@@ -1,0 +1,1117 @@
+{
+    "sectionData": {
+        "header": {
+            "logo": "assets/images/home1/logo.png",
+            "logo2": "assets/images/home2/logo.png",
+            "headerNavigationTop": {
+                "meta":{
+                  "phone": {
+                        "number": "123-456-789"
+                    },
+                  "mail": {
+                        "email": "demo@examplegmail.com"
+                    },
+                    "consultation":{
+                        "title":"Request A Free Consultation"
+                    }
+                }   
+            }
+        },
+        "sectionTitle": {
+            "about": {
+                "title": "About Page",
+                "pageName": "About",
+                "background": "assets/images/home2/banner/banner.jpg"
+            },
+            "service": {
+                "title": "Service Page",
+                "pageName": "Service",
+                "background": "assets/images/home2/banner/banner.jpg"
+            },
+            "serviceDetails": {
+                "title": "Service Details",
+                "pageName": "Service Details",
+                "background": "assets/images/home2/banner/banner.jpg"
+            },
+            "project": {
+                "title": "Project Page",
+                "pageName": "Project",
+                "background": "assets/images/home2/banner/banner.jpg"
+            },
+            "blog": {
+                "title": "Blog Page",
+                "pageName": "Blog",
+                "background": "assets/images/home2/banner/banner.jpg"
+            },
+            "singleBlog": {
+                "title": "Blog Details",
+                "pageName": "Blog Details",
+                "background": "assets/images/home2/banner/banner.jpg"
+            },
+            "faq": {
+                "title": "FAQ Page",
+                "pageName": "faq",
+                "background": "assets/images/home2/banner/banner.jpg"
+            },
+            "teamDetails": {
+                "title": "Team Details",
+                "pageName": "Team Details",
+                "background": "assets/images/home2/banner/banner.jpg"
+            },
+            "team": {
+                "title": "Team Page",
+                "pageName": "team",
+                "background": "assets/images/home2/banner/banner.jpg"
+            },
+            "pricing": {
+                "title": "Pricing Page",
+                "pageName": "Pricing",
+                "background": "assets/images/home2/banner/banner.jpg"
+            },
+            "contact": {
+                "title": "Contact Page",
+                "pageName": "Contact",
+                "background": "assets/images/home2/banner/banner.jpg"
+            },
+            "error": {
+                "title": "404 Page",
+                "pageName": "404",
+                "background": "assets/images/404/404.jpg"
+            }
+        },
+        "banner": {
+            "subtitle": "World className Cyber Security",
+            "title": "We Provide the Best value for Business",
+            "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
+            "background": "assets/images/home1/banner/banner.jpg",
+            "channelName": "youtube",
+            "videoId": "LCmsrVOXzZc"
+        },
+        "bannerV2": {
+            "subtitle": "World className Cyber Security",
+            "title": "We Provide the Best value for Business",
+            "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
+            "background": "assets/images/home2/banner/banner.jpg",
+            "channelName": "youtube",
+            "videoId": "LCmsrVOXzZc"
+        },
+        "offer":{
+            "offerSectionHeading": {
+                "subtitle":"Offers Service",
+                "title": "Services We are Offering",
+                "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tinciunt consectetuer adipiscing elit, sed diam nonummy"
+            },
+            "singleOffer": [
+                {
+                  "icon":"flaticon-medal",
+                  "title":"Great Experiences",
+                  "features":["Efficiently unleash", "Passion & Commitment", "Completely pursue"],
+                  "animation":"fadeInRight",
+                  "animationDelay":"0.4s"
+                },
+                {
+                  "icon":"flaticon-promotion",
+                  "title":"Consulting Services",
+                  "features":["Efficiently unleash", "Passion & Commitment", "Completely pursue"],
+                  "animation":"fadeInUp",
+                  "animationDelay":"0.3s"
+                },
+                {
+                  "icon":"flaticon-briefcase-1",
+                  "title":"Digital Marketing",
+                  "features":["Efficiently unleash", "Passion & Commitment", "Completely pursue"],
+                  "animation":"fadeInLeft",
+                  "animationDelay":"0.4s"
+                }
+            ]
+        },
+        "count":{
+            "singleCount":[
+                {
+                    "title":"Business Solution",
+                    "percent":73,
+                    "animation":"fadeInRight",
+                    "animationDelay":"0.4s"
+                },
+                {
+                    "title":"24/7 Support",
+                    "percent":65,
+                    "animation":"fadeInUp",
+                    "animationDelay":"0.3s"
+                },
+                {
+                    "title":"Development",
+                    "percent":78,
+                    "animation":"fadeInUp",
+                    "animationDelay":"0.3s"
+                },
+                {
+                    "title":"Client Strategy",
+                    "percent":83,
+                    "animation":"fadeInLeft",
+                    "animationDelay":"0.4s"
+                }
+            ]
+        },
+        "countV2":{
+            "background":"assets/images/home2/count/map.png",
+            "singleCount":[
+                {
+                    "title":"Happy Customers",
+                    "numbar":3365,
+                    "animation":"fadeInRight",
+                    "animationDelay":"0.4s",
+                    "icon":"flaticon-user"
+                },
+                {
+                    "title":"Clients Work",
+                    "numbar":230,
+                    "animation":"fadeInUp",
+                    "animationDelay":"0.3s",
+                    "icon":"flaticon-layers"
+                },
+                {
+                    "title":"Satisfied Customers",
+                    "numbar":124,
+                    "animation":"fadeInUp",
+                    "animationDelay":"0.3s",
+                    "icon":"flaticon-bookmark-white"
+                },
+                {
+                    "title":"Years Experience",
+                    "numbar":18,
+                    "animation":"fadeInLeft",
+                    "animationDelay":"0.4s",
+                    "icon":"flaticon-diamond"
+                }
+            ]
+        },
+        "about": {
+            "subtitle": "Welcome to Agency",
+            "title": "Best Quality Recruitment Staffing Agency",
+            "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. A error laborum totam eum, eius facere odio rerum molestiae nam et doloremque animi labore. Pariatur, sit? Ullam dolorum eveniet voluptatibus quod!",
+            "metaList": [{
+                    "itemContent": "Nunc iaculis libero in ipsum molestie fermentum, a molestie nulla aliquet."
+                },
+                {
+                    "itemContent": "Integer egestas metus blandit sagittis vestibulum."
+                },
+                {
+                    "itemContent": "Integer eget massa malesuada, semper metus in, mattis diam."
+                },
+                {
+                    "itemContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                }
+            ],
+            "ceoName": "David Ambrose",
+            "ceoDesignation":"CEO & Founder",
+
+            "experienceYears": "25",
+            "experience": "Years Experience",
+            "image1": "assets/images/home1/about/about-img1.jpg",
+            "image2": "assets/images/home1/about/about-img2.jpg",
+            "image3": "assets/images/home1/about/about-img3.jpg",
+            "image4": "assets/images/home2/about/about1.jpg",
+            "image5": "assets/images/home2/about/about2.jpg",
+            "ceoImage":"assets/images/home1/about/person.jpg",
+            "ceoSign":"assets/images/home1/about/sign.png"
+        },
+        "newsletter":{
+            "background":"assets/images/home2/newsletter/newsletter.jpg",
+            "title":"Let’s find out how to work Together",
+            "content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquenim ad m veniam, quis nostrud exercitation ullamco laboris nisi ut"
+
+        },
+        "service": {
+            "serviceSectionHeading": {
+                "subtitle":"Get your Service",
+                "title": "Services We are Providing",
+                "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tinciunt consectetuer adipiscing elit, sed diam nonummy"
+            },
+            "singleService": [
+                {
+                    "icon": "flaticon-meeting",
+                    "image": "assets/images/home1/service/img1.jpg",
+                    "animation": "fadeInRight",
+                    "title": "Investment Planning",
+                    "content": "Avoids pleasure itself, because it is pleasure because those who do not know"
+                },
+                {
+                    "icon": "flaticon-diagram",
+                    "image": "assets/images/home1/service/img2.jpg",
+                    "animation": "fadeInUp",
+                    "title": "Business Reform",
+                    "content": "Avoids pleasure itself, because it is pleasure because those who do not know"
+                },
+                {
+                    "icon": "flaticon-management",
+                    "image": "assets/images/home1/service/img3.jpg",
+                    "animation": "fadeInLeft",
+                    "title": "Infrastructure Plan",
+                    "content": "Avoids pleasure itself, because it is pleasure because those who do not know"
+                },
+                {
+                    "icon": "flaticon-diagram-1",
+                    "image": "assets/images/home1/service/img4.jpg",
+                    "animation": "fadeInRight",
+                    "title": "Firewall Advance",
+                    "content": "Avoids pleasure itself, because it is pleasure because those who do not know"
+                },
+                {
+                    "icon": "flaticon-profits",
+                    "image": "assets/images/home1/service/img5.jpg",
+                    "animation": "fadeInDown",
+                    "title": "IT Management",
+                    "content": "Avoids pleasure itself, because it is pleasure because those who do not know"
+                },
+                {
+                    "icon": "flaticon-management",
+                    "image": "assets/images/home1/service/img6.jpg",
+                    "animation": "fadeInLeft",
+                    "title": "Cloud Computing",
+                    "content": "Avoids pleasure itself, because it is pleasure because those who do not know"
+                }
+            ]
+        },
+        "serviceV2": {
+            "serviceSectionHeading": {
+                "subtitle":"Offers Service",
+                "title": "Services We are Offering",
+                "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tinciunt consectetuer adipiscing elit, sed diam nonummy"
+            },
+            "singleService": [
+                {
+                    "icon": "flaticon-medal",
+                    "image": "assets/images/home2/offer/offer1.jpg",
+                    "animation": "fadeInRight",
+                    "title": "Great Experiences",
+                    "feature":["Efficiently unleash","Passion & Commitment","Completely pursue"]
+                },
+                {
+                    "icon": "flaticon-promotion",
+                    "image": "assets/images/home2/offer/offer2.jpg",
+                    "animation": "fadeInUp",
+                    "title": "Consulting Services",
+                    "feature":["Efficiently unleash","Passion & Commitment","Completely pursue"]
+                },
+                {
+                    "icon": "flaticon-briefcase-1",
+                    "image": "assets/images/home2/offer/offer3.jpg",
+                    "animation": "fadeInLeft",
+                    "title": "Digital Marketing",
+                    "feature":["Efficiently unleash","Passion & Commitment","Completely pursue"]
+                },
+                {
+                    "icon": "flaticon-briefcase",
+                    "image": "assets/images/home2/offer/offer4.jpg",
+                    "animation": "fadeInRight",
+                    "title": "Digital Business",
+                    "feature":["Efficiently unleash","Passion & Commitment","Completely pursue"]
+                },
+                {
+                    "icon": "flaticon-medal",
+                    "image": "assets/images/home2/offer/offer5.jpg",
+                    "animation": "fadeInDown",
+                    "title": "Marketing Experience",
+                    "feature":["Efficiently unleash","Passion & Commitment","Completely pursue"]
+                },
+                {
+                    "icon": "flaticon-lamp",
+                    "image": "assets/images/home2/offer/offer6.jpg",
+                    "animation": "fadeInRight",
+                    "title": "Digital Business",
+                    "feature":["Efficiently unleash","Passion & Commitment","Completely pursue"]
+                }
+            ]
+        },
+        "serviceDetails":{
+            "image1":"assets/images/service-detail/img1.jpg",
+            "image2":"assets/images/service-detail/img2.jpg",
+            "title":"There Is Nothing To Show Something",
+            "content1":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat qui ducimus illum modi?  perspiciatis accusamus soluta perferendis, ad illum, nesciunt, reiciendis iusto et cupidit Repudiandae provident to consectetur, sapiente, libero iure necessitatibus corporis nulla voluptate, quisquam aut perspiciatis? Fugiat labore aspernatur eius, perspiciatis ut molestiae, delectus rem.",
+            "content2":"Lorem ipsum dolor sit amet, consectetur adipisicin elit, sed do eiusmod tempor incididunt ut labore et doloret magna aliqua. Ut enim ad minim veniam, quis nostru exercitation ullamco laboris",
+            "content3":"nisi ut aliquip ex ea commodo consequat. Duis autetu irure dolor in reprehenderit in voluptate velit essede cillum dolore eu fugiat nulla pariatur",
+            "content4":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat qui ducimus illum modi?  perspiciatis accusamus soluta perferendis, ad illum, nesciunt, reiciendis iusto et cupidit Repudiandae provident to consectetur, sapiente, libero iure necessitatibus corporis nulla voluptate, quisquam aut perspiciatis? Fugiat labore aspernatur eius, perspiciatis ut molestiae, delectus rem.",
+            "serviceFeature":{
+                "title":"all services",
+                "singleService":[
+                    {
+                        "serviceLink":"#!",
+                        "serviceName":"Dental Implants Depertment"
+                    },
+                    {
+                        "serviceLink":"#!",
+                        "serviceName":"Root Canal Depertment"
+                    },
+                    {
+                        "serviceLink":"#!",
+                        "serviceName":"Teeth Whitening Depertment"
+                    },
+                    {
+                        "serviceLink":"#!",
+                        "serviceName":"Wisdom Teeth Depertment"
+                    },
+                    {
+                        "serviceLink":"#!",
+                        "serviceName":"Dental Implants Depertment"
+                    },
+                    {
+                        "serviceLink":"#!",
+                        "serviceName":"Dental Implants Depertment"
+                    }
+                ]
+            },
+            "openingHours":{
+                "title":"Opening Hours",
+                "days":[
+                    {
+                        "dayName":"Monday - Friday",
+                        "dayTime":"9.00 - 20.00"
+                    },
+                    {
+                        "dayName":"Saturday",
+                        "dayTime":"10.00 - 16.00"
+                    },
+                    {
+                        "dayName":"Sunday",
+                        "dayTime":"9.30 - 18.00"
+                    }
+                ]
+            },
+            "aboutUs":{
+                "title":"About Us",
+                "image":"assets/images/service-detail/img3.jpg",
+                "subTitle":"Dental Bridges",
+                "content":"Lorem ipsum dolor sit amet, conse adipisicing elit, sed do eiusmod temporu"
+            }
+        },
+        "team": {
+            "sectionHeading": {
+                "subtitle":"Team Members",
+                "title": "Quality Team Members",
+                "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tinciunt consectetuer adipiscing elit, sed diam nonummy"
+            },
+            "member": [{
+                    "id": 1,
+                    "facebookLink": "#!",
+                    "twitterLink": "#!",
+                    "linkdinLink": "#!",
+                    "instagramLink": "#!",
+                    "name": "Satrina Donahu",
+                    "designation": "Programmer",
+                    "image": "assets/images/home1/team/img1.jpg",
+                    "animation":"fadeInRight"
+                },
+                {
+                    "id": 2,
+                    "facebookLink": "#!",
+                    "twitterLink": "#!",
+                    "linkdinLink": "#!",
+                    "instagramLink": "#!",
+                    "name": "Richard Powel",
+                    "designation": "Designer",
+                    "image": "assets/images/home1/team/img2.jpg",
+                    "animation":"fadeInUp"
+                },
+                {
+                    "id": 3,
+                    "facebookLink": "#!",
+                    "twitterLink": "#!",
+                    "linkdinLink": "#!",
+                    "instagramLink": "#!",
+                    "name": "Wicha Dowel",
+                    "designation": "Developer",
+                    "image": "assets/images/home1/team/img3.jpg",
+                    "animation":"fadeInLeft"
+                },
+                {
+                    "id": 4,
+                    "facebookLink": "#!",
+                    "twitterLink": "#!",
+                    "linkdinLink": "#!",
+                    "instagramLink": "#!",
+                    "name": "Wicha Dowel",
+                    "designation": "Co-Founder",
+                    "image": "assets/images/home1/team/img4.jpg",
+                    "animation":"fadeInRight"
+                },
+                {
+                    "id": 5,
+                    "facebookLink": "#!",
+                    "twitterLink": "#!",
+                    "linkdinLink": "#!",
+                    "instagramLink": "#!",
+                    "name": "Thomas Aldin",
+                    "designation": "Co-Founder",
+                    "image": "assets/images/home1/team/img5.jpg",
+                    "animation":"fadeInDown"
+                },
+                {
+                    "id": 6,
+                    "facebookLink": "#!",
+                    "twitterLink": "#!",
+                    "linkdinLink": "#!",
+                    "instagramLink": "#!",
+                    "name": "kate lora",
+                    "designation": "Co-Founder",
+                    "image": "assets/images/home1/team/img6.jpg",
+                    "animation":"fadeInLeft"
+                }
+            ]
+        },
+        "teamDetails":{
+            "memberInfo":{
+                "image":"assets/images/home1/team/team-img1.jpg",
+                "name":"John N. Holmes",
+                "designation":"Architecture Designer",
+                "socile":{
+                    "facebook":"#!",
+                    "twitter":"#!",
+                    "insta":"#!",
+                    "linkdin":"#!"
+                }
+            },
+            "personalInfo":{
+                "title":"Personal Info",
+                "singleInfo":[
+                    {
+                        "name":"Phone:",
+                        "no":"+ (123) 1800-567"
+                    },
+                    {
+                        "name":"Office:",
+                        "no":"+ (123) 1800-567"
+                    },
+                    {
+                        "name":"E-mail:",
+                        "no":"medilink@tlprt.com"
+                    },
+                    {
+                        "name":"Gender:",
+                        "no":"Male"
+                    }
+                ]
+            },
+            "aboutInfo":{
+                "title":"About Me",
+                "content":"Experience architecture (XA) is the art of articulating a clear user story/journey through an inform,",
+                "content2":"interaction design and experience design that an end user navigates across offered by the client",
+                "content3":"This visual representation is intended not only to highlight the system that the user will touch."
+            },
+            "timeiInfo":{
+                "title":"Working Time",
+                "singleTime":[
+                    {
+                        "dayName":"SUN",
+                        "dayTime":"11:30AM - 12:30PM"
+                    },
+                    {
+                        "dayName":"THU",
+                        "dayTime":"12:00AM - 05:00PM"
+                    },
+                    {
+                        "dayName":"MON",
+                        "dayTime":"02:00AM - 07:30PM"
+                    }
+                ]
+            },
+            "experienceInfo":{
+                "title":"Experience",
+                "singleExp":[
+                    {
+                        "year":"2007 - 2008",
+                        "department":"Civil Engineer",
+                        "position":"Senior Designer",
+                        "company":"Midtown Group"
+                    },
+                    {
+                        "year":"2009 - 2014",
+                        "department":"Architecture Designer",
+                        "position":"Senior Designer",
+                        "company":"Landmark Group"
+                    }
+                ]
+            }
+        },
+        "project": {
+            "sectionHeading": {
+                "subtitle":"Finished Project",
+                "title": "Recent Completed Projects",
+                "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tinciunt consectetuer adipiscing elit, sed diam nonummy"
+            },
+            "singleProject":  
+                [{
+                    "image": "assets/images/home1/project/img1.jpg",
+                    "category": "Commercial",
+                    "title": "We Are Digital Agenc",
+                    "detailedTitle": "Electrical Wiring concept, San Jose",
+                    "value": "555",
+                    "completedYear": "2019",
+                    "location": "London Donec eleifend",
+                    "id": 1,
+                    "animation":"fadeInRight"
+                },
+                {
+                    "image": "assets/images/home1/project/img2.jpg",
+                    "category": "Designer",
+                    "title": "Perfect Solution",
+                    "detailedTitle": "Electrical Wiring concept, San Jose",
+                    "value": "559",
+                    "completedYear": "2019",
+                    "location": "London Donec eleifend",
+                    "id": 2,
+                    "animation":"fadeInUp"
+                },
+                {
+                    "image": "assets/images/home1/project/img3.jpg",
+                    "category": "Exterior",
+                    "title": "Construction Management",
+                    "detailedTitle": "Electrical Wiring concept, San Jose",
+                    "value": "558",
+                    "completedYear": "2018",
+                    "location": "London Donec eleifend",
+                    "id": 3,
+                    "animation":"fadeInLeft"
+                },
+                {
+                    "image": "assets/images/home1/project/img4.jpg",
+                    "category": "Furniture",
+                    "title": "Construction Management",
+                    "detailedTitle": "Electrical Wiring concept, San Jose",
+                    "value": "5553",
+                    "completedYear": "2019",
+                    "location": "London Donec eleifend",
+                    "id": 4,
+                    "animation":"fadeInRight"
+                },
+                {
+                    "origin": ["Interior", "Exterior", "Designer"],
+                    "image": "assets/images/home1/project/img5.jpg",
+                    "category": "Interior",
+                    "title": "Construction Management",
+                    "detailedTitle": "Electrical Wiring concept, San Jose",
+                    "value": "5505",
+                    "completedYear": "2020",
+                    "location": "London Donec eleifend",
+                    "id": 5,
+                    "animation":"fadeInLeft"
+                },
+                {
+                    "origin": ["Commercial", "Furniture"],
+                    "image": "assets/images/home1/project/img6.jpg",
+                    "category": "Furniture",
+                    "title": "Construction Management",
+                    "detailedTitle": "Electrical Wiring concept, San Jose",
+                    "value": "5055",
+                    "completedYear": "2019",
+                    "location": "London Donec eleifend",
+                    "id": 6,
+                    "animation":"fadeInRight"
+                },
+                {
+                    "origin": ["Commercial", "Furniture"],
+                    "image": "assets/images/home1/project/img7.jpg",
+                    "category": "Furniture",
+                    "title": "Construction Management",
+                    "detailedTitle": "Electrical Wiring concept, San Jose",
+                    "value": "5055",
+                    "completedYear": "2019",
+                    "location": "London Donec eleifend",
+                    "id": 6,
+                    "animation":"fadeInLeft"
+                }
+            ]
+        },
+        "projectV2": {
+            "sectionHeading": {
+                "subtitle":"Finished Project",
+                "title": "Recent Completed Projects",
+                "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tinciunt consectetuer adipiscing elit, sed diam nonummy"
+            },
+                "singleProject": [
+                    {
+                        "origin": ["Commercial", "Furniture"],
+                        "image": "assets/images/home2/project/img1.jpg",
+                        "category": "Commercial",
+                        "title": "We Are Digital Agency",
+                        "detailedTitle": "Electrical Wiring concept, San Jose",
+                        "value": "555",
+                        "completedYear": "2019",
+                        "location": "London Donec eleifend",
+                        "id": 7,
+                        "animation":"fadeInRight"
+                    },
+                    {
+                        "origin": ["Designer", "Commercial", "Interior"],
+                        "image": "assets/images/home2/project/img2.jpg",
+                        "category": "Designer",
+                        "title": "We Are Digital Agency",
+                        "detailedTitle": "Electrical Wiring concept, San Jose",
+                        "value": "559",
+                        "completedYear": "2019",
+                        "location": "London Donec eleifend",
+                        "id": 8,
+                        "animation":"fadeInUp"
+                    },
+                    {
+                        "origin": ["Designer", "Exterior"],
+                        "image": "assets/images/home2/project/img3.jpg",
+                        "category": "Exterior",
+                        "title": "We Are Digital Agency",
+                        "detailedTitle": "Electrical Wiring concept, San Jose",
+                        "value": "558",
+                        "completedYear": "2018",
+                        "location": "London Donec eleifend",
+                        "id": 9,
+                        "animation":"fadeInLeft"
+                    },
+                    {
+                        "origin": ["Furniture", "Interior", "Exterior"],
+                        "image": "assets/images/home2/project/img4.jpg",
+                        "category": "Furniture",
+                        "title": "We Are Digital Agency",
+                        "detailedTitle": "Electrical Wiring concept, San Jose",
+                        "value": "5553",
+                        "completedYear": "2019",
+                        "location": "London Donec eleifend",
+                        "id": 10,
+                        "animation":"fadeInRight"
+                    },
+                    {
+                        "origin": ["Interior", "Exterior", "Designer"],
+                        "image": "assets/images/home2/project/img5.jpg",
+                        "category": "Interior",
+                        "title": "We Are Digital Agency",
+                        "detailedTitle": "Electrical Wiring concept, San Jose",
+                        "value": "5505",
+                        "completedYear": "2020",
+                        "location": "London Donec eleifend",
+                        "id": 11,
+                        "animation":"fadeInDown"
+                    },
+                    {
+                        "origin": ["Commercial", "Furniture"],
+                        "image": "assets/images/home2/project/img6.jpg",
+                        "category": "Furniture",
+                        "title": "We Are Digital Agency",
+                        "detailedTitle": "Electrical Wiring concept, San Jose",
+                        "value": "5055",
+                        "completedYear": "2019",
+                        "location": "London Donec eleifend",
+                        "id": 12,
+                        "animation":"fadeInLeft"
+                    }
+                ]
+        },
+        
+        "client": {
+            "sectionHeading": {
+                "subtitle":"Client Testimonials",
+                "title": "What our Clients say",
+                "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tinciunt consectetuer adipiscing elit, sed diam nonummy"
+
+            },
+            "clientReview": [
+                {
+                    "image": "assets/images/home1/client/team-2.jpg",
+                    "name": "Nike Mardson",
+                    "comment": "Lorem ipsum dolor sit amet, con adipisicing elit, sed do eiusmod tempor incididunt utr labore et dolore magna",
+                    "raiting": 3,
+                    "animation": "fadeInRight"
+                },
+                {
+                    "image": "assets/images/home1/client/team-3.jpg",
+                    "name": "Hike Kardson",
+                    "comment": "Lorem ipsum dolor sit amet, con adipisicing elit, sed do eiusmod tempor incididunt utr labore et dolore magna",
+                    "raiting": 4,
+                    "animation": "fadeInUp"
+                },
+                {
+                    "image": "assets/images/home1/client/team-4.jpg",
+                    "name": "Mike Mardson",
+                    "comment": "Lorem ipsum dolor sit amet, con adipisicing elit, sed do eiusmod tempor incididunt utr labore et dolore magna",
+                    "raiting": 3,
+                    "animation": "fadeInLeft"
+                }
+            ],
+            "background":"assets/images/home2/client/client-bg.jpg"
+        },
+        "partner": {
+            "singleParner":[
+                {
+                    "partnerLink":"#!",
+                    "partnerImage":"assets/images/home1/brand/brand-logo1.png",
+                    "animation":"fadeInRight"
+                },
+                {
+                    "partnerLink":"#!",
+                    "partnerImage":"assets/images/home1/brand/brand-logo2.png",
+                    "animation":"fadeInUp"
+                },
+                {
+                    "partnerLink":"#!",
+                    "partnerImage":"assets/images/home1/brand/brand-logo3.png",
+                    "animation":"fadeInUp"
+                },
+                {
+                    "partnerLink":"#!",
+                    "partnerImage":"assets/images/home1/brand/brand-logo4.png",
+                    "animation":"fadeInUp"
+                },
+                {
+                    "partnerLink":"#!",
+                    "partnerImage":"assets/images/home1/brand/brand-logo5.png",
+                    "animation":"fadeInLeft"
+                }
+            ]
+        },
+        "news": {
+            "sectionHeading": {
+                "subtitle":"Our Latest Blog",
+                "title": "Latest News and Articles",
+                "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tinciunt consectetuer adipiscing elit, sed diam nonummy"
+            },
+            "singleNews": [
+                {
+                    "image": "assets/images/home1/blog/blog1.jpg",
+                    "title": "Great Business Solutions and Expert Openion for Clients",
+                    "postedTime": "August 10, 2020"
+                },
+                {
+                    "image": "assets/images/home1/blog/blog2.jpg",
+                    "title": "English for Science, Techs & Engineering",
+                    "postedTime": "July 30, 2020"
+                },
+                {
+                    "image": "assets/images/home1/blog/blog3.jpg",
+                    "title": "Conference, Events and Hospitality Book",
+                    "postedTime": "june 15, 2020"
+                },
+                {
+                    "image": "assets/images/home1/blog/blog4.jpg",
+                    "title": "Conference, Events and Book for Business",
+                    "postedTime": "may 09, 2020"
+                }
+            ]
+        },
+        "blogDetails":{
+            "image":"assets/images/blog-detail/single-blog.jpg",
+            "title":"Prices Soar, but Many People don’t Believe it",
+            "authorImage":"assets/images/blog-detail/author.jpg",
+            "authorName":"John R Peter",
+            "publishDate":"Jan 20, 2019",
+            "commentCount":"2",
+            "content1":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna ali Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irures dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat null pariatur. Excepteur sint occaecat cupidatat nonm proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor.",
+            "content2":"sit amet, consectetur adipisicielit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis fvUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
+            "quteContent":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab et dolore magna ali Ut enim ad minim veniam",
+            "subTitle":"Four ways to cheer yourself on Blue Monday!",
+            "content3":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolor magna ali Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip e eacommodot consequa. Duis aute irures dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatuo Excepteur sint occcat cupidatat nonm proident, sunt in culpa qu officia",
+            "content4":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
+            "socialShare":[
+                {
+                    "icon":"fab fa-facebook-f",
+                    "link":"#!"
+                },
+                {
+                    "icon":"fab fa-twitter",
+                    "link":"#!"
+                },
+                {
+                    "icon":"fab fa-instagram",
+                    "link":"#!"
+                },
+                {
+                    "icon":"fab fa-linkedin-in",
+                    "link":"#!"
+                }
+            ],
+            "recentPost":[
+                {
+                    "image":"assets/images/blog-detail/recent1.jpg",
+                    "publishDate":"Jan 20, 2020",
+                    "title":"Covid-19 threatens the next generation of smartphones"
+                },
+                {
+                    "image":"assets/images/blog-detail/recent2.jpg",
+                    "publishDate":"Jan 18, 2020",
+                    "title":"Covid-19 threatens the next generation of smartphones"
+                },
+                {
+                    "image":"assets/images/blog-detail/recent3.jpg",
+                    "publishDate":"Jan 17, 2020",
+                    "title":"Covid-19 threatens the next generation of smartphones"
+                },
+                {
+                    "image":"assets/images/blog-detail/recent4.jpg",
+                    "publishDate":"Jan 27, 2020",
+                    "title":"Covid-19 threatens the next generation of smartphones"
+                }
+            ],
+            "categores":[
+                {
+                    "title":"Success Stories",
+                    "link":"#!"
+                },
+                {
+                    "title":"Consulting",
+                    "link":"#!"
+                },
+                {
+                    "title":"Development",
+                    "link":"#!"
+                },
+                {
+                    "title":"Business Strategy",
+                    "link":"#!"
+                },
+                {
+                    "title":"Management",
+                    "link":"#!"
+                },
+                {
+                    "title":"Creative Ideas",
+                    "link":"#!"
+                }
+            ],
+            "tags":[
+                {
+                    "title":"Budiness",
+                    "link":"#!"
+                },
+                {
+                    "title":"Consulting",
+                    "link":"#!"
+                },
+                {
+                    "title":"Management",
+                    "link":"#!"
+                },
+                {
+                    "title":"Strategy",
+                    "link":"#!"
+                },
+                {
+                    "title":"Management",
+                    "link":"#!"
+                },
+                {
+                    "title":"Likes",
+                    "link":"#!"
+                }
+            ]
+
+
+        },
+        "connect":{
+            "title":"Want to connect with us?",
+            "buttonName":"get started"
+        },
+        "pricing": {
+            "sectionHeading": {
+                "subtitle":"Pricing Plans",
+                "title": "Flexible Pricing Plans",
+                "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tinciunt consectetuer adipiscing elit, sed diam nonummy"
+                
+            },
+            "singlePrice": [
+                {
+                    "activeStatus": false,
+                    "package": "Basic",
+                    "amount": "59.99",
+                    "features": ["Lessons From $10 Per Hour","30 days trial Features","Synced to cloud database","06 hours of support","Social media integration"],
+                    "image":"assets/images/home2/pricing/price-img1.png",
+                    "background":"assets/images/home2/pricing/price-bg.png",
+                    "animation":"fadeInRight"
+                },
+                {
+                    "activeStatus": true,
+                    "package": "Advanced",
+                    "amount": "69.99",
+                    "features": ["Lessons From $20 Per Hour","30 days trial Features","Synced to cloud database","06 hours of support","Social media integration"],
+                    "image":"assets/images/home2/pricing/price-img2.png",
+                    "background":"assets/images/home2/pricing/price-bg.png",
+                    "animation":"fadeInUp"
+                },
+                {
+                    "activeStatus": false,
+                    "package": "Standard",
+                    "amount": "79.99",
+                    "features": ["Lessons From $30 Per Hour","30 days trial Features","Synced to cloud database","06 hours of support","Social media integration"],
+                    "image":"assets/images/home2/pricing/price-img3.png",
+                    "background":"assets/images/home2/pricing/price-bg.png",
+                    "animation":"fadeInLeft"
+                }
+            ]
+        },
+      
+        "mapDescription": {
+            "mapLetLng": {
+                "center": {
+                    "lat": 22.938437,
+                    "lng": 90.828876
+                }
+            },
+            "markerLet": 22.938437,
+            "markerLng": 90.628876,
+            "zoom": 11,
+            "apiKey": "AIzaSyCjkssBA3hMeFtClgslO2clWFR6bRraGz0"
+        },
+        "contact": {
+            "getAdvice": {
+                "title": "Get Advices",
+                "address": [{
+                        "icon": "far fa-map",
+                        "title": "Address",
+                        "contentOne": "1650 Lombard Street",
+                        "contentTwo": "San Francisco, CA 94123"
+                    },
+                    {
+                        "icon": "fas fa-phone-alt",
+                        "title": "Phone",
+                        "contentOne": "+1 (415) 876-3250",
+                        "contentTwo": "+1 (415) 876-3251"
+                    },
+                    {
+                        "icon": "far fa-envelope",
+                        "title": "E-mail",
+                        "contentOne": "email@sitename.com",
+                        "contentTwo": "example@sitename.com"
+                    }
+                ]
+            },
+            "inputInfo": {
+                "title": "Get every single update here",
+                "subtitle":"Contact us"
+            }
+        },
+        "footer": {
+            "background": "assets/images/home1/footer/footer.jpg",
+            
+            "mainFooter": {
+                "about": {
+                    "title": "About",
+                    "content": "Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim",
+                    "social": [
+                        {
+                            "icon":"fa-facebook-f",
+                            "idLink":"#!"
+                        },
+                        {
+                            "icon":"fa-twitter",
+                            "idLink":"#!"
+                        },
+                        {
+                            "icon":"fa-skype",
+                            "idLink":"#!"
+                        },
+                        {
+                            "icon":"fa-google-plus-g",
+                            "idLink":"#!"
+                        }
+                    ]
+                },
+                "info": {
+                    "title": "Information",
+                    "pageLink": [{
+                            "pageName": "our process",
+                            "pageLink": "#!"
+                        },
+                        {
+                            "pageName": "Vintage Stores",
+                            "pageLink": "#!"
+                        },
+                        {
+                            "pageName": "Trekking",
+                            "pageLink": "#!"
+                        },
+                        {
+                            "pageName": "Our Clients",
+                            "pageLink": "#!"
+                        },
+                        {
+                            "pageName": "Our Team",
+                            "pageLink": "#!"
+                        }
+                    ]
+                },
+                "services": {
+                    "title": "Best Services",
+                    "pageLink": [{
+                        "pageName": "our process",
+                        "pageLink": "#!"
+                    },
+                    {
+                        "pageName": "Vintage Stores",
+                        "pageLink": "#!"
+                    },
+                    {
+                        "pageName": "Trekking",
+                        "pageLink": "#!"
+                    },
+                    {
+                        "pageName": "Our Clients",
+                        "pageLink": "#!"
+                    },
+                    {
+                        "pageName": "Our Team",
+                        "pageLink": "#!"
+                    }
+                ]
+                },
+                "newsLetter": {
+                    "title": "Newsletter",
+                    "singleNews": [
+                        {
+                            "image":"assets/images/home1/footer/news1.jpg",
+                            "link":"#!"
+                        },
+                        {
+                            "image":"assets/images/home1/footer/news2.jpg",
+                            "link":"#!"
+                        },
+                        {
+                            "image":"assets/images/home1/footer/news3.jpg",
+                            "link":"#!"
+                        },
+                        {
+                            "image":"assets/images/home1/footer/news4.jpg",
+                            "link":"#!"
+                        },
+                        {
+                            "image":"assets/images/home1/footer/news5.jpg",
+                            "link":"#!"
+                        },
+                        {
+                            "image":"assets/images/home1/footer/news1.jpg",
+                            "link":"#!"
+                        }
+                    ]
+                }
+            },
+            "footerBottom": {
+                "copyRightYear": "2021",
+                "copyRightFrom": "SITL",
+                "copyRightLink": "sitlbd.com",
+                "bottomPageLink": [
+                    
+                    {
+                        "pageName": "About",
+                        "pageLink": "/about"
+                    },
+                    {
+                        "pageName": "Service",
+                        "pageLink": "/service"
+                    },
+                    {
+                        "pageName": "Privacy Policy",
+                        "pageLink": "#!"
+                    },
+                    {
+                        "pageName": "Contact",
+                        "pageLink": "/contact"
+                    }
+                ]
+            }
+        }
+    }
+}
