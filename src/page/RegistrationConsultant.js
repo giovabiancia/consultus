@@ -152,11 +152,7 @@ export default function RegistrationConsultant() {
               </Typography>
             </div>
           ) : (
-            <div className="col-12">
-              <Typography className={classes.instructions}>
-                {getStepContent(activeStep)}
-              </Typography>
-            </div>
+            <div className="col-12">{getStepContent(activeStep)}</div>
           )}
 
           <LinearProgress variant="determinate" value={activeStep * 25} />
