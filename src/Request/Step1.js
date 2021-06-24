@@ -12,6 +12,16 @@ import Map from "./Map/Map";
 
 export default function Step1() {
   const [request, setRequest] = useContext(RequestContext);
+  const handleNome = (value) => {
+    let newState = Object.assign({}, request);
+    newState.nome = value.target.value;
+    setRequest(newState);
+  };
+  const handleCognome = (value) => {
+    let newState = Object.assign({}, request);
+    newState.cognome = value.target.value;
+    setRequest(newState);
+  };
 
   const handleAnni = (value) => {
     let newState = Object.assign({}, request);
@@ -29,7 +39,43 @@ export default function Step1() {
       <Container>
         <Row>
           <Col md="6" sm="12" className="mt-4 center">
-            <h3>Quanti anni hai ?</h3>
+            <h5>Nome</h5>
+            <TextField
+              value={request.nome}
+              onChange={handleNome}
+              variant="outlined"
+              style={{ width: "80%", textAlign: "center" }}
+              required
+              error={request.nome == "" ? (request.error ? true : false) : null}
+              helperText={
+                request.nome == "" ? (request.error ? "Required" : null) : null
+              }
+              className="mt-3"
+            ></TextField>
+          </Col>
+          <Col md="6" sm="12" className="mt-4 center">
+            <h5>Cognome</h5>
+            <TextField
+              value={request.cognome}
+              onChange={handleCognome}
+              variant="outlined"
+              style={{ width: "80%", textAlign: "center" }}
+              required
+              error={
+                request.cognome == "" ? (request.error ? true : false) : null
+              }
+              helperText={
+                request.cognome == ""
+                  ? request.error
+                    ? "Required"
+                    : null
+                  : null
+              }
+              className="mt-3"
+            ></TextField>
+          </Col>
+          <Col md="6" sm="12" className="mt-4 center">
+            <h5>Quanti anni hai ?</h5>
             <TextField
               value={request.anni}
               onChange={handleAnni}
@@ -45,7 +91,7 @@ export default function Step1() {
             ></TextField>
           </Col>
           <Col md="6" sm="12" className="mt-4 center">
-            <h3>Quale è la tua professione ?</h3>
+            <h5>Quale è la tua professione ?</h5>
             <Select
               native
               variant="outlined"

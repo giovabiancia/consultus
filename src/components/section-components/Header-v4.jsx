@@ -1,5 +1,5 @@
 import React from 'react';
-import NavigationMenuV2 from '../global-components/NavigationMenu-v2';
+import NavigationMenuV2 from '../global-components/NavigationMenu-v3';
 import PageTitle from './PageTitle';
 const HeaderV3 = (props) => {
 
@@ -12,7 +12,7 @@ const HeaderV3 = (props) => {
                 {/* <!-- End menubar area --> */}
 
                 {/* <!-- start banner area --> */}
-                 <PageTitle background={props.background} title={props.title} pageName={props.pageName}/>
+
                 {/* <!-- end banner area --> */}
             </header>
             {/* <!-- end header area --> */}

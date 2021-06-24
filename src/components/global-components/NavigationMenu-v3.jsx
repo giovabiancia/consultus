@@ -5,7 +5,7 @@ import { sectionData } from './../../data/section.json';
 import Avatar from '@material-ui/core/Avatar';
 import businessman from '../../img/businessman.png'
 
-const NavigationMenuV2 = () => {
+const NavigationMenuV3 = () => {
     const [menuToggle, setMenuToggle] = useState(false);
     const [mobileMenuToggle, setMobileMenuToggle] = useState(false);
     const auth = useAuthentication()
@@ -15,7 +15,7 @@ const NavigationMenuV2 = () => {
     return (
         <>
         {/* <!-- Start menubar area --> */}
-        <section className="menubar ">
+        <section className="menubar " style={{backgroundColor: '#151A33'}}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12">
@@ -60,4 +60,4 @@ const NavigationMenuV2 = () => {
     );
 }
 
-export default NavigationMenuV2;
+export default NavigationMenuV3;

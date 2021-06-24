@@ -13,12 +13,15 @@ import Step5 from "../RegistrationConsultant/Step5";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import ReactGa from "react-ga";
 import { Helmet } from "react-helmet";
+import firebase from "../firebase";
 
 import { Container } from "react-bootstrap";
 import NavigationMenu from "../components/global-components/NavigationMenu";
 import { useHistory } from "react-router";
 import { ConsultantStepContext } from "../context/ConsultantStepContext";
+
 import { ConsultantContext } from "../context/ConsultantContext";
+import { useAuthentication } from "../hooks/useAuthentication";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -55,6 +58,7 @@ function getStepContent(step) {
 export default function RegistrationConsultant() {
   const [activeStep, setActiveStep] = useContext(ConsultantStepContext);
   const [request, setRequest] = useContext(ConsultantContext);
+  const auth = useAuthentication();
 
   const classes = useStyles();
 
@@ -116,9 +120,68 @@ export default function RegistrationConsultant() {
   const sendRequest = (e) => {
     /*     */
     e.preventDefault();
+
+    let newConsultant = {
+      attivo: false,
+      nome: request.nome,
+      cognome: request.cognome,
+      foto: auth.loggedIn.photoURL,
+      uid: auth.loggedIn.uid,
+      credit: [],
+      articoli: [],
+      email: request.email,
+      certificato: request.certificato,
+      anni: request.anni,
+      patrimonio: request.patrimonio,
+      titoloStudio: request.titoloStudio,
+      banca: request.banca,
+      esperienza: request.esperienza,
+      specializzazione: request.specializzazione,
+      competenze: request.competenze,
+      about: request.about,
+      facebook: request.facebook,
+      instagram: request.instagram,
+      linkedin: request.linkedin,
+      twitter: request.twitter,
+      indirizzo: request.indirizzo,
+      portafoglio: request.portafoglio,
+      fondoPensione: request.fondoPensione,
+      rischio: request.rischio,
+      fotoURL: request.fotoURL,
+      progress: request.progress,
+    };
+    firebase
+      .firestore()
+      .collection("consulenti")
+      .add(newConsultant)
+      .then(function (doc) {
+        //1) EMAIL AL Consulente
+        /*    var msg = {
+          from: "support@docfunnel.it",
+          from_name: "DocFunnel | new request",
+          to: auth.loggedIn.email,
+          subject: "Your new doctor Request",
+          body_html: NewRequestAdmin(newRequest),
+        }; */
+
+        // EMAIL all' admin
+        /* var msg2 = {
+          from: "support@docfunnel.it",
+          from_name: "DocFunnel | new request",
+          to: ["support@docfunnel.it", "info@docfunnel.it"],
+          subject: "Your new doctor Request",
+          body_html: NewRequestAdmin(newRequest),
+        };
+
+        EmailMe(msg);
+        EmailMe(msg2); */
+        alert("Richiesta effettuata !");
+      })
+      .catch((e) => alert("Errore nella richista" + e));
     history.push("/profilo");
     console.log("fine richiesta");
   };
+
   return (
     <div>
       <NavigationMenu></NavigationMenu>
@@ -126,7 +189,7 @@ export default function RegistrationConsultant() {
         <title>Cunsultus | Consulente finanziario | Inizia Ora</title>
         <meta name="description" content="Affidati a dei professionisti" />
       </Helmet>
-      <Container>
+      <Container style={{ height: "100vh" }}>
         <Stepper activeStep={activeStep}>
           {steps.map((label, index) => {
             const stepProps = {};
@@ -181,7 +244,7 @@ export default function RegistrationConsultant() {
                   activeStep === steps.length - 1 ? sendRequest : handleNext
                 }
               >
-                Scopri
+                Invia Application
               </button>
             ) : (
               <button

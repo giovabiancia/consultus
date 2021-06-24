@@ -117,7 +117,7 @@ export default function Request() {
   const sendRequest = (e) => {
     /*     */
     e.preventDefault();
-    history.push("/profilo");
+    history.push("/risultati");
     console.log("fine richiesta");
   };
   return (

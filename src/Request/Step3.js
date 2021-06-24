@@ -52,22 +52,65 @@ export default function Step3() {
     <Container>
       <Row>
         {request.migliorareInvestimento && (
-          <Col className="center mt-4 center" sm="12">
-            <h3>Quale l' è l' entità del tuo portafoglio</h3>
-            <TextField
-              value={request.portafoglio}
-              onChange={handlePortafoglio}
-              type="number"
+          <Col className="center mt-4 center " sm="12">
+            <h5 className="mb-2">Quale l' è l' entità del tuo portafoglio</h5>
+
+            <Select
+              native
               variant="outlined"
               style={{ width: "80%", textAlign: "center" }}
-              className="mt-3"
-            ></TextField>
+              value={request.portafoglio}
+              onChange={(value) => handlePortafoglio(value)}
+              required
+              error={
+                request.portafoglio == ""
+                  ? request.error
+                    ? true
+                    : false
+                  : null
+              }
+              helperText={
+                request.portafoglio == ""
+                  ? request.error
+                    ? "Required"
+                    : null
+                  : null
+              }
+            >
+              <option aria-label="None" value="" />
+              <option value={"0-500"}>Tra 0 e 500 euro</option>
+              <option value={"500-1.000"}>Tra 500 e 1.000 euro</option>
+              <option value={"1.000- 2.000"}>Tra 1.000 e 2.000 euro</option>
+              <option value={"2.000-4.000"}>Tra 2.000 e 4000 euro</option>
+              <option value={"4.000-8.000"}>Tra 4.000 e 8000 euro</option>
+              <option value={"8.000-16.000"}>Tra 8.000 e 16.000 euro</option>
+              <option value={"16.000-32.000"}>Tra 16.000 e 32.000 euro</option>
+              <option value={"32.000 - 64.000"}>
+                Tra 32.000 e 64.000 euro
+              </option>
+              <option value={"64.000 - 120000"}>
+                Tra 64.000 e 120.000 euro
+              </option>
+              <option value={"120.000 - 240.000"}>
+                Tra 120.000 e 240.000 euro
+              </option>
+              <option value={"240.000 - 580.000"}>
+                Tra 240.000 e 580.000 euro
+              </option>
+              <option value={"580.000 - 1.000.000"}>
+                Tra 580.000 e 1.000.000 euro
+              </option>
+              <option value={"1.000.000 - 2.000.000"}>
+                Tra 1.000.000 e 2.000.000 euro
+              </option>
+              <option value={"Oltre 2.000.000"}>Oltre 2.000.000 euro</option>
+            </Select>
           </Col>
         )}
         {request.investire || request.risparmiare ? (
-          <Row style={{ width: "100%" }}>
-            <Col className="center mt-4 mb-4 center" sm="12">
-              <h3>Con quale frequenza vorresti investire</h3>
+          <>
+            <Col className=" mt-4 mb-4 center" sm="12">
+              <h5>Con quale frequenza vorresti investire</h5>
               <Select
                 native
                 variant="outlined"
@@ -92,89 +135,128 @@ export default function Step3() {
                 }
               >
                 <option aria-label="None" value="" />
-                <option value={"Singola operazione"}>Singola operazione</option>
-                <option value={"Mensile"}>Mensile</option>
-                <option value={"Trimestrale"}>Trimestrale</option>
-                <option value={"Annuale"}>Annuale</option>
+                <option value={"in una singola operazione"}>
+                  Singola operazione
+                </option>
+                <option value={"mensilmente"}>Mensilmente</option>
+                <option value={"trimestralmente"}>Trimestralmente</option>
+                <option value={"annualmente"}>Annualmente</option>
               </Select>
-            </Col>
-            <Col className="center">
-              <h3>Quale importo vorresti investire ?</h3>
-              <FormControl fullWidth variant="outlined" className="mt-4 ">
-                <InputLabel htmlFor="outlined-adornment-amount">
-                  Amount
-                </InputLabel>
+              <h5 className="mb-3 center">
+                Quale importo vorresti investire {request.investimento} ?
+              </h5>
 
-                <OutlinedInput
-                  label="Money"
-                  id="outlined-adornment-amount"
-                  startAdornment={
-                    <InputAdornment position="start">€</InputAdornment>
-                  }
-                  value={request.importo}
-                  onChange={handleImporto}
-                  labelWidth={60}
-                  required
-                  error={
-                    request.importo == ""
-                      ? request.error
-                        ? true
-                        : false
-                      : null
-                  }
-                  helperText={
-                    request.importo == ""
-                      ? request.error
-                        ? "Required"
-                        : null
-                      : null
-                  }
-                />
-              </FormControl>
-            </Col>
-          </Row>
-        ) : null}
-
-        {request.mutuo || request.finanziamento ? (
-          <Col className=" mt-4 mb-4 center" sm="12">
-            <h3>Quale è l'importo del finanziamento desiderato ? </h3>
-
-            <FormControl fullWidth variant="outlined" className="mt-4 ">
-              <InputLabel htmlFor="outlined-adornment-amount">
-                Amount
-              </InputLabel>
-
-              <OutlinedInput
-                label="Money"
-                id="outlined-adornment-amount"
-                startAdornment={
-                  <InputAdornment position="start">€</InputAdornment>
-                }
-                value={request.importoFinanziamento}
-                onChange={handleImportoFinanziamento}
+              <Select
+                native
+                variant="outlined"
+                style={{ width: "80%", textAlign: "center" }}
+                value={request.importo}
+                onChange={(value) => handleImporto(value)}
                 required
                 error={
-                  request.importoFinanziamento == ""
-                    ? request.error
-                      ? true
-                      : false
-                    : null
+                  request.importo == "" ? (request.error ? true : false) : null
                 }
                 helperText={
-                  request.importoFinanziamento == ""
+                  request.importo == ""
                     ? request.error
                       ? "Required"
                       : null
                     : null
                 }
-                labelWidth={60}
-              />
-            </FormControl>
+              >
+                <option aria-label="None" value="" />
+                <option value={"0-500"}>Tra 0 e 500 euro</option>
+                <option value={"500-1.000"}>Tra 500 e 1.000 euro</option>
+                <option value={"1.000- 2.000"}>Tra 1.000 e 2.000 euro</option>
+                <option value={"2.000-4.000"}>Tra 2.000 e 4000 euro</option>
+                <option value={"4.000-8.000"}>Tra 4.000 e 8000 euro</option>
+                <option value={"8.000-16.000"}>Tra 8.000 e 16.000 euro</option>
+                <option value={"16.000-32.000"}>
+                  Tra 16.000 e 32.000 euro
+                </option>
+                <option value={"32.000 - 64.000"}>
+                  Tra 32.000 e 64.000 euro
+                </option>
+                <option value={"64.000 - 120000"}>
+                  Tra 64.000 e 120.000 euro
+                </option>
+                <option value={"120.000 - 240.000"}>
+                  Tra 120.000 e 240.000 euro
+                </option>
+                <option value={"240.000 - 580.000"}>
+                  Tra 240.000 e 580.000 euro
+                </option>
+                <option value={"580.000 - 1.000.000"}>
+                  Tra 580.000 e 1.000.000 euro
+                </option>
+                <option value={"1.000.000 - 2.000.000"}>
+                  Tra 1.000.000 e 2.000.000 euro
+                </option>
+                <option value={"Oltre 2.000.000"}>Oltre 2.000.000 euro</option>
+              </Select>
+            </Col>
+          </>
+        ) : null}
+
+        {request.mutuo || request.finanziamento ? (
+          <Col className=" mt-4 mb-4 center" sm="12">
+            <h5>Quale è l'importo del finanziamento desiderato ? </h5>
+
+            <Select
+              native
+              variant="outlined"
+              style={{ width: "80%", textAlign: "center" }}
+              value={request.importoFinanziamento}
+              onChange={(value) => handleImportoFinanziamento(value)}
+              required
+              error={
+                request.importoFinanziamento == ""
+                  ? request.error
+                    ? true
+                    : false
+                  : null
+              }
+              helperText={
+                request.importoFinanziamento == ""
+                  ? request.error
+                    ? "Required"
+                    : null
+                  : null
+              }
+            >
+              <option aria-label="None" value="" />
+              <option value={"0-500"}>Tra 0 e 500 euro</option>
+              <option value={"500-1.000"}>Tra 500 e 1.000 euro</option>
+              <option value={"1.000- 2.000"}>Tra 1.000 e 2.000 euro</option>
+              <option value={"2.000-4.000"}>Tra 2.000 e 4000 euro</option>
+              <option value={"4.000-8.000"}>Tra 4.000 e 8000 euro</option>
+              <option value={"8.000-16.000"}>Tra 8.000 e 16.000 euro</option>
+              <option value={"16.000-32.000"}>Tra 16.000 e 32.000 euro</option>
+              <option value={"32.000 - 64.000"}>
+                Tra 32.000 e 64.000 euro
+              </option>
+              <option value={"64.000 - 120000"}>
+                Tra 64.000 e 120.000 euro
+              </option>
+              <option value={"120.000 - 240.000"}>
+                Tra 120.000 e 240.000 euro
+              </option>
+              <option value={"240.000 - 580.000"}>
+                Tra 240.000 e 580.000 euro
+              </option>
+              <option value={"580.000 - 1.000.000"}>
+                Tra 580.000 e 1.000.000 euro
+              </option>
+              <option value={"1.000.000 - 2.000.000"}>
+                Tra 1.000.000 e 2.000.000 euro
+              </option>
+              <option value={"Oltre 2.000.000"}>Oltre 2.000.000 euro</option>
+            </Select>
           </Col>
         ) : null}
         {request.pensione ? (
           <Col className="center mt-4 mb-4 center" sm="12">
-            <h3>Conosci i vantaggi di un fondo pensione? </h3>
+            <h5>Conosci i vantaggi di un fondo pensione? </h5>
 
             <Select
               native

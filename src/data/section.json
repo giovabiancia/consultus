@@ -14,7 +14,7 @@
                     "consultation":{
                         "title":"Request A Free Consultation"
                     }
-                }   
+                }
             }
         },
         "sectionTitle": {
@@ -59,8 +59,8 @@
                 "background": "assets/images/home2/banner/banner.jpg"
             },
             "team": {
-                "title": "Team Page",
-                "pageName": "team",
+                "title": "I consulenti suggeriti",
+                "pageName": "Risultati ricerca",
                 "background": "assets/images/home2/banner/banner.jpg"
             },
             "pricing": {
@@ -80,46 +80,46 @@
             }
         },
         "banner": {
-            "subtitle": "World className Cyber Security",
-            "title": "We Provide the Best value for Business",
-            "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
+            "subtitle": "Inizia gratis",
+            "title": "Trova il consulente più adatto a te",
+            "content": "Ti mettiamo in contatto con il  consulente più adatto alle tue esigenze",
             "background": "assets/images/home1/banner/banner.jpg",
             "channelName": "youtube",
             "videoId": "LCmsrVOXzZc"
         },
         "bannerV2": {
-            "subtitle": "World className Cyber Security",
-            "title": "We Provide the Best value for Business",
-            "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
+            "subtitle": "Inizia gratis",
+            "title": "Trova il consulente più adatto a te",
+            "content": "Ti mettiamo in contatto con il  consulente più adatto alle tue esigenze",
             "background": "assets/images/home2/banner/banner.jpg",
             "channelName": "youtube",
             "videoId": "LCmsrVOXzZc"
         },
         "offer":{
             "offerSectionHeading": {
-                "subtitle":"Offers Service",
-                "title": "Services We are Offering",
-                "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tinciunt consectetuer adipiscing elit, sed diam nonummy"
+                "subtitle":"Servizio Offerto",
+                "title": "Confronta i migliori consulenti",
+                "content": "Trova i consulenti che fanno al caso tuo e inviagli il tuo profilo di investitore / risparmiatore"
             },
             "singleOffer": [
                 {
                   "icon":"flaticon-medal",
-                  "title":"Great Experiences",
-                  "features":["Efficiently unleash", "Passion & Commitment", "Completely pursue"],
+                  "title":"Crea il tuo profilo",
+                  "features":["Solo consulenti certificati", "Verifichiamo noi i requisiti", "In totale trasparenza"],
                   "animation":"fadeInRight",
                   "animationDelay":"0.4s"
                 },
                 {
                   "icon":"flaticon-promotion",
-                  "title":"Consulting Services",
-                  "features":["Efficiently unleash", "Passion & Commitment", "Completely pursue"],
+                  "title":"Trova i migliori consulenti",
+                  "features":["Patrimoniali",  "Finanziari", "Assicurativi"],
                   "animation":"fadeInUp",
                   "animationDelay":"0.3s"
                 },
                 {
                   "icon":"flaticon-briefcase-1",
-                  "title":"Digital Marketing",
-                  "features":["Efficiently unleash", "Passion & Commitment", "Completely pursue"],
+                  "title":"Contattali gratuitamente",
+                  "features":["Contatto diretto", "In completa sicurezza", "Gratuitamente"],
                   "animation":"fadeInLeft",
                   "animationDelay":"0.4s"
                 }
@@ -397,9 +397,9 @@
                     "twitterLink": "#!",
                     "linkdinLink": "#!",
                     "instagramLink": "#!",
-                    "name": "Satrina Donahu",
-                    "designation": "Programmer",
-                    "image": "assets/images/home1/team/img1.jpg",
+                    "name": "Alessio Butini",
+                    "designation": "Consulente Finanziario",
+                    "image": "assets/images/home1/team/buto.jpg",
                     "animation":"fadeInRight"
                 },
                 {
@@ -539,7 +539,7 @@
                 "title": "Recent Completed Projects",
                 "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tinciunt consectetuer adipiscing elit, sed diam nonummy"
             },
-            "singleProject":  
+            "singleProject":
                 [{
                     "image": "assets/images/home1/project/img1.jpg",
                     "category": "Commercial",
@@ -703,7 +703,7 @@
                     }
                 ]
         },
-        
+
         "client": {
             "sectionHeading": {
                 "subtitle":"Client Testimonials",
@@ -911,7 +911,7 @@
                 "subtitle":"Pricing Plans",
                 "title": "Flexible Pricing Plans",
                 "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tinciunt consectetuer adipiscing elit, sed diam nonummy"
-                
+
             },
             "singlePrice": [
                 {
@@ -943,7 +943,7 @@
                 }
             ]
         },
-      
+
         "mapDescription": {
             "mapLetLng": {
                 "center": {
@@ -986,7 +986,7 @@
         },
         "footer": {
             "background": "assets/images/home1/footer/footer.jpg",
-            
+
             "mainFooter": {
                 "about": {
                     "title": "About",
@@ -1093,7 +1093,7 @@
                 "copyRightFrom": "SITL",
                 "copyRightLink": "sitlbd.com",
                 "bottomPageLink": [
-                    
+
                     {
                         "pageName": "About",
                         "pageLink": "/about"

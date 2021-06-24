@@ -1,44 +1,52 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Col, Row, Container } from "react-bootstrap";
 import { Select, TextField } from "@material-ui/core";
-import { RequestContext } from "../context/RequestContext";
-import FormGroup from "@material-ui/core/FormGroup";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
-import CheckBoxOutlineBlankIcon from "@material-ui/icons/CheckBoxOutlineBlank";
-import TrendingUpIcon from "@material-ui/icons/TrendingUp";
+import { storage } from "../firebase";
+import Button from "@material-ui/core/Button";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import PhotoCamera from "@material-ui/icons/PhotoCamera";
+import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 import { ConsultantContext } from "../context/ConsultantContext";
-import CheckBoxIcon from "@material-ui/icons/CheckBox";
-import Favorite from "@material-ui/icons/Favorite";
-import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
-import AccountBalanceWalletIcon from "@material-ui/icons/AccountBalanceWallet";
-import AccountBalanceIcon from "@material-ui/icons/AccountBalance";
-import HomeIcon from "@material-ui/icons/Home";
-import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
-import DirectionsWalkIcon from "@material-ui/icons/DirectionsWalk";
-import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
+import UploadCert from "../components/section-components/UploadCert";
+
 import Autocomplete from "@material-ui/lab/Autocomplete";
 export default function Step2() {
   const [request, setRequest] = useContext(ConsultantContext);
 
-  const handleInvestire = (value) => {
+  const [progress, setProgress] = useState(0);
+
+  function handleBanca(e, value) {
     let newState = Object.assign({}, request);
-    if (request.investire == false) {
-      newState.investire = true;
-    } else {
-      newState.investire = false;
-    }
+    newState.banca = value;
     setRequest(newState);
-  };
+  }
+  function handlePatrimonio(e) {
+    let newState = Object.assign({}, request);
+    newState.patrimonio = e.target.value;
+    setRequest(newState);
+  }
+  function handleSpecializzazione(e) {
+    let newState = Object.assign({}, request);
+    newState.specializzazione = e.target.value;
+    setRequest(newState);
+  }
+  function handleEsperienza(e) {
+    let newState = Object.assign({}, request);
+    newState.esperienza = e.target.value;
+    setRequest(newState);
+  }
 
   return (
-    <Row>
-      <Col sm="6" className="mt-4 center" style={{ flexDirection: "row" }}>
-        <div className="ml-4 mr-4" style={{ height: "100%" }}>
-          <h4>Per quale banca lavori ?</h4>
+    <Container>
+      <Row>
+        <Col md="6" sm="12" className="mt-4 ">
+          <h5 className=" center ">Per quale intermediario lavori ?</h5>
           <Autocomplete
             id="free-solo-demo"
             options={banche.map((option) => option)}
+            freeSolo
+            value={request.banca}
+            onChange={handleBanca}
             renderInput={(params) => (
               <TextField
                 {...params}
@@ -48,15 +56,222 @@ export default function Step2() {
               />
             )}
           />
-        </div>
-      </Col>
+        </Col>
+        <Col md="6" sm="12" className="mt-4 center">
+          <h5>Quanti anni hai di esperienza ?</h5>
+          <TextField
+            value={request.esperienza}
+            onChange={handleEsperienza}
+            type="number"
+            variant="outlined"
+            style={{ width: "80%", textAlign: "center" }}
+            required
+            error={
+              request.esperienza == "" ? (request.error ? true : false) : null
+            }
+            helperText={
+              request.esperienza == ""
+                ? request.error
+                  ? "Required"
+                  : null
+                : null
+            }
+            className="mt-3"
+          ></TextField>
+        </Col>
 
-      <Col style={{ marginBottom: 200 }}></Col>
-    </Row>
+        {/*     <UploadCert></UploadCert> */}
+      </Row>
+      <Row>
+        <Col md="6" sm="12" className=" center">
+          <h5>Quale è la tua specializzazione ?</h5>
+          <Select
+            native
+            variant="outlined"
+            value={request.specializzazione}
+            onChange={(value) => handleSpecializzazione(value)}
+            style={{ width: "80%", textAlign: "center" }}
+            className="mt-3"
+            required
+            error={
+              request.specializzazione.length == ""
+                ? request.error
+                  ? true
+                  : false
+                : null
+            }
+            helperText={
+              request.specializzazione.lenght == ""
+                ? request.error
+                  ? "Required"
+                  : null
+                : null
+            }
+          >
+            <option aria-label="None" value="" />
+            <option value={"Assicurativo"}>Assicurativo</option>
+            <option value={"Assicurativo finanziario"}>
+              Assicurativo finanziario
+            </option>
+            <option value={"Finanziario"}>Finanziario</option>
+            <option value={"Pianificazione Pensionistica"}>
+              Pianificazione Pensionistica
+            </option>
+            <option value={"Credito"}>Credito</option>
+            <option value={"Gestione Patrimoniale"}>
+              Gestione Patrimoniale
+            </option>
+          </Select>
+        </Col>
+        <Col md="6" sm="12" className=" center mt-4">
+          <h5>Patrimonio gestito ?</h5>
+
+          <Select
+            native
+            className=" center mt-4"
+            variant="outlined"
+            style={{ width: "80%", textAlign: "center" }}
+            value={request.patrimonio}
+            onChange={handlePatrimonio}
+            required
+            error={
+              request.patrimonio == "" ? (request.error ? true : false) : null
+            }
+            helperText={
+              request.patrimonio == ""
+                ? request.error
+                  ? "Required"
+                  : null
+                : null
+            }
+          >
+            <option aria-label="None" value="" />
+
+            <option value={"8.000-16.000"}>Tra 8.000 e 16.000 euro</option>
+            <option value={"16.000-32.000"}>Tra 16.000 e 32.000 euro</option>
+            <option value={"32.000 - 64.000"}>Tra 32.000 e 64.000 euro</option>
+            <option value={"64.000 - 120000"}>Tra 64.000 e 120.000 euro</option>
+            <option value={"120.000 - 240.000"}>
+              Tra 120.000 e 240.000 euro
+            </option>
+            <option value={"240.000 - 580.000"}>
+              Tra 240.000 e 580.000 euro
+            </option>
+            <option value={"580.000 - 1.000.000"}>
+              Tra 580.000 e 1.000.000 euro
+            </option>
+            <option value={"1.000.000 - 2.000.000"}>
+              Tra 1.000.000 e 2.000.000 euro
+            </option>
+            <option value={"2.000.000 - 10.000.000"}>
+              Tra 2.000.000 e 10.000.000 euro
+            </option>
+            <option value={"10.000.000 - 50.000.000"}>
+              Tra 10.000.000 e 50.000.000 euro
+            </option>
+            <option value={"10.000.000 - 50.000.000"}>
+              Tra 50.000.000 e 100.000.000 euro
+            </option>
+            <option value={"Oltre i 100.000.000"}>
+              Oltre i 100.000.000 euro
+            </option>
+          </Select>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
 var banche = [
+  "Autonomo",
+  "24hAssistence",
+  "Adir Assicurazioni Roma",
+  "Admiral Insurance",
+  "AIG Direct",
+  "Ala Assicurazioni",
+  "Alleanza Assicurazioni",
+  "Allianz",
+  "Allianz Direct",
+  "Alliance Global Assistance",
+  "Amissima Assicurazioni",
+  "AmTrust",
+  "ARAG Assicurazioni",
+  "Arca Assicurazioni",
+  "Ariscom",
+  "Assicuratrice Milanese",
+  "Assimoco Assicurazioni",
+  "Assistenza Casa",
+  "Assur'O'Poil",
+  "Augusta Assicurazioni",
+  "Aurora Assicurazioni",
+  "Aviva",
+  "Axa Assicurazioni",
+  "Axa Assistance",
+  "Axieme",
+  "BCC Assicurazioni",
+  "Ben Assicura",
+  "Bene Assicurazioni",
+  "Cattolica Assicurazioni",
+  "CF Assicurazioni",
+  "Columbus Assicurazioni",
+  "ConTe.it",
+  "Coverwise",
+  "Credemassicurazioni",
+  "Credìt Agricole Assicurazioni",
+  "Dallbogg assicurazioni",
+  "Darag",
+  "Das Assicurazioni",
+  "ERV Italia",
+  "Europ Assistance",
+  "Eurovita assicurazioni",
+  "Fata assicurazioni",
+  "Fideuram assicurazioni",
+  "Generali Italia",
+  "Genetrel",
+  "Genetrellife",
+  "GenialClick",
+  "GenialLife",
+  "GlobalAssistance",
+  "Groupama",
+  "HDI Assicurazioni",
+  "Helvetia Assicurazioni",
+  "Holins",
+  "IMA Italia Assistance",
+  "Intesa Sanpaolo Assicura",
+  "Intesa Sanpaolo RBM Assicura",
+  "Italiana Assicurazioni",
+  "Itas Assicurazioni",
+  "Linear Assicurazioni",
+  "Lloyd's",
+  "MetLife",
+  "Nationale Suisse",
+  "Net Insurance Life",
+  "Nobis Assicurazioni",
+  "Old Mutual Wealth Italy",
+  "Poste assicura",
+  "Prima.it",
+  "Quixa",
+  "Reale Mutua Assicurazioni",
+  "Royal Sun Assicurazioni",
+  "Sara Assicurazioni",
+  "Systema Compagnia Assicurazioni",
+  "Tokio Marine HCC",
+  "Toro Assicurazioni",
+  "Tua Assicurazioni",
+  "UBI assicurazioni",
+  "UCA assicurazioni",
+  "UnipolSai Assicurazioni",
+  "UNIQA Assicurazioni",
+  "VAlpiave assicurazioni",
+  "Vera Assicurazioni",
+  "Verte Assicurazioni",
+  "Vite Assicurazioni",
+  "Vittoria Assicurazioni",
+  "ViteSicure",
+  "Yolo Assicurazioni",
+  "Zurich",
+  "Zurich Connect",
+
   "Intesa Sanpaolo",
   "Unicredit",
   "BPER Banca",

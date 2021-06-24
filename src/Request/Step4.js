@@ -20,9 +20,9 @@ export default function Step4() {
     newState.arcoTemporale = value.target.value;
     setRequest(newState);
   };
-  const handleRischio = (value) => {
+  const handleRischio = (event, value) => {
     let newState = Object.assign({}, request);
-    newState.rischio = value.target.value;
+    newState.rischio = value;
     setRequest(newState);
   };
   const marks = [
@@ -56,7 +56,7 @@ export default function Step4() {
       <Container>
         <Row>
           <Col md="12" sm="12" className="mt-4 center">
-            <h3>Quale è il tuo orizzonte temporale ? </h3>
+            <h5>Quale è il tuo orizzonte temporale ? </h5>
 
             <Select
               native
@@ -88,9 +88,9 @@ export default function Step4() {
             </Select>
           </Col>
           <Col md="12" sm="12" className="mt-4 center">
-            <h3 className="mb-4">Quale è la tua prepenzione al rischio?</h3>
+            <h5 className="mb-4">Quale è la tua prepenzione al rischio?</h5>
             <Slider
-              defaultValue={request.rischio}
+              value={request.rischio}
               aria-labelledby="discrete-slider-always"
               step={25}
               marks={marks}

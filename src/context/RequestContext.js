@@ -8,6 +8,8 @@ export const RequestProvider = (props) => {
     importoV: false,
     importo: 0,
     investire: false,
+    nome: "",
+    cognome: "",
     risparmiare: false,
     mutuo: false,
     finanziamento: false,

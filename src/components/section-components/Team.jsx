@@ -12,11 +12,11 @@ import {Link} from 'react-router-dom'
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-8 offset-lg-2">
-                            <SectionTitle subtitle ={data.sectionHeading.subtitle} title={data.sectionHeading.title} titleContent={data.sectionHeading.content}/>
-                            </div>
+{/*                             <SectionTitle subtitle ={data.sectionHeading.subtitle} title={data.sectionHeading.title} titleContent={data.sectionHeading.content}/>
+ */}                            </div>
                             <div className="col-lg-12">
                                 <div className="row justify-content-center">
-                       
+
                                     {data.member.slice(0, (window.location.pathname === "/team" ? 6 : 3) ).map((item, i)=>{
                                         return (
                                             <div className={`col-lg-4 col-md-6 wow  ${item.animation}`} data-wow-duration="1.5s" data-wow-delay=".4s" key={i}>
@@ -59,6 +59,5 @@ import {Link} from 'react-router-dom'
          </div>
      );
  }
- 
+
  export default Team;
- 

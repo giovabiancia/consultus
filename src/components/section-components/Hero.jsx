@@ -13,12 +13,13 @@ function Hero (props){
     return(
         <>
         {/* <!-- start banner area --> */}
-        <section className="banner" style={{background:`url(${publicUrl + data.background})`}}>
+        <section className="banner" style={{background:`url(${publicUrl + data.background})`,backgroundSize: "cover"}}>
+            <div id="overlay"></div>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8">
                         <div className="banner-text wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                            <p>{data.subtitle}</p>
+                            {/* <p>{data.subtitle}</p> */}
                             <h1>{data.title}</h1>
                             <p>
                                 {data.content}
