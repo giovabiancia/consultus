@@ -106,10 +106,12 @@ export default function Step3() {
         </Col>
         <Col className="mt-4  center" lg="6" sm="12">
           <h5 className="mb-4 center ">Le tue principali competenze</h5>
+
           <Autocomplete
             multiple
             id="checkboxes-tags-demo"
             options={top100Films}
+            style={{ width: "100%" }}
             value={request.competenze}
             disableCloseOnSelect
             onChange={(e, value) => handleCompetenze(value)}
@@ -125,7 +127,6 @@ export default function Step3() {
                 {option.title}
               </React.Fragment>
             )}
-            style={{ width: 500 }}
             renderInput={(params) => (
               <TextField
                 {...params}

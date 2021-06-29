@@ -1,4 +1,5 @@
 import { React } from 'react';
+import { Button } from 'react-bootstrap';
 
 function SectionTitle(props) {
     return (
@@ -7,6 +8,8 @@ function SectionTitle(props) {
             <h6>{props.subtitle}</h6>
             <h2>{props.title}</h2>
             <p>{props.titleContent}</p>
+
+
         </div>
         </>
     )

@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
-import SingleMemberInfo from './SingleMember';
-import { sectionData } from './../../data/section.json';
+import SingleMemberInfo from './SingleMemberv2';
+import { sectionData } from '../../data/section.json';
 import { useAuthentication } from '../../hooks/useAuthentication';
 import { ProfileContext } from '../../context/ProfileContext';
 import AssessmentIcon from '@material-ui/icons/Assessment';
@@ -14,10 +14,10 @@ import FindInPageIcon from '@material-ui/icons/FindInPage';
 import TimelineIcon from '@material-ui/icons/TrendingUp';
 import AccountBalanceWalletIcon from '@material-ui/icons/AccountBalanceWallet';
 import BlogCarousel from "../section-components/BlogCarousel";
-const ComponentProfiloConsulente = () => {
+const Consulente = (props) => {
     let data = sectionData.teamDetails;
     const auth = useAuthentication()
-    const [profilo, setProfilo] = useContext(ProfileContext);
+    const profilo= props.profilo
     const [competenze, setCompetenze]= useState([])
 
     useEffect(() => {
@@ -38,16 +38,14 @@ const ComponentProfiloConsulente = () => {
             <div className="row">
                 <div className="col-lg-4">
                     <SingleMemberInfo profilo={profilo} />
-
-
                 </div>
 
 
                 <div className="col-lg-8">
 
-                    <div className="team-inner ">
+                    <div className="team-inner service-detail">
 
-                        <div className="single-item mt-30 " >
+                        <div className="single-item time mt-30 " >
                             <div className="item-title">
                                 <h4>Su di me</h4>
                             </div>
@@ -229,4 +227,4 @@ const ComponentProfiloConsulente = () => {
     );
 }
 
-export default ComponentProfiloConsulente;
+export default Consulente;

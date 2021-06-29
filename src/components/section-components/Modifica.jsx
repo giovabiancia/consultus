@@ -1,56 +1,204 @@
-import React from 'react';
+import React, {useContext, useState} from 'react';
 import {sectionData} from './../../data/section.json'
 import Autocomplete from "@material-ui/lab/Autocomplete";
-import { Col, Row, Container } from "react-bootstrap";
+import { Col, Row, Container, Button } from "react-bootstrap";
 import CheckBoxOutlineBlankIcon from "@material-ui/icons/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@material-ui/icons/CheckBox";
 import Checkbox from "@material-ui/core/Checkbox";
-import { Select, TextField } from "@material-ui/core";
+import { Avatar, Select, TextField } from "@material-ui/core";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import InputAdornment from "@material-ui/core/InputAdornment";
+import { ProfileContext } from '../../context/ProfileContext';
+import { useEffect } from 'react';
+import MapField from './MapField';
+import { useAuthentication } from '../../hooks/useAuthentication';
+import firebase from '../../firebase'
+import {storage} from '../../firebase'
+import CircularProgress from "@material-ui/core/CircularProgress";
+import PhotoCamera from "@material-ui/icons/PhotoCamera";
+import CloudUploadIcon from "@material-ui/icons/CloudUpload";
+
+
 
 const checkedIcon = <CheckBoxIcon fontSize="small" />;
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
 
 const Modifica = () => {
     let data = sectionData.about;
+    const [profilo, setProfilo] = useContext(ProfileContext);
+    const auth = useAuthentication()
+
+    const [nome, setNome] = useState(profilo.nome)
+    const [cognome, setCognome] = useState(profilo.cognome)
+    const [anni, setAnni] = useState(profilo.anni)
+    const [email, setEmail] = useState(profilo.email)
+    const [esperienza, setEsperienza] = useState(profilo.esperienza)
+    const [specializzazione, setSpecializzazione] = useState(profilo.specializzazione)
+    const [patrimonio, setPatrimonio] = useState(profilo.patrimonio)
+    const [banca, setBanca] = useState(profilo.banca)
+    const [competenze, setCompetenze] = useState(profilo.competenze)
+    const [titoloStudio, setTitoloStudio] = useState(profilo.titoloStudio)
+    const [facebook, setFacebook] = useState(profilo.facebook)
+    const [instagram, setInstagram] = useState(profilo.instagram)
+    const [linkedin, setLinkedin] = useState(profilo.linkedin)
+    const [twitter, setTwitter] = useState(profilo.twitter)
+    const [about, setAbout] = useState(profilo.about)
+    const [indirizzo, setIndirizzo] = useState(profilo.indirizzo)
+    const [file, setFile] = useState()
+    const [fotoUrl, setFotoUrl] = useState(profilo.foto)
+    const [progress, setProgress] = useState(0)
+
+    const sendRequest = (e) => {
+        /*     */
+        e.preventDefault();
+
+        let newConsultant = {
+
+          nome: nome,
+          cognome: cognome,
+          foto: auth.loggedIn.photoURL,
+          credit: [],
+          email: email,
+          anni: anni,
+          patrimonio: patrimonio,
+          titoloStudio: titoloStudio,
+          banca: banca,
+          esperienza: esperienza,
+          specializzazione: specializzazione,
+          competenze: competenze,
+          about: about,
+          facebook: facebook,
+          instagram: instagram,
+          linkedin: linkedin,
+          twitter: twitter,
+          indirizzo: indirizzo,
+
+
+        };
+
+        var db = firebase.firestore();
+
+        db.collection("consulenti").doc(profilo.id).update(newConsultant).then((e)=>{
+            alert("Modifica effettuata");
+
+        }).catch((e)=>{
+            alert(e);
+        })
+
+
+
+      };
+      function handleChange(e) {
+
+       setFile(e.target.files[0])
+
+      }
+      function handleUpload(e) {
+        e.preventDefault();
+        // Get current username
+        var user = firebase.auth().currentUser;
+
+        // Create a Storage Ref w/ username
+        var ref = firebase.storage().ref(user + '/profilePicture/' + file.name);
+
+        const uploadTask = ref.put(file);
+
+
+        uploadTask.on("state_changed", (snapshot) => {
+          var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+
+          setProgress(progress);
+
+          ref.getDownloadURL().then((url) => {
+
+            setFile(null)
+            setFotoUrl(url)
+            const user = firebase.auth().currentUser;
+            var db = firebase.firestore();
+            db.collection("consulenti").doc(profilo.id).update({foto:url}).then((e)=>{
+
+
+            }).catch((e)=>{
+                alert(e);
+            })
+
+            user.updateProfile({
+            photoURL: url
+            }).then(() => {
+            // Update successful
+            // ...
+            }).catch((error) => {
+            // An error occurred
+            alert(error)
+            // ...
+            });
+
+          });
+        });
+      }
+
+
+
     return (
         <>
             {/* <!-- start about area --> */}
             <section className="about p-120 index2">
                 <div className="container">
-                    <Row><Col><h3>Generali</h3></Col></Row>
+                    <Row>
+                        <Col className="center">
+                            <Avatar size="large" variant="rounded" style={{width:100, height: 100
+                            }} src={auth.loggedIn.photoURL}></Avatar>
+                            <input type="file"  accept="image/png, image/gif, image/jpeg" className=" mt-3" onChange={handleChange} >
+
+                            </input>
+                            <CircularProgress variant="determinate" value={progress} />
+                            {file != null ? (
+                                <Button
+                                className="mt-4"
+                                startIcon={<CloudUploadIcon />}
+                                color="primary"
+                                onClick={handleUpload}
+                                >
+                                Upload Now
+                                </Button>
+                            ) : null}
+
+
+
+
+                        </Col>
+                    </Row>
 
                     <div className="row align-items-center">
 
                         <div className="col-md-3 col-sm-12">
 
                                     <h5>Nome</h5>
-                                    <TextField variant="outlined" className="mt-2"></TextField>
+                                    <TextField variant="outlined" className="mt-2" value={nome} onChange={(e)=>setNome(e.target.value)}></TextField>
                         </div>
 
                         <div className="col-md-3 col-sm-12">
 
 
                                     <h5>Cognome</h5>
-                                    <TextField variant="outlined" className="mt-2"></TextField>
+                                    <TextField variant="outlined" className="mt-2" value={cognome} onChange={(e)=>setCognome(e.target.value)}></TextField>
 
                         </div>
                         <div className="col-md-3 col-sm-12">
 
 
                                     <h5>Età</h5>
-                                    <TextField variant="outlined" className="mt-2"></TextField>
+                                    <TextField variant="outlined" className="mt-2" value={anni} onChange={(e)=>setAnni(e.target.value)}></TextField>
 
                         </div>
                         <div className="col-md-3 col-sm-12">
 
 
                                     <h5>Email</h5>
-                                    <TextField variant="outlined" className="mt-2"></TextField>
+                                    <TextField variant="outlined" className="mt-2" value={email} onChange={(e)=>setEmail(e.target.value)}></TextField>
 
                         </div>
                         </div>
@@ -63,6 +211,7 @@ const Modifica = () => {
                         <div className="col-md-4 col-sm-12 mt-4 ">
                             <h5>Quanti anni hai di esperienza ?</h5>
                             <TextField
+                            value={esperienza} onChange={(e)=>setEsperienza(e.target.value)}
 
                                 type="number"
                                 variant="outlined"
@@ -76,6 +225,7 @@ const Modifica = () => {
                         <Select
                             native
                             variant="outlined"
+                            value={specializzazione} onChange={(e)=>setSpecializzazione(e.target.value)}
 
                             style={{  textAlign: "center" }}
                             className="mt-3"
@@ -104,6 +254,7 @@ const Modifica = () => {
                         className=" center mt-4"
                         variant="outlined"
                         style={{ textAlign: "center" }}
+                        value={patrimonio} onChange={(e)=>setPatrimonio(e.target.value)}
 
                         required
 
@@ -150,6 +301,7 @@ const Modifica = () => {
                             id="free-solo-demo"
                             options={banche.map((option) => option)}
                             freeSolo
+                            value={banca} onChange={(e)=>setBanca(e.target.value)}
 
                             renderInput={(params) => (
                             <TextField
@@ -168,7 +320,8 @@ const Modifica = () => {
                             multiple
                             id="checkboxes-tags-demo"
                             options={top100Films}
-
+                            value={competenze}
+                            onChange={(e, value)=>setCompetenze(value)}
                             disableCloseOnSelect
 
                             getOptionLabel={(option) => option.title}
@@ -199,11 +352,13 @@ const Modifica = () => {
                         <Col className="mt-4  " md="4" sm="12">
                             <h5 className="mb-4  ">Zona di operatività</h5>
                             {/* <MapField></MapField> */}
+                          {/*   <MapField></MapField> */}
                         </Col>
                         <Col className="mt-4  " md="4" sm="12">
                             <h5 className="mb-4  ">Titolo di studio</h5>
                         <Select
                             native
+                            value={titoloStudio} onChange={(e)=>setTitoloStudio(e.target.value)}
                             variant="outlined"
                             required
 
@@ -262,6 +417,7 @@ const Modifica = () => {
           <TextField
             id="input-with-icon-textfield"
             label="Facebook"
+            value={facebook} onChange={(e)=>setFacebook(e.target.value)}
 
             variant="outlined"
             InputProps={{
@@ -278,6 +434,7 @@ const Modifica = () => {
                             id="input-with-icon-textfield"
                             label="Instagram"
                             variant="outlined"
+                            value={instagram} onChange={(e)=>setInstagram(e.target.value)}
 
                             InputProps={{
                             startAdornment: (
@@ -293,6 +450,7 @@ const Modifica = () => {
                             id="input-with-icon-textfield"
                             label="LinkedIn"
                             variant="outlined"
+                            value={linkedin} onChange={(e)=>setLinkedin(e.target.value)}
 
                             InputProps={{
                             startAdornment: (
@@ -307,6 +465,7 @@ const Modifica = () => {
           <TextField
             id="input-with-icon-textfield"
             label="Twitter"
+            value={twitter} onChange={(e)=>setTwitter(e.target.value)}
 
             variant="outlined"
             InputProps={{
@@ -325,14 +484,13 @@ const Modifica = () => {
                     <Col className="mt-4 center " md="12" sm="12">
           <h5>Qualcosa su di te e sulla tua esperienza</h5>
           <TextField
-
+             value={about} onChange={(e)=>setAbout(e.target.value)}
             type="text"
             multiline
             rows={5}
             variant="outlined"
             style={{ width: "80%", textAlign: "center" }}
             required
-
             className="mt-3"
           ></TextField>
         </Col>
@@ -340,7 +498,7 @@ const Modifica = () => {
                     <Row>
                         <Col className="center">
                         <button className="btn-style" >
-                    <span>Salva Modifiche</span>
+                    <span onClick={sendRequest}>Salva Modifiche</span>
                     </button>
                         </Col>
                     </Row>

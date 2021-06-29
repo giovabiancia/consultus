@@ -18,7 +18,7 @@ function Hero (props){
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8">
-                        <div className="banner-text wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                        <div className="banner-text " data-wow-duration="1s" data-wow-delay=".3s">
                             {/* <p>{data.subtitle}</p> */}
                             <h1>{data.title}</h1>
                             <p>

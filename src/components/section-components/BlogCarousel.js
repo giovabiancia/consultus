@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import SectionTitle from "../global-components/SectionTitle";
 import { sectionData } from "./../../data/section.json";
@@ -15,8 +16,10 @@ const BlogCarousel = () => {
       >
         <div className="container">
           <div className="row">
-            <div className="col-lg-8 offset-lg-2">
+            <div className="col-lg-12 ">
               <SectionTitle title={"I miei ultimi articoli"} />
+              {/*   solo per consulente profilo */}
+              <Button>Aggiungi</Button>
             </div>
             <div className="col-lg-12">
               <div className="row">
@@ -30,7 +33,7 @@ const BlogCarousel = () => {
                       >
                         <div className="img-part">
                           <img
-                            src={item.image}
+                            src={"/" + item.image}
                             className="img-fluid"
                             alt="Service Img"
                           />

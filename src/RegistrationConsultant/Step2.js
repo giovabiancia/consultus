@@ -45,6 +45,7 @@ export default function Step2() {
             id="free-solo-demo"
             options={banche.map((option) => option)}
             freeSolo
+            style={{ width: "100%" }}
             value={request.banca}
             onChange={handleBanca}
             renderInput={(params) => (

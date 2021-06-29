@@ -24,50 +24,59 @@ import RegistrationConsultant from "../../page/RegistrationConsultant";
 import { ConsultantProvider } from "../../context/ConsultantContext";
 import { ProfileProvider } from "../../context/ProfileContext";
 import UpdateProfile from "../../page/UpdateProfile";
+import { RisultatiProvider } from "../../context/RisultatiContext";
+import ProfiloConsulente from "../../page/ProfiloConsulente";
 
 function AppRoute() {
   return (
     <BrowserRouter>
-      <ProfileProvider>
-        <ConsultantProvider>
-          <ConsultantStepProvider>
-            <RequestProvider>
-              <RegistrationStepProvider>
-                <Switch>
-                  <Route path="/" exact component={Home} />
-                  <Route path="/request" exact component={Request} />
-                  <Route
-                    path="/registrazione-consulente"
-                    exact
-                    component={RegistrationConsultant}
-                  />
-                  <Route path="/home-v2" exact component={HomeV2} />
-                  <Route path="/about" exact component={AboutPage} />
-                  <Route path="/service" exact component={ServicePage} />
-                  <Route
-                    path="/service-details"
-                    exact
-                    component={ServiceDetails}
-                  />
-                  <Route path="/project" exact component={ProjectPage} />
-                  <Route path="/team" exact component={TeamPage} />
-                  <Route path="/risultati" exact component={TeamPage} />
-                  <Route path="/profilo" exact component={ProfiloUtente} />
-                  <Route
-                    path="/modifica-profilo"
-                    exact
-                    component={UpdateProfile}
-                  />
-                  <Route path="/pricing" exact component={PricingPage} />
-                  <Route path="/contact" exact component={ContactPage} />
-                  <Route path="/blog-details" exact component={BlogDetails} />
-                  <Route path="*" exact component={ErrorPage} />
-                </Switch>
-              </RegistrationStepProvider>
-            </RequestProvider>
-          </ConsultantStepProvider>
-        </ConsultantProvider>
-      </ProfileProvider>
+      <RisultatiProvider>
+        <ProfileProvider>
+          <ConsultantProvider>
+            <ConsultantStepProvider>
+              <RequestProvider>
+                <RegistrationStepProvider>
+                  <Switch>
+                    <Route path="/" exact component={Home} />
+                    <Route path="/request" exact component={Request} />
+                    <Route
+                      path="/registrazione-consulente"
+                      exact
+                      component={RegistrationConsultant}
+                    />
+                    <Route path="/home-v2" exact component={HomeV2} />
+                    <Route path="/about" exact component={AboutPage} />
+                    <Route path="/service" exact component={ServicePage} />
+                    <Route
+                      path="/service-details"
+                      exact
+                      component={ServiceDetails}
+                    />
+                    <Route path="/project" exact component={ProjectPage} />
+                    <Route path="/team" exact component={TeamPage} />
+                    <Route path="/risultati" exact component={TeamPage} />
+                    <Route path="/profilo" exact component={ProfiloUtente} />
+                    <Route
+                      path="/consulente/:nome"
+                      exact
+                      component={ProfiloConsulente}
+                    />
+                    <Route
+                      path="/modifica-profilo"
+                      exact
+                      component={UpdateProfile}
+                    />
+                    <Route path="/pricing" exact component={PricingPage} />
+                    <Route path="/contact" exact component={ContactPage} />
+                    <Route path="/blog-details" exact component={BlogDetails} />
+                    <Route path="*" exact component={ErrorPage} />
+                  </Switch>
+                </RegistrationStepProvider>
+              </RequestProvider>
+            </ConsultantStepProvider>
+          </ConsultantProvider>
+        </ProfileProvider>
+      </RisultatiProvider>
     </BrowserRouter>
   );
 }

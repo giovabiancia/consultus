@@ -19,12 +19,12 @@ export default function ButtonSignUp(props) {
 
   function handleClick() {
     var user = firebase.auth().currentUser;
-    if (user) {
+    history.push("/request");
+    /* if (user) {
       history.push("/request");
     } else {
       setLgShow(true);
-      /* ; */
-    }
+    } */
   }
   const checkValues = () => {
     if (name == "") {

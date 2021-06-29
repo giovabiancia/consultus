@@ -14,7 +14,7 @@ export function useAuthentication() {
   }
   function logout() {
     auth.signOut().then(function (error) {
-      console.log("error");
+      alert(error);
     });
   }
   function signInEmail(email, pwd) {
@@ -34,7 +34,7 @@ export function useAuthentication() {
           displayName: name,
         });
       })
-      .catch((error) => console.log(error));
+      .catch((error) => alert(error));
   }
   function fbLogin() {
     auth.signInWithPopup(FacebookProvider);
@@ -50,13 +50,15 @@ export function useAuthentication() {
         }
       },
       function (error) {
-        console.log("error");
+        setError(true);
+        alert(error);
       }
     );
   }, []);
   return {
     login,
     logout,
+    error,
     fbLogin,
     signUpEmail,
     signInEmail,

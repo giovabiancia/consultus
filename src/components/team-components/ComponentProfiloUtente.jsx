@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import SingleMemberInfo from './SingleMember';
-import { sectionData } from './../../data/section.json';
+import { sectionData } from '../../data/section.json';
 import { useAuthentication } from '../../hooks/useAuthentication';
 import { ProfileContext } from '../../context/ProfileContext';
 import AssessmentIcon from '@material-ui/icons/Assessment';
@@ -13,7 +13,7 @@ import ComputerIcon from '@material-ui/icons/Computer';
 import FindInPageIcon from '@material-ui/icons/FindInPage';
 import TimelineIcon from '@material-ui/icons/TrendingUp';
 import AccountBalanceWalletIcon from '@material-ui/icons/AccountBalanceWallet';
-const TeamDetailsInnerv2 = () => {
+const ComponentProfiloUtente = () => {
     let data = sectionData.teamDetails;
     const auth = useAuthentication()
     const [profilo, setProfilo] = useContext(ProfileContext);
@@ -47,4 +47,4 @@ const TeamDetailsInnerv2 = () => {
     );
 }
 
-export default TeamDetailsInnerv2;
+export default ComponentProfiloUtente;
