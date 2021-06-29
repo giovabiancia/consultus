@@ -26,6 +26,7 @@ import { ProfileProvider } from "../../context/ProfileContext";
 import UpdateProfile from "../../page/UpdateProfile";
 import { RisultatiProvider } from "../../context/RisultatiContext";
 import ProfiloConsulente from "../../page/ProfiloConsulente";
+import CreaArticolo from "../../page/CreaArticolo";
 
 function AppRoute() {
   return (
@@ -56,6 +57,11 @@ function AppRoute() {
                     <Route path="/team" exact component={TeamPage} />
                     <Route path="/risultati" exact component={TeamPage} />
                     <Route path="/profilo" exact component={ProfiloUtente} />
+                    <Route
+                      path="/crea-articolo"
+                      exact
+                      component={CreaArticolo}
+                    />
                     <Route
                       path="/consulente/:nome"
                       exact

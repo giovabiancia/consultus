@@ -1,11 +1,15 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import SectionTitle from "../global-components/SectionTitle";
 import { sectionData } from "./../../data/section.json";
 
 const BlogCarousel = () => {
   let data = sectionData.service;
+  const history = useHistory();
+  const handleArticolo = () => {
+    history.push("/crea-articolo");
+  };
   return (
     <div>
       {/* <!-- start service area --> */}
@@ -16,11 +20,17 @@ const BlogCarousel = () => {
       >
         <div className="container">
           <div className="row">
+            <div className="col-12 center">
+              <Button onClick={handleArticolo}>Aggiungi Articolo</Button>
+              <p>!!!Solo se attuale consulente!!!</p>
+            </div>
+          </div>
+          <div className="row">
             <div className="col-lg-12 ">
               <SectionTitle title={"I miei ultimi articoli"} />
               {/*   solo per consulente profilo */}
-              <Button>Aggiungi</Button>
             </div>
+
             <div className="col-lg-12">
               <div className="row">
                 {data.singleService.map((item, i) => {
