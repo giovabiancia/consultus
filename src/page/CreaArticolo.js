@@ -23,6 +23,9 @@ export default function CreaArticolo() {
         <section className="about p-120 index2">
           <Container>
             <Row>
+              <Col></Col>
+            </Row>
+            <Row>
               <Col>
                 <Editor
                   editorState={editorState}
