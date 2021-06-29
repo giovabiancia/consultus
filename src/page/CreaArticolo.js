@@ -10,8 +10,8 @@ import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 export default function CreaArticolo() {
   const [editorState] = useState("");
 
-  const onEditorStateChange = () => {
-    cons;
+  const onEditorStateChange = (e) => {
+    console.log(e);
   };
 
   let data = sectionData.sectionTitle;
