@@ -8,10 +8,10 @@ import { Col, Row, Container, Button } from "react-bootstrap";
 import { Editor } from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 export default function CreaArticolo() {
-  const [editorState] = useState("");
+  const [editorState, setEditorState] = useState("");
 
   const onEditorStateChange = (e) => {
-    console.log(e);
+    setEditorState(e);
   };
 
   let data = sectionData.sectionTitle;

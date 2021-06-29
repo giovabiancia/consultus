@@ -67,7 +67,6 @@ Coordinator: Asif Mahmud
 
 html {
   overflow-x: hidden !important;
-
 }
 body {
   overflow-x: hidden !important;
@@ -22241,3 +22240,10 @@ html[class*="ie"] .dtp-hour-hand {
   z-index: 1000;
 }
 
+.wrapperClassName {
+  border: 2px solid lightgray !important;
+}
+
+.rdw-editor-main {
+  padding: 10px;
+}
