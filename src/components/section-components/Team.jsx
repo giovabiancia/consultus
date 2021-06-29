@@ -1,4 +1,4 @@
- import React, {useContext} from 'react';
+ import React, {useContext, useEffect} from 'react';
  import SectionTitle from '../global-components/SectionTitle';
 import {sectionData} from './../../data/section.json'
 import {Link, useHistory} from 'react-router-dom'
@@ -14,6 +14,9 @@ import { RisultatiContext } from '../../context/RisultatiContext';
             state:item
     })
     }
+    useEffect(() => {
+        consulenti.filter((cons)=>cons.active==true)
+    }, [])
 
 
 
