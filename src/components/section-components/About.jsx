@@ -1,5 +1,11 @@
 import React from 'react';
 import {sectionData} from './../../data/section.json'
+import expert from '../../img/svg/expert.svg'
+import investing from '../../img/svg/investing.svg'
+import location from '../../img/svg/location.svg'
+import mobile from '../../img/svg/mobile.svg'
+import pitch from '../../img/svg/pitch.svg'
+import profile from '../../img/svg/profile.svg'
 
 const About = () => {
     let data = sectionData.about;
@@ -31,26 +37,26 @@ const About = () => {
                                 </div>
                                 <div className="author d-flex align-items-center wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".4s">
                                     <div className="image">
-                                        <img src={data.ceoImage} className="img-fluid" alt="Person" />
+                                        <img src={mobile} className="img-fluid" alt="Person" />
                                     </div>
                                     <div className="name">
                                         <h6>{data.ceoName}</h6>
                                         <p>{data.ceoDesignation}</p>
                                     </div>
                                     <div className="sign">
-                                        <img src={data.ceoSign} className="img-fluid" alt="Signature" />
+                                        <img src={expert} className="img-fluid" alt="Signature" />
                                     </div>
                                 </div>
                             </div>
                             <div className="col-lg-6">
                                 <div className="all-img mt-xs-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".4s">
                                     <div className="bg bg1">
-                                        <img src={data.image1} className="img-fluid" alt="About" />
+                                        <img src={mobile} className="img-fluid" alt="About" />
                                     </div>
                                     <div className="bg bg2">
-                                        <img src={data.image2} className="img-fluid" alt="About" />
+                                        <img src={expert} className="img-fluid" alt="About" />
                                     </div>
-                                    <div className="bg3" style={{background:`url(${publicUrl + data.image3})`,backgroundPosition: "54%"}}>
+                                    <div className="bg3" style={{background:`url(${expert})`,backgroundPosition: "54%"}}>
                                         <span>{data.experienceYears}</span>
                                         <h3>{data.experience}</h3>
                                     </div>

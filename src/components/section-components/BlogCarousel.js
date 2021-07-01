@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Button } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
+import { BlogContext } from "../../context/BlogContext";
+import { ProfileContext } from "../../context/ProfileContext";
+import { useAuthentication } from "../../hooks/useAuthentication";
 import SectionTitle from "../global-components/SectionTitle";
 import { sectionData } from "./../../data/section.json";
 
 const BlogCarousel = () => {
   let data = sectionData.service;
   const history = useHistory();
+  const [profilo, setProfilo] = useContext(ProfileContext);
+  const [blog, setBlog] = useContext(BlogContext);
+  const auth = useAuthentication();
+
   const handleArticolo = () => {
     history.push("/crea-articolo");
+    console.log(blog);
   };
   return (
     <div>
@@ -19,12 +27,14 @@ const BlogCarousel = () => {
         }`}
       >
         <div className="container">
-          <div className="row">
-            <div className="col-12 center">
-              <Button onClick={handleArticolo}>Aggiungi Articolo</Button>
-              <p>!!!Solo se attuale consulente!!!</p>
+          {profilo.uid == auth.loggedIn.uid ? (
+            <div className="row">
+              <div className="col-12 center">
+                <Button onClick={handleArticolo}>Aggiungi Articolo</Button>
+              </div>
             </div>
-          </div>
+          ) : null}
+
           <div className="row">
             <div className="col-lg-12 ">
               <SectionTitle title={"I miei ultimi articoli"} />
@@ -33,7 +43,7 @@ const BlogCarousel = () => {
 
             <div className="col-lg-12">
               <div className="row">
-                {data.singleService.map((item, i) => {
+                {blog.map((item, i) => {
                   return (
                     <div className="col-lg-4 col-md-6" key={i}>
                       <div
@@ -43,19 +53,29 @@ const BlogCarousel = () => {
                       >
                         <div className="img-part">
                           <img
-                            src={"/" + item.image}
+                            src={item.immagine}
                             className="img-fluid"
                             alt="Service Img"
                           />
                         </div>
                         <div className="content">
                           <div className="icon">
-                            <i className={item.icon}></i>
+                            <img
+                              src={item.immagineConsulente}
+                              className="avatar"
+                              style={{ marginLeft: 0 }}
+                            ></img>
                           </div>
-                          <h4>{item.title}</h4>
-                          <p>{item.content}</p>
-                          <Link to="/service-details">
-                            View Details{" "}
+                          <p>By {item.nomeConsulente}</p>
+                          <h4>{item.nome}</h4>
+
+                          <Link
+                            to={{
+                              pathname: "blog-details/" + item.nome,
+                              state: { dati: item },
+                            }}
+                          >
+                            Leggi articolo{" "}
                             <i className="fas fa-long-arrow-alt-right"></i>
                           </Link>
                         </div>

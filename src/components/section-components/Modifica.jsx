@@ -102,7 +102,7 @@ const Modifica = () => {
         var user = firebase.auth().currentUser;
 
         // Create a Storage Ref w/ username
-        var ref = firebase.storage().ref(user + '/profilePicture/' + file.name);
+        var ref = firebase.storage().ref(user.displayName + '/profilePicture/' + file.name);
 
         const uploadTask = ref.put(file);
 

@@ -16,6 +16,7 @@ import { RisultatiContext } from '../../context/RisultatiContext';
     }
     useEffect(() => {
         consulenti.filter((cons)=>cons.active==true)
+        console.log(consulenti)
     }, [])
 
 

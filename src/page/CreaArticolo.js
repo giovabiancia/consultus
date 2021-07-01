@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Component, useContext } from "react";
 import HeaderV3 from "../components/section-components/Header-v4";
 import Layouts from "../components/global-components/Layouts";
 import { sectionData } from "../data/section.json";
@@ -6,27 +6,152 @@ import AboutV2 from "../components/section-components/About-v2";
 import Modifica from "../components/section-components/Modifica";
 import { Col, Row, Container, Button } from "react-bootstrap";
 import { Editor } from "react-draft-wysiwyg";
+import { convertToRaw, EditorState } from "draft-js";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import { TextField, Divider } from "@material-ui/core";
+import { stateToHTML } from "draft-js-export-html";
+import { draftToHtml } from "draftjs-to-html";
+import CloudUploadIcon from "@material-ui/icons/CloudUpload";
+import firebase from "../firebase";
+
+import LinearProgress from "@material-ui/core/LinearProgress";
+import { ProfileContext } from "../context/ProfileContext";
+import { useAuthentication } from "../hooks/useAuthentication";
 export default function CreaArticolo() {
   const [editorState, setEditorState] = useState("");
+  const [html, setHtml] = useState("");
+  const [titolo, setTitolo] = useState("");
+  const [progress, setProgress] = useState(0);
+  const [file, setFile] = useState();
+  const [error, setError] = useState(false);
+  const [fotoURL, setFotoUrl] = useState("");
+  const [profilo, setProfilo] = useContext(ProfileContext);
+  const auth = useAuthentication();
 
   const onEditorStateChange = (e) => {
     setEditorState(e);
+
+    let htmls = stateToHTML(e.getCurrentContent());
+    setHtml(htmls);
   };
+
+  const handleSave = (e) => {
+    if (titolo !== "" && html !== "" && file !== null) {
+      // carico la foto
+
+      const uid = firebase.auth().currentUser.uid;
+      var db = firebase.firestore();
+      db.collection("blog").add({
+        nome: titolo,
+        contenuto: html,
+        immagineConsulente: auth.loggedIn.photoURL,
+        nomeConsulente: auth.loggedIn.displayName,
+        bancaConsulente: profilo.banca,
+        instagramConsulente: profilo.instagram,
+        facebookConsulente: profilo.facebook,
+        linkedinConsulente: profilo.linkedin,
+        specializzazioneConsulente: profilo.specializzazione,
+        immagine: fotoURL,
+        idConsulente: profilo.uid,
+      });
+
+      alert("salvataggio effettuato");
+    } else if (html == "") {
+      alert("Inserisci un corpo");
+    } else {
+      alert("Completa tutti i campi");
+    }
+    setError(false);
+  };
+  function handleUpload(e) {
+    e.preventDefault();
+    if (titolo == "") {
+      setError(true);
+    } else {
+      var user = firebase.auth().currentUser;
+      var ref = firebase
+        .storage()
+        .ref("/blog/" + user.displayName + "/" + titolo + "/" + file);
+      const uploadTask = ref.put(file);
+      uploadTask.on("state_changed", (snapshot) => {
+        var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+
+        setProgress(progress);
+
+        ref.getDownloadURL().then((url) => {
+          setFotoUrl(url);
+        });
+      });
+    }
+
+    // Get current username
+  }
 
   let data = sectionData.sectionTitle;
   return (
     <>
-      <p> Ciao</p>
       <Layouts pageTitle="Team Details">
         <HeaderV3 background={data.teamDetails.background} />
-        <section className="about p-120 index2">
-          <Container>
+        <section className="about p-120 index2 ">
+          <Container fluid>
             <Row>
-              <Col></Col>
-            </Row>
-            <Row>
-              <Col>
+              <Col className="flex-start" md="4">
+                <TextField
+                  className="mt-4"
+                  variant="outlined"
+                  label="titolo articolo"
+                  style={{ width: "80%" }}
+                  error={error}
+                  InputProps={{
+                    style: {
+                      fontSize: "25px",
+                    },
+                  }}
+                  fontSize={30}
+                  onChange={(e) => setTitolo(e.target.value)}
+                ></TextField>
+                <div className="mt-4">
+                  <h5>Carica Immagine articolo</h5>
+                  <img
+                    className="img-fluid"
+                    src={fotoURL}
+                    style={{
+                      border: "1px solid lightgray",
+                      margin: 10,
+                      maxWidth: 300,
+                      maxHeight: 300,
+                      objectFit: "cover",
+                    }}
+                  ></img>
+                  <br></br>
+                  <input
+                    type="file"
+                    className="mt-3"
+                    accept="image/png, image/gif, image/jpeg"
+                    onChange={(e) => setFile(e.target.files[0])}
+                  ></input>{" "}
+                  <br></br>
+                  <LinearProgress
+                    className="mt-3"
+                    variant="determinate"
+                    value={progress}
+                  />
+                </div>
+
+                {file != null ? (
+                  <Button
+                    className="mt-4"
+                    startIcon={<CloudUploadIcon />}
+                    color="primary"
+                    onClick={handleUpload}
+                  >
+                    Upload Now
+                  </Button>
+                ) : null}
+              </Col>
+              <Col md="8">
+                <div className="mb-4" />
+
                 <Editor
                   editorState={editorState}
                   toolbarClassName="toolbarClassName"
@@ -36,6 +161,16 @@ export default function CreaArticolo() {
                 />
               </Col>
             </Row>
+            <Row></Row>
+            <div className=" bottomBar section ">
+              <button
+                className="button button-primary ml-4"
+                onClick={handleSave}
+              >
+                {" "}
+                salva
+              </button>
+            </div>
           </Container>
         </section>
 
