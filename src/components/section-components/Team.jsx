@@ -3,6 +3,7 @@
 import {sectionData} from './../../data/section.json'
 import {Link, useHistory} from 'react-router-dom'
 import { RisultatiContext } from '../../context/RisultatiContext';
+import Grow from '@material-ui/core/Grow';
 
  const Team = () => {
     let data = sectionData.team;
@@ -36,6 +37,7 @@ import { RisultatiContext } from '../../context/RisultatiContext';
                                     {consulenti.map((item, i)=>{
                                         return (
                                             <div className="col-lg-4 col-md-6 wow cardMargin" style={{cursor:'pointer'}} data-wow-duration="1.5s" data-wow-delay=".4s" key={i}>
+                                                <Grow in timeout={1000}>
                                                 <div className="item" onClick={()=>handleLink(item)}>
                                                     <div className="image">
                                                         <img src={item.foto} className="img-fluid" alt="Team Member" />
@@ -63,6 +65,7 @@ import { RisultatiContext } from '../../context/RisultatiContext';
                                                         </div>
                                                     </div>
                                                 </div>
+                                                </Grow>
                                             </div>
                                         )
                                     })}

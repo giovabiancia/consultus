@@ -67,14 +67,18 @@ const NavigationMenu = () => {
                                             <li><Link to="/home-v2">home 2</Link></li>
                                         </ul> */}
                                     </li>
-                                    <li><Link to="/about">about</Link></li>
+                                    <li><Link to="/about">Su di noi</Link></li>
                                     <li>
-                                        <Link to="/service">service</Link>
+                                        <Link to="/service">servizio</Link>
+
+                                    </li>
+                                    <li>
+                                        <Link to="/blog">blog</Link>
 
                                     </li>
 
-                                    <li><Link to="/project">project</Link></li>
-                                    <li><Link to="/contact">contact</Link></li>
+                                    <li><Link to="/project">consulenti</Link></li>
+                                    <li><Link to="/contact">contatti</Link></li>
                                     <li>
                                     <Link to="/profilo" style={{cursor:"pointer"}}>{auth.loggedIn ? <Avatar alt="Remy Sharp" src={auth.loggedIn.photoURL ? auth.loggedIn.photoURL: businessman} />:null}
                                     </Link>

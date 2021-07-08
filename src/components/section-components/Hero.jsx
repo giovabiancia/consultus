@@ -1,7 +1,7 @@
 import React,{ useState } from 'react';
 import ModalVideo from 'react-modal-video';
 import 'react-modal-video/css/modal-video.min.css';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import ButtonSignUp from '../ButtonSignUp';
 import ButtonConsultant from '../ButtonConsultant';
 import { sectionData } from './../../data/section.json';
@@ -10,6 +10,12 @@ function Hero (props){
     const [isOpen, setOpen] = useState(false)
     let data = sectionData.banner;
     let publicUrl = process.env.PUBLIC_URL+'/'
+
+    const history = useHistory()
+
+    const handleClick =()=>{
+        history.push('/registrazione-consulente')
+    }
     return(
         <>
         {/* <!-- start banner area --> */}
@@ -28,7 +34,10 @@ function Hero (props){
                                 <li>
                                     {/* <Link to="/about" className="btn-style"><span>about us hei </span></Link> */}
                                     <ButtonSignUp></ButtonSignUp>
-                                    <ButtonConsultant></ButtonConsultant>
+                                    <button className="btn-style mt-4" onClick={handleClick}>
+        <span>consulente?</span>
+      </button>
+                                {/*     <ButtonConsultant></ButtonConsultant> */}
 
                                 </li>
                                 <li>

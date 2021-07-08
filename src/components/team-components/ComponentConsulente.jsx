@@ -45,7 +45,7 @@ const Consulente = (props) => {
         <>
                 {/* <!-- start team details area --> */}
     <section className="team-detail pt-120">
-        <div className="container mt-4">
+        <div className="container mt-4 pb-90 ">
             <div className="row">
                 <div className="col-lg-4">
                     <SingleMemberInfo profilo={props.profilo} />
@@ -66,35 +66,35 @@ const Consulente = (props) => {
 
                         </div>
 
-                        <div className="single-item time mt-30 " >
+                        <div className="single-item  mt-30 " >
                             <div className="item-title">
                                 <h4>Su di me</h4>
                             </div>
                             <div className="row">
-                                <div className="col-md-4 col-sm-6">
+                                <div className="col-md-4 ">
                                     <h6>Società 🏦</h6>
                                     <p>{profilo.banca}</p>
                                 </div>
-                                <div className="col-md-4 col-sm-6">
+                                <div className="col-md-4 ">
                                     <h6>Capitale Gestito 💰</h6>
                                     <p> € {profilo.patrimonio}</p>
                                 </div>
-                                <div className="col-md-4 col-sm-6">
+                                <div className="col-md-4 ">
                                     <h6>Dove Opero 📍 </h6>
                                     <p> {profilo.indirizzo}</p>
                                 </div>
                             </div>
                             <div className="row">
-                                <div className="col-md-4 col-sm-6">
+                                <div className="col-md-4 ">
                                     <h6>Titolo di studio 🎓</h6>
                                     <p>{profilo.titoloStudio}</p>
                                 </div>
-                                <div className="col-md-4 col-sm-6">
+                                <div className="col-md-4 ">
                                     <h6>Età
 👨</h6>
                                     <p>{profilo.anni} anni</p>
                                 </div>
-                                <div className="col-md-4 col-sm-6">
+                                <div className="col-md-4 ">
                                     <h6>Anni di esperienza
 ⌛</h6>
                                     <p> {profilo.esperienza} anni</p>

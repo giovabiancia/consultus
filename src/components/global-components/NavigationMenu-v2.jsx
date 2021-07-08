@@ -21,26 +21,30 @@ const NavigationMenuV2 = () => {
                     <div className="col-lg-12">
                         <nav className="navbar p-0">
                             <Link className="navbar-brand p-0" to="/">
-                            <img src={data.logo2} style={{width:70}} alt="Logo" />
+                            <img src={data.logo2} style={{width:120}} alt="Logo" />
                             </Link>
                             <div className={`header-menu ml-auto position-static ${menuToggle === true ? 'menuToggle' : ''}`}>
                             <div id="menu-button"  onClick={()=>{setMobileMenuToggle(!mobileMenuToggle)}}><i className="fas fa-bars"></i></div>
                                 <ul className={`menus ${mobileMenuToggle === true ? 'open' : ''}`}>
-                                    <li className="active">
+                                    <li>
                                         <Link to="/">home</Link>
                                        {/*  <ul>
                                             <li><Link to="/">home 1</Link></li>
                                             <li><Link to="/home-v2">home 2</Link></li>
                                         </ul> */}
                                     </li>
-                                    <li><Link to="/about">about</Link></li>
+                                    <li><Link to="/about">su di noi</Link></li>
                                     <li>
                                         <Link to="/service">service</Link>
 
                                     </li>
+                                    <li>
+                                        <Link to="/blog">Blog</Link>
 
-                                    <li><Link to="/project">project</Link></li>
-                                    <li><Link to="/contact">contact</Link></li>
+                                    </li>
+
+                                    <li><Link to="/project">consulenti</Link></li>
+                                    <li><Link to="/contact">contatti</Link></li>
                                     <li>
                                     <Link to="/profilo" style={{cursor:"pointer"}}>{auth.loggedIn ? <Avatar alt="Remy Sharp" src={auth.loggedIn.photoURL ? auth.loggedIn.photoURL: businessman} />:null}
                                     </Link>

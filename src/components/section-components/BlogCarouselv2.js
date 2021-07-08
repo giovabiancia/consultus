@@ -8,7 +8,7 @@ import { useAuthentication } from "../../hooks/useAuthentication";
 import SectionTitle from "../global-components/SectionTitle";
 import { sectionData } from "./../../data/section.json";
 
-const BlogCarousel = (props) => {
+const BlogCarouselv2 = (props) => {
   let data = sectionData.service;
   const history = useHistory();
   const [profilo, setProfilo] = useContext(ProfileContext);
@@ -23,11 +23,6 @@ const BlogCarousel = (props) => {
     console.log(blog);
   };
 
-  useEffect(() => {
-    const filter = blog.filter((cons) => cons.idConsulente == consulente.uid);
-    setFileteredBlog(filter);
-  }, [blog, props]);
-
   return (
     <div>
       {/* <!-- start service area --> */}
@@ -37,24 +32,11 @@ const BlogCarousel = (props) => {
         }`}
       >
         <div className="container">
-          {profilo.uid && profilo.uid == consulente.uid ? (
+          {blog.length > 0 ? (
             <div className="row">
-              <div className="col-12 center">
-                <Button onClick={handleArticolo}>Aggiungi Articolo</Button>
-              </div>
-            </div>
-          ) : null}
-
-          {filteredBlog.length > 0 ? (
-            <div className="row">
-              <div className="col-lg-12 ">
-                <SectionTitle title={"I miei ultimi articoli"} />
-                {/*   solo per consulente profilo */}
-              </div>
-
               <div className="col-lg-12">
                 <div className="row">
-                  {filteredBlog.map((item, i) => {
+                  {blog.map((item, i) => {
                     return (
                       <div className="col-lg-4 col-md-6" key={i}>
                         <Link
@@ -105,4 +87,4 @@ const BlogCarousel = (props) => {
   );
 };
 
-export default BlogCarousel;
+export default BlogCarouselv2;

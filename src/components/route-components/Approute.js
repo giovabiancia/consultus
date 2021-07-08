@@ -29,8 +29,13 @@ import ProfiloConsulente from "../../page/ProfiloConsulente";
 import CreaArticolo from "../../page/CreaArticolo";
 import { BlogProvider } from "../../context/BlogContext";
 import ModificaArticolo from "../../page/ModificaArticolo";
+import SignUp from "../../page/SignUp";
+import { useAuthentication } from "../../hooks/useAuthentication";
+import BlogPage from "../../page/BlogPage";
 
 function AppRoute() {
+  const auth = useAuthentication();
+
   return (
     <BrowserRouter>
       <BlogProvider>
@@ -43,10 +48,13 @@ function AppRoute() {
                     <Switch>
                       <Route path="/" exact component={Home} />
                       <Route path="/request" exact component={Request} />
+                      <Route path="/iscriviti" exact component={SignUp} />
                       <Route
                         path="/registrazione-consulente"
                         exact
-                        component={RegistrationConsultant}
+                        component={
+                          auth.loggedIn ? RegistrationConsultant : SignUp
+                        }
                       />
                       <Route path="/home-v2" exact component={HomeV2} />
                       <Route path="/about" exact component={AboutPage} />
@@ -57,6 +65,7 @@ function AppRoute() {
                         component={ServiceDetails}
                       />
                       <Route path="/project" exact component={ProjectPage} />
+                      <Route path="/blog" exact component={BlogPage} />
                       <Route path="/team" exact component={TeamPage} />
                       <Route path="/risultati" exact component={TeamPage} />
                       <Route path="/profilo" exact component={ProfiloUtente} />

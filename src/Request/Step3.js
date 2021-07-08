@@ -205,7 +205,8 @@ export default function Step3() {
             <Select
               native
               variant="outlined"
-              style={{ width: "80%", textAlign: "center" }}
+              style={{ width: "80%", textAlign: "center", marginTop: 30 }}
+              className="mt-3"
               value={request.importoFinanziamento}
               onChange={(value) => handleImportoFinanziamento(value)}
               required

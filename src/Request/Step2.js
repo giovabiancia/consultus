@@ -77,10 +77,16 @@ export default function Step2() {
   return (
     <Container>
       <Row>
-        <Col sm="12" className="center">
+        <Col sm="12" className="center mb-4">
           <h5>Quale è il tuo obiettivo ?</h5>
+          <small>Scelta multipla</small>
         </Col>
-        <Col sm="6" xs="6" className="center" style={{ flexDirection: "row" }}>
+        <Col
+          sm="6"
+          xs="6"
+          className="center mt-3"
+          style={{ flexDirection: "row" }}
+        >
           <div className="ml-4 mr-4">
             <FormControlLabel
               control={

@@ -75,9 +75,9 @@ export default function UploadCert(props) {
           <CircularProgress variant="determinate" value={request.progress} />
           {request.file != null ? (
             <Button
-              className="mt-4"
+              className="mt-4 "
               startIcon={<CloudUploadIcon />}
-              color="primary"
+              color="secondary"
               onClick={handleUpload}
             >
               Upload Now
