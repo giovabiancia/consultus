@@ -129,6 +129,7 @@ export default function RegistrationConsultant() {
       uid: auth.loggedIn.uid,
       credit: [],
       articoli: [],
+      views: 0,
       email: request.email,
       certificato: request.certificato,
       anni: request.anni,

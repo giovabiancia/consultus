@@ -15,11 +15,11 @@ const BlogDetails = (props) => {
 
     console.log(props.dati)
 
-    useEffect(() =>{
+     useEffect(() =>{
         consulenti.filter((cons)=> cons.uid == dati.idConsulente)
 
     }
-    )
+     )
 
 
     const history =useHistory()
@@ -35,19 +35,19 @@ const BlogDetails = (props) => {
     return (
         <>
             {/* <!-- start blog details area --> */}
-            <section className="blog-detail pt-120">
+        <section className="blog-detail pt-120">
         <div className="container">
             <div className="row">
                 {/* <!-- start blog detail inner --> */}
                 <div className="col-lg-8 order-1 order-lg-0">
-                    <div className="detail-inner">
-                        <img src={dati.immagine} className="img-fluid wow fadeInUp" alt="Single Blog" data-wow-duration="1.5s" data-wow-delay=".3s" />
+                    <div className="detail-inner ">
+                        <img src={dati.immagine} className="img-fluid wow fadeInUp" style={{maxHeight:300}} alt="Single Blog" data-wow-duration="1.5s" data-wow-delay=".3s" />
                         <h3 className="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">{dati.nome}</h3>
                         <div className="blog-meta media align-items-center wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                            <div className="author media align-items-center">
+                            {/* <div className="author media align-items-center">
                                 <img src={dati.immagineConsulente} className="img-fluid" alt="Author" />
                                 <p>By: {dati.nomeConsulente}</p>
-                            </div>
+                            </div> */}
                             {/* <ul className="meta-list media">
                                 <li className="d-flex align-items-center">
                                     <i className="fas fa-calendar-alt"></i>

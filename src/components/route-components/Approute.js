@@ -28,6 +28,7 @@ import { RisultatiProvider } from "../../context/RisultatiContext";
 import ProfiloConsulente from "../../page/ProfiloConsulente";
 import CreaArticolo from "../../page/CreaArticolo";
 import { BlogProvider } from "../../context/BlogContext";
+import ModificaArticolo from "../../page/ModificaArticolo";
 
 function AppRoute() {
   return (
@@ -67,17 +68,24 @@ function AppRoute() {
                       <Route
                         path="/consulente/:nome"
                         exact
-                        component={ProfiloConsulente}
+                        render={() => {
+                          return <ProfiloConsulente />;
+                        }}
                       />
                       <Route
                         path="/modifica-profilo"
                         exact
                         component={UpdateProfile}
                       />
+                      <Route
+                        path="/modifica-articolo"
+                        exact
+                        component={ModificaArticolo}
+                      />
                       <Route path="/pricing" exact component={PricingPage} />
                       <Route path="/contact" exact component={ContactPage} />
                       <Route
-                        path="/blog-details/:nome"
+                        path="/blog-details/:ome"
                         exact
                         component={BlogDetails}
                       />

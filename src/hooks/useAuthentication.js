@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import firebase from "../firebase";
 
 const auth = firebase.auth();

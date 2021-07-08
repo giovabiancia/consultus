@@ -17,18 +17,29 @@ import BlogCarousel from "../section-components/BlogCarousel";
 const Consulente = (props) => {
     let data = sectionData.teamDetails;
     const auth = useAuthentication()
-    const profilo= props.profilo
+
     const [competenze, setCompetenze]= useState([])
+    let profilo = props.profilo
 
     useEffect(() => {
         let array = []
-        profilo.competenze.map((i)=>{
-            let title = i.title
-            array.push(title)
-        })
-        setCompetenze(array)
 
-    }, [])
+
+        if(typeof profilo.competenze !== "undefined"){
+
+            profilo.competenze.map((i)=>{
+                let title = i.title
+                array.push(title)
+            })
+            setCompetenze(array)
+
+        }
+
+
+      /*  */
+
+    }, [props])
+
 
     return (
         <>
@@ -37,43 +48,55 @@ const Consulente = (props) => {
         <div className="container mt-4">
             <div className="row">
                 <div className="col-lg-4">
-                    <SingleMemberInfo profilo={profilo} />
+                    <SingleMemberInfo profilo={props.profilo} />
                 </div>
 
 
                 <div className="col-lg-8">
 
                     <div className="team-inner service-detail">
+                    <div className="single-item "  style={{marginTop:60}}>
+                            <div className="item-title">
+                                <h4>Profilo Professionale</h4>
+
+                            </div>
+                            <p>
+                                {profilo.about}
+                            </p>
+
+                        </div>
 
                         <div className="single-item time mt-30 " >
                             <div className="item-title">
                                 <h4>Su di me</h4>
                             </div>
                             <div className="row">
-                                <div className="col-4">
-                                    <h6>Società</h6>
+                                <div className="col-md-4 col-sm-6">
+                                    <h6>Società 🏦</h6>
                                     <p>{profilo.banca}</p>
                                 </div>
-                                <div className="col-4">
-                                    <h6>Capitale Gestito</h6>
+                                <div className="col-md-4 col-sm-6">
+                                    <h6>Capitale Gestito 💰</h6>
                                     <p> € {profilo.patrimonio}</p>
                                 </div>
-                                <div className="col-4">
-                                    <h6>Dove Opero</h6>
+                                <div className="col-md-4 col-sm-6">
+                                    <h6>Dove Opero 📍 </h6>
                                     <p> {profilo.indirizzo}</p>
                                 </div>
                             </div>
                             <div className="row">
-                                <div className="col-4">
-                                    <h6>Titolo di studio</h6>
+                                <div className="col-md-4 col-sm-6">
+                                    <h6>Titolo di studio 🎓</h6>
                                     <p>{profilo.titoloStudio}</p>
                                 </div>
-                                <div className="col-4">
-                                    <h6>Età</h6>
+                                <div className="col-md-4 col-sm-6">
+                                    <h6>Età
+👨</h6>
                                     <p>{profilo.anni} anni</p>
                                 </div>
-                                <div className="col-4">
-                                    <h6>Anni di esperienza</h6>
+                                <div className="col-md-4 col-sm-6">
+                                    <h6>Anni di esperienza
+⌛</h6>
                                     <p> {profilo.esperienza} anni</p>
                                 </div>
                             </div>
@@ -160,66 +183,15 @@ const Consulente = (props) => {
                             </div>
 
                         </div>
-                        <div className="single-item "  style={{marginTop:60}}>
-                            <div className="item-title">
-                                <h4>Profilo Professionale</h4>
 
-                            </div>
-                            <p>
-                                {profilo.about}
-                            </p>
 
-                        </div>
-                        <div className="single-item " style={{marginTop:60}}>
-                            <div className="item-title">
-                                <h4>Esperienza e riconoscimenti</h4>
-                            </div>
-                            <table className="table table-responsive" style={{width: "100%"}}>
-                                <thead>
-                                    <tr>
-                                        <th scope="col" style={{width: "25%"}}>
-                                            <p>year</p>
-                                        </th>
-                                        <th scope="col" style={{width: "30%"}}>
-                                            <p>department</p>
-                                        </th>
-                                        <th scope="col" style={{width: "25%"}}>
-                                            <p>position</p>
-                                        </th>
-                                        <th scope="col" style={{width: "20%"}}>
-                                            <p>company</p>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                {data.experienceInfo.singleExp.map((item, i)=>{
-                                        return (
-                                            <tr key={i}>
-                                                <td>
-                                                    <p>{item.year}</p>
-                                                </td>
-                                                <td>
-                                                    <p>{item.department}</p>
-                                                </td>
-                                                <td>
-                                                    <p>{item.position}</p>
-                                                </td>
-                                                <td>
-                                                    <p>{item.company}</p>
-                                                </td>
-                                            </tr>
-                                        )
-                                    })}
-                                </tbody>
-                            </table>
-                        </div>
 
                     </div>
                 </div>
             </div>
 
         </div>
-        <BlogCarousel></BlogCarousel>
+        <BlogCarousel consulente={profilo}></BlogCarousel>
     </section>
     {/* <!-- end team details area --> */}
 

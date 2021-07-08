@@ -37,14 +37,14 @@ const About = () => {
                                 </div>
                                 <div className="author d-flex align-items-center wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".4s">
                                     <div className="image">
-                                        <img src={mobile} className="img-fluid" alt="Person" />
+                                        <img src={data.ceoImage} className="img-fluid" style={{objectFit:'cover'}} alt="Person" />
                                     </div>
                                     <div className="name">
                                         <h6>{data.ceoName}</h6>
                                         <p>{data.ceoDesignation}</p>
                                     </div>
                                     <div className="sign">
-                                        <img src={expert} className="img-fluid" alt="Signature" />
+                                        <img src={data.ceoSign} className="img-fluid" alt="Signature" />
                                     </div>
                                 </div>
                             </div>
@@ -54,9 +54,9 @@ const About = () => {
                                         <img src={mobile} className="img-fluid" alt="About" />
                                     </div>
                                     <div className="bg bg2">
-                                        <img src={expert} className="img-fluid" alt="About" />
+                                        <img src={data.ceoSign} className="img-fluid" alt="About" />
                                     </div>
-                                    <div className="bg3" style={{background:`url(${expert})`,backgroundPosition: "54%"}}>
+                                    <div className="bg3" style={{background:`url(${data.ceoSign})`,backgroundPosition: "54%"}}>
                                         <span>{data.experienceYears}</span>
                                         <h3>{data.experience}</h3>
                                     </div>

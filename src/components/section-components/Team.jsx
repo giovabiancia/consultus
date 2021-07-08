@@ -16,7 +16,7 @@ import { RisultatiContext } from '../../context/RisultatiContext';
     }
     useEffect(() => {
         consulenti.filter((cons)=>cons.active==true)
-        console.log(consulenti)
+
     }, [])
 
 
@@ -30,15 +30,12 @@ import { RisultatiContext } from '../../context/RisultatiContext';
                 <section className={`team p-120 ${window.location.pathname === "/team" ? "team-page" : 3}`}>
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-8 offset-lg-2">
-{/*                             <SectionTitle subtitle ={data.sectionHeading.subtitle} title={data.sectionHeading.title} titleContent={data.sectionHeading.content}/>
- */}                            </div>
-                            <div className="col-lg-12">
-                                <div className="row justify-content-center">
+
+
 
                                     {consulenti.map((item, i)=>{
                                         return (
-                                            <div className="col-lg-4 col-md-6 wow " style={{cursor:'pointer'}} data-wow-duration="1.5s" data-wow-delay=".4s" key={i}>
+                                            <div className="col-lg-4 col-md-6 wow cardMargin" style={{cursor:'pointer'}} data-wow-duration="1.5s" data-wow-delay=".4s" key={i}>
                                                 <div className="item" onClick={()=>handleLink(item)}>
                                                     <div className="image">
                                                         <img src={item.foto} className="img-fluid" alt="Team Member" />
@@ -70,8 +67,7 @@ import { RisultatiContext } from '../../context/RisultatiContext';
                                         )
                                     })}
                                 </div>
-                            </div>
-                        </div>
+
                     </div>
                 </section>
                 {/* <!-- end team area --> */}

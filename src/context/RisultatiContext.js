@@ -20,11 +20,9 @@ export const RisultatiProvider = (props) => {
           id: richiesta.id,
           ...richiesta.data(),
         }));
-        console.log(newRichieste);
 
         setConsulenti(newRichieste);
       });
-    console.log("hey");
 
     return () => firestoreCall?.();
   }, []);

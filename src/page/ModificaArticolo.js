@@ -6,7 +6,13 @@ import AboutV2 from "../components/section-components/About-v2";
 import Modifica from "../components/section-components/Modifica";
 import { Col, Row, Container, Button } from "react-bootstrap";
 import { Editor } from "react-draft-wysiwyg";
-import { convertToRaw, EditorState } from "draft-js";
+import {
+  convertToRaw,
+  EditorState,
+  createFromBlockArray,
+  convertFromHTML,
+  ContentState,
+} from "draft-js";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { TextField, Divider } from "@material-ui/core";
 import { stateToHTML } from "draft-js-export-html";
@@ -18,16 +24,24 @@ import { storage } from "../firebase";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import { ProfileContext } from "../context/ProfileContext";
 import { useAuthentication } from "../hooks/useAuthentication";
-export default function CreaArticolo() {
-  const [editorState, setEditorState] = useState("");
-  const [html, setHtml] = useState("");
-  const [titolo, setTitolo] = useState("");
+export default function ModificaArticolo(props) {
+  const [editorState, setEditorState] = useState(
+    EditorState.createWithContent(
+      ContentState.createFromBlockArray(
+        convertFromHTML(props.location.state.contenuto)
+      )
+    )
+  );
+  const [html, setHtml] = useState(props.location.state.contenuto);
+  const [titolo, setTitolo] = useState(props.location.state.nome);
   const [progress, setProgress] = useState(0);
   const [file, setFile] = useState();
   const [error, setError] = useState(false);
-  const [fotoURL, setFotoUrl] = useState("");
+  const [fotoURL, setFotoUrl] = useState(props.location.state.immagine);
   const [profilo, setProfilo] = useContext(ProfileContext);
   const auth = useAuthentication();
+
+  console.log(props.location.state);
 
   const onEditorStateChange = (e) => {
     setEditorState(e);
@@ -42,7 +56,7 @@ export default function CreaArticolo() {
 
       const uid = firebase.auth().currentUser.uid;
       var db = firebase.firestore();
-      db.collection("blog").add({
+      db.collection("blog").doc(props.location.state.id).update({
         nome: titolo,
         contenuto: html,
         immagineConsulente: auth.loggedIn.photoURL,
@@ -107,6 +121,7 @@ export default function CreaArticolo() {
                   variant="outlined"
                   label="titolo articolo"
                   style={{ width: "80%" }}
+                  value={titolo}
                   error={error}
                   InputProps={{
                     style: {

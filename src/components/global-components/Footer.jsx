@@ -1,10 +1,19 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { sectionData } from './../../data/section.json';
 
 const Footer =()=>{
     let data = sectionData.footer;
     let publicUrl = process.env.PUBLIC_URL+'/'
+    useEffect(() => {
+        let publicUrl = process.env.PUBLIC_URL + "/";
+
+        const minscript = document.createElement("script");
+        minscript.async = true;
+        minscript.src = publicUrl + "assets/js/main.js";
+
+        document.body.appendChild(minscript);
+      }, []);
     return (
         <>
                 {/* <!-- start footer area --> */}

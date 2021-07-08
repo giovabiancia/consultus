@@ -24,6 +24,13 @@ const SingleMemberInfo = (props) => {
           setLgShow(true)
 
       }
+      const consu = ()=>{
+        history.push('/registrazione-consulente')
+    }
+    const logout = ()=>{
+        history.push('/')
+        auth.logout()
+    }
 
 
 
@@ -68,7 +75,7 @@ const SingleMemberInfo = (props) => {
                   Modifica Profilo
                   </button>
                   <button className="btn-danger mt-3
-                  btn-lg" onClick={auth.logout}>
+                  btn-lg" onClick={logout}>
                   <span>Logout</span>
                   </button>
 

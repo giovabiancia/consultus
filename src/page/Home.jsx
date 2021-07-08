@@ -18,7 +18,7 @@ class Home extends Component {
     componentDidMount(){
         window.scrollTo(0,0)
     }
-   render(){ 
+   render(){
        return(
            <Layouts pageTitle='Home'>
                <Header />
@@ -26,8 +26,8 @@ class Home extends Component {
                <Count />
                <About />
                <Service />
-               <Team />
-               <Project />
+             {/*   <Team /> */}
+               {/* <Project /> */}
                <Client />
                <Partner />
                <News />
@@ -37,9 +37,9 @@ class Home extends Component {
            </Layouts>
        )
    }
-   
-        
-      
-    
+
+
+
+
 }
 export default Home;

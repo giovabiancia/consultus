@@ -11,23 +11,21 @@ export const BlogProvider = (props) => {
   useEffect(() => {
     let firestoreCall;
     var user = firebase.auth().currentUser;
-    if (user) {
-      firestoreCall = firebase
-        .firestore()
-        .collection("blog")
-        .onSnapshot((snapshot) => {
-          const newRichieste = snapshot.docs.map((richiesta) => ({
-            id: richiesta.id,
-            ...richiesta.data(),
-          }));
-          console.log(newRichieste);
 
-          setBlog(newRichieste);
-        });
-    }
+    firestoreCall = firebase
+      .firestore()
+      .collection("blog")
+      .onSnapshot((snapshot) => {
+        const newRichieste = snapshot.docs.map((richiesta) => ({
+          id: richiesta.id,
+          ...richiesta.data(),
+        }));
+
+        setBlog(newRichieste);
+      });
 
     return () => firestoreCall?.();
-  }, [auth.loggedIn]);
+  }, []);
 
   return (
     <BlogContext.Provider value={[blog, setBlog]}>

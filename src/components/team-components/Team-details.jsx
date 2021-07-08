@@ -30,6 +30,7 @@ const ComponentProfiloConsulente = () => {
 
     }, [])
 
+
     return (
         <>
                 {/* <!-- start team details area --> */}
@@ -46,6 +47,16 @@ const ComponentProfiloConsulente = () => {
                 <div className="col-lg-8">
 
                     <div className="team-inner ">
+                    <div className="single-item mb-4"  style={{marginTop:60}}>
+                            <div className="item-title">
+                                <h4>Profilo Professionale</h4>
+
+                            </div>
+                            <p>
+                                {profilo.about}
+                            </p>
+
+                        </div>
 
                         <div className="single-item mt-30 " >
                             <div className="item-title">
@@ -80,7 +91,7 @@ const ComponentProfiloConsulente = () => {
                                 </div>
                             </div>
                                  </div>
-                         <div className="single-item " style={{marginTop:60}} >
+                         <div className="single-item mb-4 " style={{marginTop:60}} >
                             <div className="item-title">
                                 <h4>Competenze Principali</h4>
 
@@ -162,17 +173,8 @@ const ComponentProfiloConsulente = () => {
                             </div>
 
                         </div>
-                        <div className="single-item "  style={{marginTop:60}}>
-                            <div className="item-title">
-                                <h4>Profilo Professionale</h4>
 
-                            </div>
-                            <p>
-                                {profilo.about}
-                            </p>
-
-                        </div>
-                        <div className="single-item " style={{marginTop:60}}>
+                       {/*  <div className="single-item " style={{marginTop:60}}>
                             <div className="item-title">
                                 <h4>Esperienza e riconoscimenti</h4>
                             </div>
@@ -214,14 +216,14 @@ const ComponentProfiloConsulente = () => {
                                     })}
                                 </tbody>
                             </table>
-                        </div>
+                        </div> */}
 
                     </div>
                 </div>
             </div>
 
         </div>
-        <BlogCarousel></BlogCarousel>
+        <BlogCarousel consulente={profilo}></BlogCarousel>
     </section>
     {/* <!-- end team details area --> */}
 

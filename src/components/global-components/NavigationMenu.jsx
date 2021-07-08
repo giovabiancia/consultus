@@ -55,7 +55,7 @@ const NavigationMenu = () => {
                     <div className="col-lg-12">
                         <nav className="navbar p-0">
                             <Link className="navbar-brand p-0" to="/">
-                                <img src={data.logo} alt="Logo" />
+                                <img src={data.logo}  style={{width:130}}alt="Logo" />
                             </Link>
                             <div className={`header-menu ml-auto position-static ${menuToggle === true ? 'menuToggle' : ''}`}>
                             <div id="menu-button"  onClick={()=>{setMobileMenuToggle(!mobileMenuToggle)}}><i className="fas fa-bars"></i></div>

@@ -13,11 +13,22 @@ import ComputerIcon from '@material-ui/icons/Computer';
 import FindInPageIcon from '@material-ui/icons/FindInPage';
 import TimelineIcon from '@material-ui/icons/TrendingUp';
 import AccountBalanceWalletIcon from '@material-ui/icons/AccountBalanceWallet';
+import { useHistory } from "react-router-dom";
 const ComponentProfiloUtente = () => {
     let data = sectionData.teamDetails;
     const auth = useAuthentication()
     const [profilo, setProfilo] = useContext(ProfileContext);
     const [competenze, setCompetenze]= useState([])
+    const history = useHistory()
+
+    const consu = ()=>{
+        history.push('/registrazione-consulente')
+    }
+    const logout = ()=>{
+        history.push('/')
+        auth.logout()
+    }
+
 
 
 
@@ -29,11 +40,21 @@ const ComponentProfiloUtente = () => {
             <div className="row">
                 <div className="col-lg-4">
 
-                    <button className="button btn btn-danger" onClick={auth.logout}>Logout</button>
+
+                    <p>Sei un consulente ? </p>
+                    <button className="button btn btn-primary"onClick={consu} >Inizia qui</button>
+                    <br></br>
+
+
+
+                    <button className="button btn btn-danger" onClick={logout}>Logout</button>
+
+
+
 
                 </div>
                 <div className="col-lg-8">
-                    <h4> Il tuo profilo </h4>
+                    <h4> Le tue richieste</h4>
 
                 </div>
 

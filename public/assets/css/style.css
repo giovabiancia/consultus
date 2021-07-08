@@ -22247,3 +22247,13 @@ html[class*="ie"] .dtp-hour-hand {
 .rdw-editor-main {
   padding: 10px;
 }
+
+.cardMargin {
+  margin-bottom: 150px;
+}
+
+@media (max-width: 480px) {
+  .cardMargin {
+    margin-bottom: 0px;
+  }
+}

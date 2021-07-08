@@ -1,5 +1,5 @@
 import React from 'react';
-import NavigationMenuV2 from '../global-components/NavigationMenu-v2';
+import NavigationMenuV2 from '../global-components/NavigationMenu-v3';
 import PageTitle from './PageTitle';
 const HeaderV3 = (props) => {
 

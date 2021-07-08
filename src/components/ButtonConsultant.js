@@ -26,6 +26,7 @@ export default function ButtonConsultant(props) {
       history.push("/registrazione-consulente");
     } else {
       setLgShow(true);
+
       /* ; */
     }
   }
