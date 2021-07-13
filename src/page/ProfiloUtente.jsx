@@ -4,7 +4,7 @@ import Layouts from '../components/global-components/Layouts';
 import Connect from '../components/section-components/Connect';
 import HeaderV3 from '../components/section-components/Header-v4';
 import Team from '../components/section-components/Team';
-import ComponentProfiloConsulente from '../components/team-components/Team-details';
+import ComponentProfiloConsulente from '../components/team-components/ComponentProfiloConsulente';
 import ComponentProfiloUtente from '../components/team-components/ComponentProfiloUtente';
 import { ProfileContext } from '../context/ProfileContext';
 import { sectionData } from '../data/section.json';
@@ -18,7 +18,7 @@ const ProfiloUtente = () => {
     let data = sectionData.sectionTitle;
     useEffect(() => {
         window.scrollTo(0,0);
-        console.log(profilo)
+
 }, [])
     return (
         <>

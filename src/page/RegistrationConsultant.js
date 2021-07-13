@@ -14,6 +14,7 @@ import LinearProgress from "@material-ui/core/LinearProgress";
 import ReactGa from "react-ga";
 import { Helmet } from "react-helmet";
 import firebase from "../firebase";
+import { loadStripe } from "@stripe/stripe-js";
 
 import { Container } from "react-bootstrap";
 import NavigationMenu from "../components/global-components/NavigationMenu";
@@ -22,6 +23,7 @@ import { ConsultantStepContext } from "../context/ConsultantStepContext";
 
 import { ConsultantContext } from "../context/ConsultantContext";
 import { useAuthentication } from "../hooks/useAuthentication";
+import Step6 from "../RegistrationConsultant/Step6";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function getSteps() {
-  return ["Step1", "Step2", "Step3", "Step4", "Step5"];
+  return ["Step1", "Step2", "Step3", "Step4", "Step5", "Step6"];
 }
 
 function getStepContent(step) {
@@ -52,12 +54,16 @@ function getStepContent(step) {
       return <Step4></Step4>;
     case 4:
       return <Step5></Step5>;
+    case 5:
+      return <Step6></Step6>;
   }
 }
 
 export default function RegistrationConsultant() {
   const [activeStep, setActiveStep] = useContext(ConsultantStepContext);
   const [request, setRequest] = useContext(ConsultantContext);
+  const [loading, setLoading] = useState(false);
+
   const auth = useAuthentication();
 
   const classes = useStyles();
@@ -97,14 +103,14 @@ export default function RegistrationConsultant() {
     }
 
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    setProgress((activeStep) => activeStep + 80);
+    setProgress((activeStep) => activeStep + 60);
     setSkipped(newSkipped);
   };
 
   const handleBack = (e) => {
     e.preventDefault();
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
-    setProgress((activeStep) => activeStep - 80);
+    setProgress((activeStep) => activeStep - 60);
   };
   /*  const sendEmail = () => {
     window.Email.send({
@@ -118,6 +124,8 @@ export default function RegistrationConsultant() {
  */
 
   const sendRequest = (e) => {
+    setLoading(true);
+
     /*     */
     e.preventDefault();
 
@@ -151,36 +159,45 @@ export default function RegistrationConsultant() {
       fotoURL: request.fotoURL,
       progress: request.progress,
     };
+    // CREO IL CONSULENTE
     firebase
       .firestore()
       .collection("consulenti")
-      .add(newConsultant)
+      .doc(auth.loggedIn.uid)
+      .set(newConsultant)
       .then(function (doc) {
-        //1) EMAIL AL Consulente
-        /*    var msg = {
-          from: "support@docfunnel.it",
-          from_name: "DocFunnel | new request",
-          to: auth.loggedIn.email,
-          subject: "Your new doctor Request",
-          body_html: NewRequestAdmin(newRequest),
-        }; */
+        // CREO LA SESSIONE DI PAGAMENTO
+        firebase.default
+          .firestore()
+          .collection("consulenti")
+          .doc(auth.loggedIn.uid)
+          .collection("checkout_sessions")
+          .add({
+            price: "price_1JAyyOLyrGIetcWTlBxvgrgz", // id prezzo stripe price
+            success_url: window.location.origin + "/profilo", // pagamento andato bene
+            cancel_url: window.location.origin, // pagamento andato male
+          })
+          .then((docRef) => {
+            docRef.onSnapshot(async (snap) => {
+              const { error, sessionId } = snap.data();
 
-        // EMAIL all' admin
-        /* var msg2 = {
-          from: "support@docfunnel.it",
-          from_name: "DocFunnel | new request",
-          to: ["support@docfunnel.it", "info@docfunnel.it"],
-          subject: "Your new doctor Request",
-          body_html: NewRequestAdmin(newRequest),
-        };
+              if (error) {
+                alert(error.message);
+              }
 
-        EmailMe(msg);
-        EmailMe(msg2); */
-        alert("Richiesta effettuata !");
+              if (sessionId) {
+                const stripe = await loadStripe(
+                  "pk_test_51JAyOjLyrGIetcWTZTFA5Ylhq9VSN9p1nCuzZyEvDSEiyCHgRZDgrGnGkzfjmoVgNUFC4f7ClSAL3OuE1YKBsaUr00wN5Rdyvk"
+                );
+                await stripe.redirectToCheckout({ sessionId }).then((e) => {
+                  alert(e);
+                });
+                /*  history.push("/profilo"); */
+              }
+            });
+          });
       })
       .catch((e) => alert("Errore nella richista" + e));
-    history.push("/profilo");
-    console.log("fine richiesta");
   };
 
   return (
@@ -219,7 +236,7 @@ export default function RegistrationConsultant() {
             <div className="col-12">{getStepContent(activeStep)}</div>
           )}
 
-          <LinearProgress variant="determinate" value={activeStep * 25} />
+          <LinearProgress variant="determinate" value={activeStep * 20} />
           <div className=" bottomBar section ">
             <button
               disabled={activeStep === 0}
@@ -264,6 +281,15 @@ export default function RegistrationConsultant() {
           </div>
         </form>
       </Container>
+      {loading && (
+        <div class="preloader">
+          <div class="main-circle">
+            <div class="green-circle">
+              <div class="brown-circle"></div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

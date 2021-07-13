@@ -40,13 +40,12 @@ export default function ButtonConsultant(props) {
 
   return (
     <div>
-      {profilo ? null : (
-        <div className="mt-3">
-          <button className="btn-style" onClick={handleClick}>
-            <span>consulente</span>
-          </button>
-        </div>
-      )}
+      <div className="mt-3">
+        <button className="btn-style" onClick={handleClick}>
+          <span>Registrati</span>
+        </button>
+      </div>
+
       {auth.loggedIn ? null : (
         <Modal size="sm" show={lgShow} onHide={() => setLgShow(false)}>
           <div className="container" style={{ padding: 30 }}>

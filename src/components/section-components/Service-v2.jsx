@@ -2,6 +2,7 @@ import React from 'react';
 import {sectionData} from './../../data/section.json'
 import SectionTitle from '../global-components/SectionTitle';
 import { Link } from 'react-router-dom';
+import ButtonConsultant from '../ButtonConsultant'
 
 const ServiceV2 = () => {
     let data = sectionData.serviceV2;
@@ -32,7 +33,8 @@ const ServiceV2 = () => {
                                                                 return <li key={i}>{item}</li>
                                                             })}
                                                         </ul>
-                                                        <Link to="/service" className="btn-style"><span>read more</span></Link>
+                                                        <ButtonConsultant></ButtonConsultant>
+
                                                     </div>
                                                 </div>
                                             </div>

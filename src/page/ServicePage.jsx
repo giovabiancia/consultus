@@ -6,7 +6,7 @@ import Footer from '../components/global-components/Footer';
 import ScrollTop from '../components/global-components/BackToTop';
 import ServiceV2 from '../components/section-components/Service-v2';
 import Connect from '../components/section-components/Connect';
-
+import Count from '../components/section-components/Count-v3'
 const ServicePage = () => {
     const data = sectionData.sectionTitle
     useEffect(() => {
@@ -16,7 +16,10 @@ const ServicePage = () => {
         <>
             <Layouts pageTitle='Service'>
                 <HeaderV3 background={data.service.background} title={data.service.title} pageName={data.service.pageName} />
+
                 <ServiceV2 />
+                <Count></Count>
+
                 <Connect />
                 <Footer />
                 <ScrollTop />

@@ -45,12 +45,12 @@ export default function ButtonSignUp(props) {
   return (
     <div>
       {auth.loggedIn ? (
-        <button className="btn-style" onClick={handleClick}>
+        <button className="btn-style" onClick={goToRequest}>
           <span>Invia Richiesta</span>
         </button>
       ) : (
         <>
-          <button className="btn-style" onClick={handleClick}>
+          <button className="btn-style" onClick={() => setLgShow(true)}>
             <span>Invia Richiesta</span>
           </button>
           <Modal size="sm" show={lgShow} onHide={() => setLgShow(false)}>
@@ -121,31 +121,6 @@ export default function ButtonSignUp(props) {
           </Modal>
         </>
       )}
-      <Modal size="sm" show={lg2Show} onHide={() => setLg2Show(false)}>
-        <div className="container" style={{ padding: 30 }}>
-          <Row>
-            <CloseIcon
-              style={{ position: "absolute", top: 13, cursor: "pointer" }}
-              onClick={() => setLg2Show(false)}
-            ></CloseIcon>
-            {/* <Col md="6" lg="6" className="noMobile center">
-                <img src={wallet}></img>
-              </Col> */}
-
-            <Col className="center">
-              <h3 className="mb-3">Invia il tuo profilo al consulente !</h3>
-              <p>
-                Il consulente riceverà i dati della richiesta compilata nel step
-                by step e ti contatterà in privato{" "}
-              </p>
-
-              <button className="btn-style mt-3">
-                <span>Invia</span>
-              </button>
-            </Col>
-          </Row>
-        </div>
-      </Modal>
     </div>
   );
 }

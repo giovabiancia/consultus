@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import SingleMemberInfo from './SingleMember';
-import { sectionData } from './../../data/section.json';
+import { sectionData } from '../../data/section.json';
 import { useAuthentication } from '../../hooks/useAuthentication';
 import { ProfileContext } from '../../context/ProfileContext';
 import AssessmentIcon from '@material-ui/icons/Assessment';
@@ -14,13 +14,30 @@ import FindInPageIcon from '@material-ui/icons/FindInPage';
 import TimelineIcon from '@material-ui/icons/TrendingUp';
 import AccountBalanceWalletIcon from '@material-ui/icons/AccountBalanceWallet';
 import BlogCarousel from "../section-components/BlogCarousel";
+import Chip from '@material-ui/core/Chip';
+import FaceIcon from '@material-ui/icons/Face';
+import DoneIcon from '@material-ui/icons/Done';
+import firebase from '../../firebase'
+import { loadStripe } from "@stripe/stripe-js";
+import { SubscriptionContext } from "../../context/SubsriptionContext";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Loader from "react-loader-spinner";
+
+
+
+
+
+
 const ComponentProfiloConsulente = () => {
     let data = sectionData.teamDetails;
     const auth = useAuthentication()
     const [profilo, setProfilo] = useContext(ProfileContext);
+    const [abbonamento, setAbbonamento] = useContext(SubscriptionContext);
     const [competenze, setCompetenze]= useState([])
+    const [loading, setLoading]= useState(false)
 
     useEffect(() => {
+        console.log(abbonamento)
         let array = []
         profilo.competenze.map((i)=>{
             let title = i.title
@@ -28,7 +45,48 @@ const ComponentProfiloConsulente = () => {
         })
         setCompetenze(array)
 
-    }, [])
+    }, [abbonamento])
+    const sendToCheckOut =()=>{
+        setLoading(true)
+        firebase.default
+        .firestore()
+        .collection("consulenti")
+        .doc(auth.loggedIn.uid)
+        .collection("checkout_sessions")
+        .add({
+          price: "price_1JAyyOLyrGIetcWTlBxvgrgz", // id prezzo stripe price
+          success_url: window.location.origin + "/profilo", // pagamento andato bene
+          cancel_url: window.location.origin, // pagamento andato male
+        })
+        .then((docRef) => {
+          docRef.onSnapshot(async (snap) => {
+            const { error, sessionId } = snap.data();
+
+            if (error) {
+              alert(error.message);
+            }
+
+            if (sessionId) {
+              const stripe = await loadStripe(
+                "pk_test_51JAyOjLyrGIetcWTZTFA5Ylhq9VSN9p1nCuzZyEvDSEiyCHgRZDgrGnGkzfjmoVgNUFC4f7ClSAL3OuE1YKBsaUr00wN5Rdyvk"
+              );
+              await stripe.redirectToCheckout({ sessionId }).then((e) => {
+                console.log(e);
+              });
+
+            }
+          });
+        });
+
+    }
+
+    const sendToPortal = async ()=>{
+        setLoading(true)
+        const functionRef = firebase.default.functions().httpsCallable('ext-firestore-stripe-subscriptions-createPortalLink')
+        const {data} = await functionRef ({returnUrl: window.location.origin+'/profilo'})
+        window.location.assign(data.url)
+    }
+
 
 
     return (
@@ -46,9 +104,55 @@ const ComponentProfiloConsulente = () => {
 
                 <div className="col-lg-8">
 
+
+
                     <div className="team-inner ">
-                    <div className="single-item mb-4"  style={{marginTop:60}}>
-                            <div className="item-title">
+                        <div className=" inner-shadow flex">
+
+                                {abbonamento=="active" && profilo.attivo == true ?
+                                <div className="center p-4">
+                                     <p>Stato del profilo</p><Chip label="Attivo" style={{backgroundColor:'green', color:'white'}} />
+                                     <br></br>
+                                     <button className="btn button-primary mt-3" onClick={sendToPortal}>Gestisci abbonamento</button>
+                                </div>
+                                :null}
+                                {abbonamento=="active" && profilo.attivo == false ?
+                                <div className="center p-4">
+                                 <p>Stato del profilo: <Chip label="In attesa di revisione" style={{backgroundColor:'orange', color:'white'}} /></p>
+                                 <p>Stiamo controllando la tua documentazione</p>
+                                 </div>
+
+
+                                 :null}
+                                {abbonamento !="active" && profilo.attivo == true ?
+                                <div className="center p-4">
+                                 <p>Stato del profilo: <Chip label="Rinnova abbonamento" style={{backgroundColor:'orange', color:'white'}} /></p>
+                                 <button className="btn button-primary mt-3"  onClick={sendToPortal}>Gestisci abbonamento</button>
+                                 </div>
+
+                                 :null}
+                                {abbonamento !="active" && profilo.attivo == false ?
+
+                                <div className="center p-4">
+                                    <p>Stato del profilo: <Chip label="Non attivo" style={{backgroundColor:'red', color:'white'}} /></p>
+                                    <p>Il tuo profilo non è visibile ai nostri utenti</p>
+                                    <button className="btn button-primary mt-4" onClick={sendToCheckOut}>Concludi abbonamento</button>
+
+
+                                </div>
+
+
+
+                                 :null}
+
+
+
+
+
+
+                        </div>
+                        <div className="single-item mb-4"  style={{marginTop:60}}>
+                            <div className="item-title " >
                                 <h4>Profilo Professionale</h4>
 
                             </div>
@@ -223,7 +327,21 @@ const ComponentProfiloConsulente = () => {
             </div>
 
         </div>
+        {loading &&
+        <div class="preloader">
+            <div class="main-circle">
+                <div class="green-circle">
+                <div class="brown-circle"></div>
+                </div>
+            </div>
+        </div>
+
+        }
+
+
         <BlogCarousel consulente={profilo}></BlogCarousel>
+
+
     </section>
     {/* <!-- end team details area --> */}
 

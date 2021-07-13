@@ -9,10 +9,10 @@
                         "number": "3332232648"
                     },
                     "mail": {
-                        "email": "demo@examplegmail.com"
+                        "email": "prontoconsulenti@gmail.com"
                     },
                     "consultation": {
-                        "title": "Cerca il Tuo Consulente"
+                        "title": "Trova il Tuo Consulente"
                     }
                 }
             }
@@ -24,7 +24,7 @@
                 "background": "assets/images/home2/banner/banner.jpg"
             },
             "service": {
-                "title": "I Nostri Servizi ",
+                "title": "I Nostri Servizi",
                 "pageName": "Servizi",
                 "background": "assets/images/home2/banner/banner.jpg"
             },
@@ -81,16 +81,16 @@
         },
         "banner": {
             "subtitle": "Inizia Gratis",
-            "title": "Trova subito il consulente più adatto a te",
-            "content": "Ti mettiamo in contatto con il consulente più adatto alle tue esigenze, grazie ad un metodo vemplice e gratutito ",
+            "title": "Trova subito il consulente giusto",
+            "content": "Ti mettiamo in contatto con il consulente più adatto alle tue esigenze, grazie ad un metodo semplice e gratutito ",
             "background": "assets/images/home1/banner/banner.jpg",
             "channelName": "youtube",
             "videoId": "LCmsrVOXzZc"
         },
         "bannerV2": {
             "subtitle": "Inizia Gratis",
-            "title": "Trova il consulente più adatto a te",
-            "content": "Ti mettiamo in contatto con il  consulente più adatto alle tue esigenze, grazie ad un metodo vemplice e gratutito",
+            "title": "Trova il consulente giusto",
+            "content": "Ti mettiamo in contatto con il  consulente più adatto alle tue esigenze, grazie ad un metodo semplice e gratutito",
             "background": "assets/images/home2/banner/banner.jpg",
             "channelName": "youtube",
             "videoId": "LCmsrVOXzZc"
@@ -200,8 +200,8 @@
         },
         "about": {
             "subtitle": "Benvenuti su Pronto Consulenti",
-            "title": "I Nostri Consulenti",
-            "content": "Ti mettiamo in contatto velocemente e gratuitamente con il migliore consulente in base al tuo bisogno. Ogni consulente è obbligato ad avere L'autorizzazione per poter operare nel mercato !",
+            "title": "Perche rivolgersi ad un consulente",
+            "content": "Il consulente aiuta i propri clienti a prendere decisioni di investimento, risparmio, credito offrendo una consulenza personalizzata che mira ad aiutarli a raggiungere i loro obiettivi attraverso la creazione di un piano finanziario .",
             "metaList": [
                 {
                     "itemContent": "Solamente Consulenti Abilitati"
@@ -225,62 +225,62 @@
             "image3": "assets/images/home1/about/about-img3.jpg",
             "image4": "assets/images/home2/about/about1.jpg",
             "image5": "assets/images/home2/about/about2.jpg",
-            "ceoImage": "assets/images/home1/about/person.jpeg",
+            "ceoImage": "assets/images/home1/about/person.jpg",
             "ceoSign": "assets/images/home1/about/sign.png"
         },
         "newsletter": {
             "background": "assets/images/home2/newsletter/newsletter.jpg",
-            "title": "Let’s find out how to work Together",
+            "title": "Entra anche tu tra i nostri Consulenti",
             "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquenim ad m veniam, quis nostrud exercitation ullamco laboris nisi ut"
         },
         "service": {
             "serviceSectionHeading": {
-                "subtitle": "Trova il Consulente",
-                "title": "Servizi che offriamo ",
-                "content": "Il Nostro Metodo é personalizzato per adattarsi al meglio alle tue esigenze ed ai punti di forza dei nostri consulenti."
+                "subtitle": "Trova il tuo Consulente",
+                "title": "Perche Rivolgersi ad un Consulente ",
+                "content": "In un mondo sempre più incerto e dominato dalla complessità, si rafforza l’esigenza di affidarsi a chi ha delle competenze ben precise. Questo vale in tutti i campi, a maggior ragione quando si tratta di gestire risparmi accumulati con sforzi e sacrifici da destinare a progetti che riguardano la propria famiglia o il proprio futuro."
             },
             "singleService": [
                 {
                     "icon": "flaticon-meeting",
-                    "image": "assets/images/home1/service/img1.jpg",
+                    "image": "assets/images/home1/service/img2.jpeg",
                     "animation": "fadeInRight",
-                    "title": "Investment Planning",
-                    "content": "Avoids pleasure itself, because it is pleasure because those who do not know"
+                    "title": "Chi è il consulente ?",
+                    "content": "Il consulente è un professionista esperto di economia, finanza e gestione patrimoniale ma sopratutto conosce gli aspetti giuridici e fiscali, con particolare riferimento alla materia dei servizi d'investimento e alle operazioni di gestione capitali di famiglie, istituzioni o aziende "
                 },
                 {
                     "icon": "flaticon-diagram",
-                    "image": "assets/images/home1/service/img2.jpg",
+                    "image": "assets/images/home1/service/img6.jpeg",
                     "animation": "fadeInUp",
-                    "title": "Business Reform",
-                    "content": "Avoids pleasure itself, because it is pleasure because those who do not know"
+                    "title": "Cosa fa un consulente ?",
+                    "content": "Il consulente aiuta i propri clienti a prendere decisioni di investimento, risparmio, credito offrendo una consulenza personalizzata che mira ad aiutarli a raggiungere i loro obiettivi attraverso la creazione di un piano finanziario "
                 },
                 {
                     "icon": "flaticon-management",
-                    "image": "assets/images/home1/service/img3.jpg",
+                    "image": "assets/images/home1/service/img7.svg",
                     "animation": "fadeInLeft",
-                    "title": "Infrastructure Plan",
-                    "content": "Avoids pleasure itself, because it is pleasure because those who do not know"
+                    "title": "Conviene avere un consulente ?",
+                    "content": "È infatti importante scegliere il consulente giusto per essere sicuri di avere a propria disposizione un professionista esperto e capace di guidarci nella definizione di obiettivi, delle coperture assicurative e delle dinamiche sempre mutevoli dello scenario economico-finanziario."
                 },
                 {
                     "icon": "flaticon-diagram-1",
-                    "image": "assets/images/home1/service/img4.jpg",
+                    "image": "assets/images/home1/service/img4.jpeg",
                     "animation": "fadeInRight",
-                    "title": "Firewall Advance",
-                    "content": "Avoids pleasure itself, because it is pleasure because those who do not know"
+                    "title": "Consulente Finanziario",
+                    "content": "Il consulente finanziario, per definirsi tale, deve essere iscritto presso il relativo albo professionale dopo aver superato una prova d'esame valutativa, a cui accede solo chi ha determinati requisiti e titoli di studio."
                 },
                 {
                     "icon": "flaticon-profits",
-                    "image": "assets/images/home1/service/img5.jpg",
+                    "image": "assets/images/home1/service/img3.jpeg",
                     "animation": "fadeInDown",
-                    "title": "IT Management",
-                    "content": "Avoids pleasure itself, because it is pleasure because those who do not know"
+                    "title": "Consulente Assicurativo",
+                    "content": "Il consulente assicurativo è colui che aiuta il proprio cliente nel gestire il patrimonio e i risparmi, con lo scopo di garantirgli il benessere economico e una protezione a gli imprevisti, per mezzo di un un metodo personalizzato sui propri bisogni. Tale consulente può suggerire le soluzioni migliori in ambito di investimento, previdenza e Coperture assicurative"
                 },
                 {
                     "icon": "flaticon-management",
-                    "image": "assets/images/home1/service/img6.jpg",
+                    "image": "assets/images/home1/service/img5.jpeg",
                     "animation": "fadeInLeft",
-                    "title": "Cloud Computing",
-                    "content": "Avoids pleasure itself, because it is pleasure because those who do not know"
+                    "title": "Consulente del credito",
+                    "content": "Il Consulente del credito, conosciuto anche come Mediatore creditizio o broker bancario, è l'intermediario tra la banca e il cliente. In pratica assiste il cliente che desidera ottenere un mutuo proponendogli l'istituto di credito più adatto alle sue esigenze"
                 }
             ]
         },
@@ -774,28 +774,28 @@
             "sectionHeading": {
                 "subtitle": "Cosa dicono di Noi",
                 "title": "Cosa dicono di Noi",
-                "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tinciunt consectetuer adipiscing elit, sed diam nonummy"
+                "content": "Le recensioni dei nostri utenti"
             },
             "clientReview": [
                 {
-                    "image": "assets/images/home1/client/team-2.jpg",
-                    "name": "Nike Mardson",
-                    "comment": "Lorem ipsum dolor sit amet, con adipisicing elit, sed do eiusmod tempor incididunt utr labore et dolore magna",
-                    "raiting": 3,
+                    "image": "assets/images/home1/client/team-2.jpeg",
+                    "name": "Vittoria",
+                    "comment": "<p>Non sapevo dove cercare per trovare un consulente <br> nei meandri di internet; <br>mentre con questo metodo di ricerca veloce <br> sono riuscita a trovare Alessio il consulente <br> che mi segue ormai da mesi </p>",
+                    "raiting": 5,
                     "animation": "fadeInRight"
                 },
                 {
-                    "image": "assets/images/home1/client/team-3.jpg",
-                    "name": "Hike Kardson",
-                    "comment": "Lorem ipsum dolor sit amet, con adipisicing elit, sed do eiusmod tempor incididunt utr labore et dolore magna",
+                    "image": "assets/images/home1/client/team-3.jpeg",
+                    "name": "Carlo",
+                    "comment": "<p>Trovato su google, aperto, risposto agli step <br> e trovato il consulente perfetto per aiutarmi<br> a trovare un mutuo. <br> Il tutto in 5 min...consigliato </p>",
                     "raiting": 4,
                     "animation": "fadeInUp"
                 },
                 {
-                    "image": "assets/images/home1/client/team-4.jpg",
-                    "name": "Mike Mardson",
-                    "comment": "Lorem ipsum dolor sit amet, con adipisicing elit, sed do eiusmod tempor incididunt utr labore et dolore magna",
-                    "raiting": 3,
+                    "image": "assets/images/home1/client/team-4.jpeg",
+                    "name": "Maurizio",
+                    "comment": "<p>Sono stato ore a girare su internet senza trovare nulla.<br> Mentre grazie a Pronto Consulenti ho trovato un consulente <br> molto disponibile e tra l'altro vicino a casa mia </p>",
+                    "raiting": 5,
                     "animation": "fadeInLeft"
                 }
             ],
@@ -967,7 +967,7 @@
         },
         "connect": {
             "title": "Desideri Contattarci?",
-            "buttonName": "Domanda a noi "
+            "buttonName": "Chiedi a noi "
         },
         "pricing": {
             "sectionHeading": {
@@ -1068,7 +1068,7 @@
             "background": "assets/images/home1/footer/footer.jpg",
             "mainFooter": {
                 "about": {
-                    "title": "About",
+                    "title": "Su di Noi",
                     "content": "Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim",
                     "social": [
                         {
@@ -1090,26 +1090,26 @@
                     ]
                 },
                 "info": {
-                    "title": "Information",
+                    "title": "Informazioni",
                     "pageLink": [
                         {
-                            "pageName": "our process",
+                            "pageName": "Il nostro metodo",
                             "pageLink": "#!"
                         },
                         {
-                            "pageName": "Vintage Stores",
+                            "pageName": "I nostri servizi",
                             "pageLink": "#!"
                         },
                         {
-                            "pageName": "Trekking",
+                            "pageName": "BLog",
                             "pageLink": "#!"
                         },
                         {
-                            "pageName": "Our Clients",
+                            "pageName": "I nostri utenti",
                             "pageLink": "#!"
                         },
                         {
-                            "pageName": "Our Team",
+                            "pageName": "Il nostro Team",
                             "pageLink": "#!"
                         }
                     ]
@@ -1118,29 +1118,29 @@
                     "title": "Best Services",
                     "pageLink": [
                         {
-                            "pageName": "our process",
+                            "pageName": "Il nostro metodo",
                             "pageLink": "#!"
                         },
                         {
-                            "pageName": "Vintage Stores",
+                            "pageName": "I nostri servizi",
                             "pageLink": "#!"
                         },
                         {
-                            "pageName": "Trekking",
+                            "pageName": "Blog",
                             "pageLink": "#!"
                         },
                         {
-                            "pageName": "Our Clients",
+                            "pageName": "I nostri utenti",
                             "pageLink": "#!"
                         },
                         {
-                            "pageName": "Our Team",
+                            "pageName": "Il nostro Team",
                             "pageLink": "#!"
                         }
                     ]
                 },
                 "newsLetter": {
-                    "title": "Newsletter",
+                    "title": "Blog",
                     "singleNews": [
                         {
                             "image": "assets/images/home1/footer/news1.jpg",
@@ -1172,23 +1172,23 @@
             "footerBottom": {
                 "copyRightYear": "2021",
                 "copyRightFrom": "SITL",
-                "copyRightLink": "sitlbd.com",
+                "copyRightLink": "prontoconsulenti.it",
                 "bottomPageLink": [
                     {
-                        "pageName": "About",
-                        "pageLink": "/about"
+                        "pageName": "su di noi",
+                        "pageLink": "/su di noi"
                     },
                     {
-                        "pageName": "Service",
-                        "pageLink": "/service"
+                        "pageName": "Servizi",
+                        "pageLink": "/servizi"
                     },
                     {
                         "pageName": "Privacy Policy",
                         "pageLink": "#!"
                     },
                     {
-                        "pageName": "Contact",
-                        "pageLink": "/contact"
+                        "pageName": "Contatti",
+                        "pageLink": "/contatti"
                     }
                 ]
             }

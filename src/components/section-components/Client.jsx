@@ -39,9 +39,8 @@ const Client = () => {
                                     <div className="item text-center">
                                         <span className="quote"></span>
                                         <h3>{item.name}</h3>
-                                        <p>
-                                           {item.comment}
-                                        </p>
+                                        <div dangerouslySetInnerHTML={{__html: item.comment}} />
+
                                         <ul className="d-flex justify-content-center">
                                             <div  className='review-stars'>
                                                 <ReactStars {...secondExample} value={item.raiting}/>
@@ -55,7 +54,7 @@ const Client = () => {
                                     </div>
                                 </div>
                             </div>
-                                }) 
+                                })
                             }
                         </div>
                     </div>

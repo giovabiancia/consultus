@@ -3,7 +3,7 @@ import ScrollTop from '../components/global-components/BackToTop';
 import Footer from '../components/global-components/Footer';
 import About from '../components/section-components/About';
 import Client from '../components/section-components/Client';
-import Count from '../components/section-components/Count';
+import Count from '../components/section-components/Count-v3';
 import Connect from '../components/section-components/Connect';
 import News from '../components/section-components/New';
 import Offer from '../components/section-components/Offer';
@@ -29,8 +29,8 @@ class Home extends Component {
              {/*   <Team /> */}
                {/* <Project /> */}
                <Client />
-               <Partner />
-               <News />
+              {/*  <Partner />
+               <News /> */}
                <Connect />
                <Footer />
                <ScrollTop />

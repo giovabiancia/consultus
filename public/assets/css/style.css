@@ -623,7 +623,7 @@ select {
     07: banner
 ===========================================================*/
 .banner {
-  padding-top: 200px;
+  padding-top: 140px;
   padding-bottom: 210px;
   position: relative;
 }
@@ -22255,5 +22255,22 @@ html[class*="ie"] .dtp-hour-hand {
 @media (max-width: 480px) {
   .cardMargin {
     margin-bottom: 0px;
+  }
+}
+
+.MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] {
+  padding: 0 !important;
+}
+
+@media (min-width: 940px) {
+  .homeItem {
+    width: 830px;
+  }
+}
+
+@media (max-width: 940px) {
+  .marginProv {
+    margin-top: 20px;
+    margin-bottom: 30px;
   }
 }

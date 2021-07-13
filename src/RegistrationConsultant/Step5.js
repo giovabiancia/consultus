@@ -24,8 +24,14 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
+import { loadStripe } from "@stripe/stripe-js";
+
+import firebase from "./../firebase";
+import { useAuthentication } from "../hooks/useAuthentication";
+
 export default function Step5() {
   const [request, setRequest] = useContext(ConsultantContext);
+  const auth = useAuthentication();
   const handleAbout = (value) => {
     let newState = Object.assign({}, request);
     newState.about = value.target.value;
@@ -51,6 +57,7 @@ export default function Step5() {
     newState.twitter = value.target.value;
     setRequest(newState);
   };
+
   return (
     <Container>
       <Row>

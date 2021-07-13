@@ -20,7 +20,7 @@ const Service = () => {
                                        return <div className="col-lg-4 col-md-6" key={i}>
                                         <div className= {`item wow  ${item.animation}`} data-wow-duration="1.5s" data-wow-delay=".4s">
                                             <div className="img-part">
-                                                <img src={item.image} className="img-fluid" alt="Service Img" />
+                                                <img src={item.image} style={{height:250, objectFit:'cover'}} className="img-fluid" alt="Service Img" />
                                             </div>
                                             <div className="content">
                                                 <div className="icon">
