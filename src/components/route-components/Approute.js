@@ -60,7 +60,11 @@ function AppRoute() {
                         />
                         <Route path="/home-v2" exact component={HomeV2} />
                         <Route path="/about" exact component={AboutPage} />
-                        <Route path="/service" exact component={ServicePage} />
+                        <Route
+                          path="/consulenti"
+                          exact
+                          component={ServicePage}
+                        />
                         <Route
                           path="/service-details"
                           exact

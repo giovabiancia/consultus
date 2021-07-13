@@ -43,7 +43,7 @@ const NavigationMenuV2 = () => {
 
                                     </li>
 
-                                    <li><Link to="/project">consulenti</Link></li>
+                                    <li><Link to="/consulenti">consulenti</Link></li>
                                     <li><Link to="/contact">contatti</Link></li>
                                     <li>
                                     <Link to="/profilo" style={{cursor:"pointer"}}>{auth.loggedIn ? <Avatar alt="Remy Sharp" src={auth.loggedIn.photoURL ? auth.loggedIn.photoURL: businessman} />:null}

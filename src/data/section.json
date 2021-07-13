@@ -24,7 +24,7 @@
                 "background": "assets/images/home2/banner/banner.jpg"
             },
             "service": {
-                "title": "I Nostri Servizi",
+                "title": "Perchè scegliere ProntoConsulenti",
                 "pageName": "Servizi",
                 "background": "assets/images/home2/banner/banner.jpg"
             },
@@ -201,7 +201,7 @@
         "about": {
             "subtitle": "Benvenuti su Pronto Consulenti",
             "title": "Perche rivolgersi ad un consulente",
-            "content": "Il consulente aiuta i propri clienti a prendere decisioni di investimento, risparmio, credito offrendo una consulenza personalizzata che mira ad aiutarli a raggiungere i loro obiettivi attraverso la creazione di un piano finanziario .",
+            "content": "Il consulente aiuta i propri clienti a prendere decisioni di investimento, risparmio, credito ;offrendo una consulenza personalizzata che mira ad aiutarli a raggiungere i loro obiettivi attraverso la creazione di un piano finanziario .",
             "metaList": [
                 {
                     "itemContent": "Solamente Consulenti Abilitati"
@@ -242,42 +242,42 @@
             "singleService": [
                 {
                     "icon": "flaticon-meeting",
-                    "image": "assets/images/home1/service/img2.jpeg",
+                    "image": "assets/images/home1/service/img1.jpg",
                     "animation": "fadeInRight",
                     "title": "Chi è il consulente ?",
                     "content": "Il consulente è un professionista esperto di economia, finanza e gestione patrimoniale ma sopratutto conosce gli aspetti giuridici e fiscali, con particolare riferimento alla materia dei servizi d'investimento e alle operazioni di gestione capitali di famiglie, istituzioni o aziende "
                 },
                 {
                     "icon": "flaticon-diagram",
-                    "image": "assets/images/home1/service/img6.jpeg",
+                    "image": "assets/images/home1/service/img2.jpg",
                     "animation": "fadeInUp",
                     "title": "Cosa fa un consulente ?",
-                    "content": "Il consulente aiuta i propri clienti a prendere decisioni di investimento, risparmio, credito offrendo una consulenza personalizzata che mira ad aiutarli a raggiungere i loro obiettivi attraverso la creazione di un piano finanziario "
+                    "content": "Il consulente aiuta i propri clienti a prendere decisioni di investimento, risparmio, credito ;offrendo una consulenza personalizzata che mira ad aiutarli a raggiungere i loro obiettivi attraverso la creazione di un piano finanziario "
                 },
                 {
                     "icon": "flaticon-management",
-                    "image": "assets/images/home1/service/img7.svg",
+                    "image": "assets/images/home1/service/img3.jpg",
                     "animation": "fadeInLeft",
                     "title": "Conviene avere un consulente ?",
                     "content": "È infatti importante scegliere il consulente giusto per essere sicuri di avere a propria disposizione un professionista esperto e capace di guidarci nella definizione di obiettivi, delle coperture assicurative e delle dinamiche sempre mutevoli dello scenario economico-finanziario."
                 },
                 {
                     "icon": "flaticon-diagram-1",
-                    "image": "assets/images/home1/service/img4.jpeg",
+                    "image": "assets/images/home1/service/img4.jpg",
                     "animation": "fadeInRight",
-                    "title": "Consulente Finanziario",
+                    "title": "Consulente Finzaiario",
                     "content": "Il consulente finanziario, per definirsi tale, deve essere iscritto presso il relativo albo professionale dopo aver superato una prova d'esame valutativa, a cui accede solo chi ha determinati requisiti e titoli di studio."
                 },
                 {
                     "icon": "flaticon-profits",
-                    "image": "assets/images/home1/service/img3.jpeg",
+                    "image": "assets/images/home1/service/img5.jpg",
                     "animation": "fadeInDown",
                     "title": "Consulente Assicurativo",
                     "content": "Il consulente assicurativo è colui che aiuta il proprio cliente nel gestire il patrimonio e i risparmi, con lo scopo di garantirgli il benessere economico e una protezione a gli imprevisti, per mezzo di un un metodo personalizzato sui propri bisogni. Tale consulente può suggerire le soluzioni migliori in ambito di investimento, previdenza e Coperture assicurative"
                 },
                 {
                     "icon": "flaticon-management",
-                    "image": "assets/images/home1/service/img5.jpeg",
+                    "image": "assets/images/home1/service/img6.jpg",
                     "animation": "fadeInLeft",
                     "title": "Consulente del credito",
                     "content": "Il Consulente del credito, conosciuto anche come Mediatore creditizio o broker bancario, è l'intermediario tra la banca e il cliente. In pratica assiste il cliente che desidera ottenere un mutuo proponendogli l'istituto di credito più adatto alle sue esigenze"
@@ -286,75 +286,65 @@
         },
         "serviceV2": {
             "serviceSectionHeading": {
-                "subtitle": "Servizi Offerti",
-                "title": "Cosa Offriamo ?",
-                "content": "Lorem ipsum dolor sit amet, sed diam nonummy nibh euismod tinciunt consectetuer adipiscing elit, sed diam nonummy"
+                "subtitle": "Sei Consulente ? ",
+                "title": "Perchè scegliere ProntoConsulenti",
+                "content": "ProntoConsulenti è la piattaforma che mancava agli utenti che decidono di cercare su internet un consulente adatto alle loro esigenze"
             },
             "singleService": [
                 {
                     "icon": "flaticon-medal",
                     "image": "assets/images/home2/offer/offer1.jpg",
                     "animation": "fadeInRight",
-                    "title": "Facile e Veloce",
+                    "title": "Ricevi clienti davvero interessati ",
                     "feature": [
-                        "Efficiently unleash",
-                        "Passion & Commitment",
-                        "Completely pursue"
+                        " ProntoConsulenti, al contario di altre piattafome, mette al primo posto le esigenze dei suoi utenti. Aiutandoli ad trovare il professionista desiderato"
                     ]
                 },
                 {
                     "icon": "flaticon-promotion",
                     "image": "assets/images/home2/offer/offer2.jpg",
                     "animation": "fadeInUp",
-                    "title": "Consultazione Servizi",
+                    "title": "Raggiungi il pubblico online ",
                     "feature": [
-                        "Efficiently unleash",
-                        "Passion & Commitment",
-                        "Completely pursue"
+                        "ProntoConsulenti adotta un solido piano pubblicitario volto a raggiungere il maggior numero di utenti motivati, grazie a sponzorizzazioni indicizzate su google e sui vari canali social "
                     ]
                 },
                 {
                     "icon": "flaticon-briefcase-1",
                     "image": "assets/images/home2/offer/offer3.jpg",
                     "animation": "fadeInLeft",
-                    "title": "Digital Marketing",
+                    "title": "Abbatti i limiti territoriali",
                     "feature": [
-                        "Efficiently unleash",
-                        "Passion & Commitment",
-                        "Completely pursue"
+                        "Grazie a ProntoConsulenti potrai trovare nuovi clienti in tutta Italia !"
                     ]
                 },
                 {
                     "icon": "flaticon-briefcase",
                     "image": "assets/images/home2/offer/offer4.jpg",
                     "animation": "fadeInRight",
-                    "title": "Digital Business",
+                    "title": "Cavalvca il nuovo trend",
                     "feature": [
-                        "Efficiently unleash",
-                        "Passion & Commitment",
-                        "Completely pursue"
+                        "Secondo i dati di google analytics Sempre più persone ricercano un consulente nel web; non perdere l'onda "
+
                     ]
                 },
                 {
                     "icon": "flaticon-medal",
                     "image": "assets/images/home2/offer/offer5.jpg",
                     "animation": "fadeInDown",
-                    "title": "Marketing Experience",
+                    "title": "Consulente Smart",
                     "feature": [
-                        "Efficiently unleash",
-                        "Passion & Commitment",
-                        "Completely pursue"
+                        "Crea contenuti con i articoli ed esperienze personali nel tuo prfilo ProntoConsuleti, implementando la tua presenza online "
+
                     ]
                 },
                 {
                     "icon": "flaticon-lamp",
                     "image": "assets/images/home2/offer/offer6.jpg",
                     "animation": "fadeInRight",
-                    "title": "Digital Business",
+                    "title": "Open Platform",
                     "feature": [
-                        "Efficiently unleash",
-                        "Passion & Commitment",
-                        "Completely pursue"
+                        "ProntoConsulenti non è una lista appartenente a singole banche o istituti assicurativi; bensì è accessibile ad ogni tipo di operatore abilitato ad operare nel mercato"
                     ]
                 }
             ]
@@ -778,24 +768,24 @@
             },
             "clientReview": [
                 {
-                    "image": "assets/images/home1/client/team-2.jpeg",
-                    "name": "Vittoria",
-                    "comment": "<p>Non sapevo dove cercare per trovare un consulente <br> nei meandri di internet; <br>mentre con questo metodo di ricerca veloce <br> sono riuscita a trovare Alessio il consulente <br> che mi segue ormai da mesi </p>",
+                    "image": "assets/images/home1/client/team-2.jpg",
+                    "name": "Vittoria Giannelli",
+                    "comment": "Non sapevo dove cercare per trovare un consulente nei meandri di internet; mentre con questo metodo di ricerca veloce sono riuscita a trovare Alessio il consulente che mi segue ormai da mesi ",
                     "raiting": 5,
                     "animation": "fadeInRight"
                 },
                 {
-                    "image": "assets/images/home1/client/team-3.jpeg",
-                    "name": "Carlo",
-                    "comment": "<p>Trovato su google, aperto, risposto agli step <br> e trovato il consulente perfetto per aiutarmi<br> a trovare un mutuo. <br> Il tutto in 5 min...consigliato </p>",
-                    "raiting": 4,
+                    "image": "assets/images/home1/client/team-3.jpg",
+                    "name": "Carlo Pradelli",
+                    "comment": "Trovato su google, aperto , risposto a gli step e trovato il consulente perfetto per avere un credito. Il tutto in 5 min...consiglisto",
+                    "raiting": 5,
                     "animation": "fadeInUp"
                 },
                 {
-                    "image": "assets/images/home1/client/team-4.jpeg",
-                    "name": "Maurizio",
-                    "comment": "<p>Sono stato ore a girare su internet senza trovare nulla.<br> Mentre grazie a Pronto Consulenti ho trovato un consulente <br> molto disponibile e tra l'altro vicino a casa mia </p>",
-                    "raiting": 5,
+                    "image": "assets/images/home1/client/team-4.jpg",
+                    "name": "Maurizio Gialli",
+                    "comment": "Sono stato ore a girare siti senza trovare il consulente per risparmiare qualcosa per mio figlio. Mentre con Pronto Consulenti hp trovato il consulente molto disponibile e tra l'altro vicino a casa mia ",
+                    "raiting": 4,
                     "animation": "fadeInLeft"
                 }
             ],
