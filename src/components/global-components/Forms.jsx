@@ -12,18 +12,18 @@ const Forms = () => {
 
     const handleSubmit =(e)=>{
         e.preventDefault()
-       
+
         let inpVlaue = {}
         inpVlaue.name = inputName
         inpVlaue.email = inputEmail
         inpVlaue.phone = inputPhone
         inpVlaue.web = inputWebsite
         inpVlaue.message = inputMessage
-      
+
         const  fetchApi=()=>{
             axios({
-                method: "POST", 
-                url:"https://doesir.w3webscript.com/send/index.php", 
+                method: "POST",
+                url:"https://doesir.w3webscript.com/send/index.php",
                 data:  inpVlaue
               })
               .then(res=>{
@@ -39,8 +39,8 @@ const Forms = () => {
               })
           }
           fetchApi()
-         
-        
+
+
     }
     return (
         <>
@@ -61,11 +61,7 @@ const Forms = () => {
                             <input type="tell" id="phn" placeholder="phone number*" className="inputs" onChange={(e)=>{setInputPhone(e.target.value)}} required value={inputPhone}/>
                         </label>
                     </div>
-                    <div className="col-lg-6 col-md-6">
-                        <label htmlFor="web">
-                            <input type="text" id="web" placeholder="website*" className="inputs" onChange={(e)=>{setInputWebsite(e.target.value)}} required value={inputWebsite}/>
-                        </label>
-                    </div>
+
                     <div className="col-lg-12">
                         <label htmlFor="msg">
                             <textarea id="msg" placeholder="message*" className="inputs" onChange={(e)=>{setInputMessage(e.target.value)}} required value={inputMessage}></textarea>
@@ -73,13 +69,13 @@ const Forms = () => {
                     </div>
                     <div className="col-lg-12">
                         <button type="submit" className="btn-style">
-                            <span>submit now</span>
+                            <span>Invia Subito</span>
                         </button>
                         {messageSuccess ? <p className="email-success">Mail Sent Successfully</p>: " " }
-                        
+
                     </div>
                 </div>
-            </form> 
+            </form>
         </>
     );
 }

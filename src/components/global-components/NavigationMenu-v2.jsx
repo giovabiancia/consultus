@@ -4,6 +4,7 @@ import { useAuthentication } from '../../hooks/useAuthentication';
 import { sectionData } from './../../data/section.json';
 import Avatar from '@material-ui/core/Avatar';
 import businessman from '../../img/businessman.png'
+import ModalLogin from '../ModalLogin';
 
 const NavigationMenuV2 = () => {
     const [menuToggle, setMenuToggle] = useState(false);
@@ -34,10 +35,10 @@ const NavigationMenuV2 = () => {
                                         </ul> */}
                                     </li>
                                     <li><Link to="/about">su di noi</Link></li>
-                                    <li>
+                                   {/*  <li>
                                         <Link to="/service">service</Link>
 
-                                    </li>
+                                    </li> */}
                                     <li>
                                         <Link to="/blog">Blog</Link>
 
@@ -46,8 +47,8 @@ const NavigationMenuV2 = () => {
                                     <li><Link to="/consulenti">consulenti</Link></li>
                                     <li><Link to="/contact">contatti</Link></li>
                                     <li>
-                                    <Link to="/profilo" style={{cursor:"pointer"}}>{auth.loggedIn ? <Avatar alt="Remy Sharp" src={auth.loggedIn.photoURL ? auth.loggedIn.photoURL: businessman} />:null}
-                                    </Link>
+                                    {auth.loggedIn ?    <a style={{cursor:"pointer"}}><Avatar alt="Remy Sharp" src={auth.loggedIn.photoURL ? auth.loggedIn.photoURL: businessman} /></a>:<ModalLogin></ModalLogin>}
+
                                     </li>
                                 </ul>
                             </div>

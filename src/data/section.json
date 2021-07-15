@@ -54,7 +54,7 @@
                 "background": "assets/images/home2/banner/banner.jpg"
             },
             "teamDetails": {
-                "title": "Il Nostro Team",
+                "title": "Chi ci ha già scelto",
                 "pageName": "Team ",
                 "background": "assets/images/home2/banner/banner.jpg"
             },
@@ -83,7 +83,7 @@
             "subtitle": "Inizia Gratis",
             "title": "Trova subito il consulente giusto",
             "content": "Ti mettiamo in contatto con il consulente più adatto alle tue esigenze, grazie ad un metodo semplice e gratutito ",
-            "background": "assets/images/home1/banner/banner.jpg",
+            "background": "assets/images/home1/banner/banner1.jpg",
             "channelName": "youtube",
             "videoId": "LCmsrVOXzZc"
         },
@@ -200,32 +200,32 @@
         },
         "about": {
             "subtitle": "Benvenuti su Pronto Consulenti",
-            "title": "Perche rivolgersi ad un consulente",
-            "content": "Il consulente aiuta i propri clienti a prendere decisioni di investimento, risparmio, credito ;offrendo una consulenza personalizzata che mira ad aiutarli a raggiungere i loro obiettivi attraverso la creazione di un piano finanziario .",
+            "title": "Che cosa facciamo ? ",
+            "content": "Ti aiutiamo a trovare il consulente che fà al caso tuo. Il nostro consulente ti supporterà nelle decisioni di investimento, risparmio  e credito;  sostenendoti nel raggiungimento dei tuoi obiettivi attraverso la creazione di un piano finanziario.",
             "metaList": [
                 {
                     "itemContent": "Solamente Consulenti Abilitati"
                 },
                 {
-                    "itemContent": "Miglior abbinamento possibile per esigenze e capacità "
+                    "itemContent": "Confronta migliaia di consulenti"
                 },
                 {
-                    "itemContent": "Operativita in presenza oppure da remoto "
+                    "itemContent": "Consulenza in presenza oppure da remoto "
                 },
                 {
-                    "itemContent": "Ampia scelta di consulenti divisi per competenze "
+                    "itemContent": "Trova il consulente che fà per te"
                 }
             ],
-            "ceoName": "Banana Gio, Zionciatti",
-            "ceoDesignation": "CEO & Founder",
+            "ceoName": "Giovanni Bianciardi",
+            "ceoDesignation": "Fondatore",
             "experienceYears": "135",
             "experience": "Consulenti Coinvolti",
             "image1": "assets/images/home1/about/about-img1.jpg",
             "image2": "assets/images/home1/about/about-img2.jpg",
             "image3": "assets/images/home1/about/about-img3.jpg",
-            "image4": "assets/images/home2/about/about1.jpg",
-            "image5": "assets/images/home2/about/about2.jpg",
-            "ceoImage": "assets/images/home1/about/person.jpg",
+            "image4": "assets/images/home2/about/about1.svg",
+            "image5": "assets/images/home2/about/about2.svg",
+            "ceoImage": "assets/images/home1/about/person.jpeg",
             "ceoSign": "assets/images/home1/about/sign.png"
         },
         "newsletter": {
@@ -236,48 +236,48 @@
         "service": {
             "serviceSectionHeading": {
                 "subtitle": "Trova il tuo Consulente",
-                "title": "Perche Rivolgersi ad un Consulente ",
+                "title": "Perchè Rivolgersi ad un Consulente ",
                 "content": "In un mondo sempre più incerto e dominato dalla complessità, si rafforza l’esigenza di affidarsi a chi ha delle competenze ben precise. Questo vale in tutti i campi, a maggior ragione quando si tratta di gestire risparmi accumulati con sforzi e sacrifici da destinare a progetti che riguardano la propria famiglia o il proprio futuro."
             },
             "singleService": [
                 {
                     "icon": "flaticon-meeting",
-                    "image": "assets/images/home1/service/img1.jpg",
+                    "image": "assets/images/home1/service/img2.jpeg",
                     "animation": "fadeInRight",
                     "title": "Chi è il consulente ?",
                     "content": "Il consulente è un professionista esperto di economia, finanza e gestione patrimoniale ma sopratutto conosce gli aspetti giuridici e fiscali, con particolare riferimento alla materia dei servizi d'investimento e alle operazioni di gestione capitali di famiglie, istituzioni o aziende "
                 },
                 {
                     "icon": "flaticon-diagram",
-                    "image": "assets/images/home1/service/img2.jpg",
+                    "image": "assets/images/home1/service/img6.jpeg",
                     "animation": "fadeInUp",
                     "title": "Cosa fa un consulente ?",
                     "content": "Il consulente aiuta i propri clienti a prendere decisioni di investimento, risparmio, credito ;offrendo una consulenza personalizzata che mira ad aiutarli a raggiungere i loro obiettivi attraverso la creazione di un piano finanziario "
                 },
                 {
                     "icon": "flaticon-management",
-                    "image": "assets/images/home1/service/img3.jpg",
+                    "image": "assets/images/home1/service/img7.svg",
                     "animation": "fadeInLeft",
                     "title": "Conviene avere un consulente ?",
                     "content": "È infatti importante scegliere il consulente giusto per essere sicuri di avere a propria disposizione un professionista esperto e capace di guidarci nella definizione di obiettivi, delle coperture assicurative e delle dinamiche sempre mutevoli dello scenario economico-finanziario."
                 },
                 {
                     "icon": "flaticon-diagram-1",
-                    "image": "assets/images/home1/service/img4.jpg",
+                    "image": "assets/images/home1/service/img4.jpeg",
                     "animation": "fadeInRight",
                     "title": "Consulente Finzaiario",
                     "content": "Il consulente finanziario, per definirsi tale, deve essere iscritto presso il relativo albo professionale dopo aver superato una prova d'esame valutativa, a cui accede solo chi ha determinati requisiti e titoli di studio."
                 },
                 {
                     "icon": "flaticon-profits",
-                    "image": "assets/images/home1/service/img5.jpg",
+                    "image": "assets/images/home1/service/img3.jpeg",
                     "animation": "fadeInDown",
                     "title": "Consulente Assicurativo",
                     "content": "Il consulente assicurativo è colui che aiuta il proprio cliente nel gestire il patrimonio e i risparmi, con lo scopo di garantirgli il benessere economico e una protezione a gli imprevisti, per mezzo di un un metodo personalizzato sui propri bisogni. Tale consulente può suggerire le soluzioni migliori in ambito di investimento, previdenza e Coperture assicurative"
                 },
                 {
                     "icon": "flaticon-management",
-                    "image": "assets/images/home1/service/img6.jpg",
+                    "image": "assets/images/home1/service/img5.jpeg",
                     "animation": "fadeInLeft",
                     "title": "Consulente del credito",
                     "content": "Il Consulente del credito, conosciuto anche come Mediatore creditizio o broker bancario, è l'intermediario tra la banca e il cliente. In pratica assiste il cliente che desidera ottenere un mutuo proponendogli l'istituto di credito più adatto alle sue esigenze"
@@ -288,12 +288,12 @@
             "serviceSectionHeading": {
                 "subtitle": "Sei Consulente ? ",
                 "title": "Perchè scegliere ProntoConsulenti",
-                "content": "ProntoConsulenti è la piattaforma che mancava agli utenti che decidono di cercare su internet un consulente adatto alle loro esigenze"
+                "content": "Mettiamo in contatto i nostri utenti con un consulente adatto alle loro esigenze"
             },
             "singleService": [
                 {
                     "icon": "flaticon-medal",
-                    "image": "assets/images/home2/offer/offer1.jpg",
+                    "image": "assets/images/home2/offer/offer1.jpeg",
                     "animation": "fadeInRight",
                     "title": "Ricevi clienti davvero interessati ",
                     "feature": [
@@ -302,7 +302,7 @@
                 },
                 {
                     "icon": "flaticon-promotion",
-                    "image": "assets/images/home2/offer/offer2.jpg",
+                    "image": "assets/images/home2/offer/offer2.jpeg",
                     "animation": "fadeInUp",
                     "title": "Raggiungi il pubblico online ",
                     "feature": [
@@ -311,7 +311,7 @@
                 },
                 {
                     "icon": "flaticon-briefcase-1",
-                    "image": "assets/images/home2/offer/offer3.jpg",
+                    "image": "assets/images/home2/offer/offer3.jpeg",
                     "animation": "fadeInLeft",
                     "title": "Abbatti i limiti territoriali",
                     "feature": [
@@ -320,31 +320,32 @@
                 },
                 {
                     "icon": "flaticon-briefcase",
-                    "image": "assets/images/home2/offer/offer4.jpg",
+                    "image": "assets/images/home2/offer/offer4.jpeg",
                     "animation": "fadeInRight",
-                    "title": "Cavalvca il nuovo trend",
+                    "title": "Cavalca il nuovo trend",
                     "feature": [
-                        "Secondo i dati di google analytics Sempre più persone ricercano un consulente nel web; non perdere l'onda "
+                        "Secondo i dati di google sempre più persone ricercano un consulente sul web, non perdere questa opportunità "
 
                     ]
                 },
                 {
                     "icon": "flaticon-medal",
-                    "image": "assets/images/home2/offer/offer5.jpg",
+                    "image": "assets/images/home2/offer/offer5.jpeg",
                     "animation": "fadeInDown",
                     "title": "Consulente Smart",
                     "feature": [
-                        "Crea contenuti con i articoli ed esperienze personali nel tuo prfilo ProntoConsuleti, implementando la tua presenza online "
+                        "Crea nuovi articoli e racconta esperienze personali nel tuo profilo ProntoConsulenti, aumentando la tua presenza online "
+
 
                     ]
                 },
                 {
                     "icon": "flaticon-lamp",
-                    "image": "assets/images/home2/offer/offer6.jpg",
+                    "image": "assets/images/home2/offer/offer6.jpeg",
                     "animation": "fadeInRight",
                     "title": "Open Platform",
                     "feature": [
-                        "ProntoConsulenti non è una lista appartenente a singole banche o istituti assicurativi; bensì è accessibile ad ogni tipo di operatore abilitato ad operare nel mercato"
+                        "ProntoConsulenti è accessibile ad ogni tipo di operatore abilitato ad operare nel mercato"
                     ]
                 }
             ]
@@ -768,23 +769,23 @@
             },
             "clientReview": [
                 {
-                    "image": "assets/images/home1/client/team-2.jpg",
+                    "image": "assets/images/home1/client/team-2.jpeg",
                     "name": "Vittoria Giannelli",
-                    "comment": "Non sapevo dove cercare per trovare un consulente nei meandri di internet; mentre con questo metodo di ricerca veloce sono riuscita a trovare Alessio il consulente che mi segue ormai da mesi ",
+                    "comment": "<p>Non sapevo dove cercare per trovare un consulente nei meandri di internet; <br>mentre con questo metodo di ricerca veloce <br> sono riuscita a trovare Alessio <br> il consulente che mi segue ormai da mesi</p> ",
                     "raiting": 5,
                     "animation": "fadeInRight"
                 },
                 {
-                    "image": "assets/images/home1/client/team-3.jpg",
+                    "image": "assets/images/home1/client/team-3.jpeg",
                     "name": "Carlo Pradelli",
-                    "comment": "Trovato su google, aperto , risposto a gli step e trovato il consulente perfetto per avere un credito. Il tutto in 5 min...consiglisto",
+                    "comment": "<p>Trovato su google, aperto , risposto a gli step<br> e trovato il consulente perfetto per avere un credito.<br> Il tutto in 5 min...consigliato</p>",
                     "raiting": 5,
                     "animation": "fadeInUp"
                 },
                 {
-                    "image": "assets/images/home1/client/team-4.jpg",
+                    "image": "assets/images/home1/client/team-4.jpeg",
                     "name": "Maurizio Gialli",
-                    "comment": "Sono stato ore a girare siti senza trovare il consulente per risparmiare qualcosa per mio figlio. Mentre con Pronto Consulenti hp trovato il consulente molto disponibile e tra l'altro vicino a casa mia ",
+                    "comment": "<p>Sono stato ore a girare siti senza trovare nulla <br>  </br>Mentre con Pronto Consulenti ho trovato il consulente <br>molto disponibile e tra l'altro vicino a casa mia </p>",
                     "raiting": 4,
                     "animation": "fadeInLeft"
                 }
@@ -1050,16 +1051,16 @@
                 ]
             },
             "inputInfo": {
-                "title": "Get every single update here",
+                "title": "Contattaci ",
                 "subtitle": "Contact us"
             }
         },
         "footer": {
-            "background": "assets/images/home1/footer/footer.jpg",
+            "background": "assets/images/home1/footer/footer1.jpg",
             "mainFooter": {
                 "about": {
                     "title": "Su di Noi",
-                    "content": "Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim",
+                    "content": "Mettiamo in contatto i nostri utenti con un consulente adatto alle loro esigenze",
                     "social": [
                         {
                             "icon": "fa-facebook-f",
@@ -1080,27 +1081,24 @@
                     ]
                 },
                 "info": {
-                    "title": "Informazioni",
+                    "title": "Menu",
                     "pageLink": [
                         {
-                            "pageName": "Il nostro metodo",
-                            "pageLink": "#!"
+                            "pageName": "Su di noi",
+                            "pageLink": "about"
+                        },
+
+                        {
+                            "pageName": "Blog",
+                            "pageLink": "blog"
                         },
                         {
-                            "pageName": "I nostri servizi",
-                            "pageLink": "#!"
+                            "pageName": "Consulenti",
+                            "pageLink": "consulenti"
                         },
                         {
-                            "pageName": "BLog",
-                            "pageLink": "#!"
-                        },
-                        {
-                            "pageName": "I nostri utenti",
-                            "pageLink": "#!"
-                        },
-                        {
-                            "pageName": "Il nostro Team",
-                            "pageLink": "#!"
+                            "pageName": "Contatti",
+                            "pageLink": "contact"
                         }
                     ]
                 },

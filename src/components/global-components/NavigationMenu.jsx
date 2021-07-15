@@ -4,6 +4,7 @@ import { useAuthentication } from '../../hooks/useAuthentication';
 import { sectionData } from './../../data/section.json';
 import Avatar from '@material-ui/core/Avatar';
 import businessman from '../../img/businessman.png'
+import ModalLogin from '../ModalLogin';
 
 const NavigationMenu = () => {
     const [headerSearch, setHeaderSearch] = useState('');
@@ -68,10 +69,10 @@ const NavigationMenu = () => {
                                         </ul> */}
                                     </li>
                                     <li><Link to="/about">Su di noi</Link></li>
-                                    <li>
+                                    {/* <li>
                                         <Link to="/service">service</Link>
 
-                                    </li>
+                                    </li> */}
                                     <li>
                                         <Link to="/blog">blog</Link>
 
@@ -80,8 +81,8 @@ const NavigationMenu = () => {
                                     <li><Link to="/consulenti">consulenti</Link></li>
                                     <li><Link to="/contact">contatti</Link></li>
                                     <li>
-                                    <Link to="/profilo" style={{cursor:"pointer"}}>{auth.loggedIn ? <Avatar alt="Remy Sharp" src={auth.loggedIn.photoURL ? auth.loggedIn.photoURL: businessman} />:null}
-                                    </Link>
+                                 {auth.loggedIn ?    <a style={{cursor:"pointer"}}><Avatar alt="Remy Sharp" src={auth.loggedIn.photoURL ? auth.loggedIn.photoURL: businessman} /></a>:<ModalLogin></ModalLogin>}
+
                                     </li>
                                 </ul>
                             </div>

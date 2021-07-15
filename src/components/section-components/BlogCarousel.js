@@ -37,7 +37,7 @@ const BlogCarousel = (props) => {
         }`}
       >
         <div className="container">
-          {profilo.uid && profilo.uid == consulente.uid ? (
+          {typeof profilo !== "undefined" && profilo.uid == consulente.uid ? (
             <div className="row">
               <div className="col-12 center">
                 <Button onClick={handleArticolo}>Aggiungi Articolo</Button>

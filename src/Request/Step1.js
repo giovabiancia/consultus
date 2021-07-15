@@ -38,7 +38,7 @@ export default function Step1() {
     <div>
       <Container>
         <Row>
-          <Col md="6" sm="12" className="mt-4 center">
+          {/* <Col md="6" sm="12" className="mt-4 center">
             <h5>Nome</h5>
             <TextField
               value={request.nome}
@@ -73,7 +73,7 @@ export default function Step1() {
               }
               className="mt-3"
             ></TextField>
-          </Col>
+          </Col> */}
           <Col md="6" sm="12" className="mt-4 center">
             <h5>Quanti anni hai ?</h5>
             <TextField

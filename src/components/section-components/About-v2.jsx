@@ -14,10 +14,10 @@ const AboutV2 = () => {
                                 <div className="bg bg1">
                                     <img src={data.image4} className="img-fluid" alt="About " />
                                 </div>
-                                <div className="bg bg2">
+                                {/* <div className="bg bg2">
                                     <img src={data.image5} className="img-fluid" alt="About " />
-                                </div>
-                                <div className="shape"></div>
+                                </div> */}
+                                {/* <div className="shape"></div> */}
                             </div>
                         </div>
                         <div className="col-lg-6">

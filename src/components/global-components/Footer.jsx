@@ -31,7 +31,7 @@ const Footer =()=>{
                                         {data.mainFooter.about.content}
                                         </p>
                                         <div className="more">
-                                            <Link to="/about">read more <i className="flaticon-chevron-1"></i></Link>
+                                            <Link to="/about">Scopri di più <i className="flaticon-chevron-1"></i></Link>
                                         </div>
                                         <div className="social">
                                             <ul className="d-flex">
@@ -53,7 +53,7 @@ const Footer =()=>{
                                             </ul>
                                         </div>
                                     </div>
-                                    <div className="col-xl-2 col-lg-3 col-md-6 mt-md-30">
+                                    {/* <div className="col-xl-2 col-lg-3 col-md-6 mt-md-30">
                                         <div className="title">
                                             <h4>{data.mainFooter.services.title}</h4>
                                         </div>
@@ -64,8 +64,8 @@ const Footer =()=>{
                                                 })}
                                             </ul>
                                         </div>
-                                    </div>
-                                    <div className="col-xl-3 col-lg-3 col-md-6 mt-md-30">
+                                    </div> */}
+                                    {/* <div className="col-xl-3 col-lg-3 col-md-6 mt-md-30">
                                         <div className="title">
                                             <h4>{data.mainFooter.newsLetter.title}</h4>
                                         </div>
@@ -79,7 +79,7 @@ const Footer =()=>{
                                                 </div>
                                                 })}
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </section>
@@ -93,7 +93,7 @@ const Footer =()=>{
                                         <div className="col-lg-6 col-md-5">
                                             <div className="copyright">
                                                 <p>
-                                                    Copyright &copy; {data.footerBottom.copyRightYear} <Link to={data.footerBottom.copyRightLink}>{data.footerBottom.copyRightFrom}</Link>. All Rights
+                                                    Copyright &copy; {data.footerBottom.copyRightYear} Prontoconsulenti.it. All Rights
                                                     Reserved
                                                 </p>
                                             </div>
@@ -101,9 +101,14 @@ const Footer =()=>{
                                         <div className="col-lg-6 col-md-7 mt-sm-20">
                                             <div className="footer-menu">
                                                 <ul className="d-flex justify-content-end">
-                                                    {data.footerBottom.bottomPageLink.map((item, i)=>{
-                                                        return <li key={i}><a href={item.pageLink}>{item.pageName}</a></li>
-                                                    })}
+
+                                                   <li>
+                                                       <a>Facebook</a>
+                                                    </li>
+                                                   <li>
+                                                    <a>Instagram</a>
+                                                   </li>
+
                                                 </ul>
                                             </div>
                                         </div>

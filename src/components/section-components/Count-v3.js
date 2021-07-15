@@ -3,6 +3,7 @@ import { sectionData } from "./../../data/section.json";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import warren from "../../img/warren.png";
+import buto from "../../img/buto.jpg";
 
 const CountV3 = () => {
   let data = sectionData.count;
@@ -19,8 +20,8 @@ const CountV3 = () => {
                 style={{ paddingBottom: 0 }}
                 data-wow-delay=".3s"
               >
-                <h6>Team</h6>
-                <h2>Il Nostro Team</h2>
+                <h6>Consulenti Premium</h6>
+                <h2>Chi ci ha già scelto</h2>
               </div>
             </div>
           </div>
@@ -58,7 +59,7 @@ const CountV3 = () => {
             <div className="col-lg-3 col-md-6 col-sm-6  mt-4">
               <div className="center">
                 <img
-                  src={warren}
+                  src={buto}
                   style={{
                     borderRadius: "50%",
                     backgroundColor: "white",
@@ -67,7 +68,8 @@ const CountV3 = () => {
                     objectFit: "cover",
                   }}
                 ></img>
-                <h5>Giovanni Bianciardi</h5>
+                <h5>Alessio Butini</h5>
+                <small>Consulente Finanziario</small>
               </div>
             </div>
             <div className="col-lg-3 col-md-6 col-sm-6 mt-4">

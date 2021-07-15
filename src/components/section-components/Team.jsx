@@ -4,6 +4,7 @@ import {sectionData} from './../../data/section.json'
 import {Link, useHistory} from 'react-router-dom'
 import { RisultatiContext } from '../../context/RisultatiContext';
 import Grow from '@material-ui/core/Grow';
+import CardConsulente from './CardConsulente';
 
  const Team = () => {
     let data = sectionData.team;
@@ -36,36 +37,11 @@ import Grow from '@material-ui/core/Grow';
 
                                     {consulenti.map((item, i)=>{
                                         return (
-                                            <div className="col-lg-4 col-md-6 wow cardMargin" style={{cursor:'pointer'}} data-wow-duration="1.5s" data-wow-delay=".4s" key={i}>
+                                            <div className="col-xl-3 col-lg-4 col-md-6 wow " style={{cursor:'pointer'}} data-wow-duration="1.5s" data-wow-delay=".4s" key={i}>
                                                 <Grow in timeout={1000}>
-                                                <div className="item" onClick={()=>handleLink(item)}>
-                                                    <div className="image">
-                                                        <img src={item.foto} className="img-fluid" alt="Team Member" />
-                                                        <div className="overlay">
-                                                            <ul className="d-flex justify-content-center">
-                                                                <li>
-                                                                    <Link to={item.facebook}><i className="fab fa-facebook-f"></i></Link>
-                                                                </li>
-                                                                <li>
-                                                                    <Link to={item.twitter}><i className="fab fa-twitter"></i></Link>
-                                                                </li>
-                                                                <li>
-                                                                    <Link to={item.instagram}><i className="fab fa-instagram"></i></Link>
-                                                                </li>
-                                                                <li>
-                                                                    <Link to={item.linkedin}><i className="fab fa-linkedin-in"></i></Link>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div className="shape">
-                                                        <div className="text">
-                                                            <a onClick={()=>handleLink(item)}>{item.nome} {item.cognome}</a>
-                                                            <span>{item.email}</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                    <CardConsulente consulente = {item} ></CardConsulente>
                                                 </Grow>
+
                                             </div>
                                         )
                                     })}

@@ -26,7 +26,7 @@ function Hero (props){
     return(
         <>
         {/* <!-- start banner area --> */}
-        <section className="banner" style={{background:`url(${publicUrl + data.background})`,backgroundSize: "cover"}}>
+        <section className="banner" style={{background:`url(${publicUrl + data.background})`,backgroundSize: "cover", backgroundPosition:'center'}}>
             <div id="overlay"></div>
             <div className="container">
                 <div className="row">

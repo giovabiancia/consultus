@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SectionTitle from '../global-components/SectionTitle';
+import ModalIscriviti from '../ModalIscriviti';
 import {sectionData} from './../../data/section.json'
 
 const Offer = () => {
@@ -20,18 +21,18 @@ const Offer = () => {
                             data.singleOffer.map((item, i) =>{
                                 return(
                                     <div className="col-lg-4 col-md-6" key={i}>
-                                        <div className={`item wow ${item.animation}`} data-wow-duration="1.5s" data-wow-delay={item.animationDelay}>
+                                        <div className={`item wow ${item.animation}`}  data-wow-duration="1.5s" data-wow-delay={item.animationDelay}>
                                             <div className="icon">
                                                 <i className={item.icon}></i>
                                             </div>
                                             <span className="number">0{i + 1}</span>
                                             <h3>{item.title}</h3>
-                                            <ul>
+                                            <ul className="mb-4">
                                                 {item.features.map((feature, i)=>{
                                                     return <li key={i}>{feature}</li>
                                                 })}
                                             </ul>
-                                            <Link to="/service" className="btn-style"><span>read more</span></Link>
+                                            <ModalIscriviti ></ModalIscriviti>
                                         </div>
                                     </div>
                                 )

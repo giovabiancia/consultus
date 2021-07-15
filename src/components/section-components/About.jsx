@@ -3,9 +3,9 @@ import {sectionData} from './../../data/section.json'
 import expert from '../../img/svg/expert.svg'
 import investing from '../../img/svg/investing.svg'
 import location from '../../img/svg/location.svg'
-import mobile from '../../img/svg/mobile.svg'
+import mobile from '../../img/svg/investing.svg'
 import pitch from '../../img/svg/pitch.svg'
-import profile from '../../img/svg/profile.svg'
+import profile from '../../img/svg/expert.svg'
 
 const About = () => {
     let data = sectionData.about;
@@ -53,7 +53,7 @@ const About = () => {
                                     <div className="bg bg1">
                                         <img src={mobile} className="img-fluid" alt="About" />
                                     </div>
-                                    <div className="bg bg2">
+                                    {/* <div className="bg bg2">
                                         <img src={data.ceoSign} className="img-fluid" alt="About" />
                                     </div>
                                     <div className="bg3" style={{background:`url(${data.ceoSign})`,backgroundPosition: "54%"}}>
@@ -62,7 +62,7 @@ const About = () => {
                                     </div>
                                     <div className="shape">
                                         <div className="inner"></div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>

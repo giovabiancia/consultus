@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 import firebase from "../firebase.js";
 import CloseIcon from "@material-ui/icons/Close";
 import { useAuthentication } from "../hooks/useAuthentication";
+import ModalIscriviti from "./ModalIscriviti";
 
 export default function ButtonSignUp(props) {
   const history = useHistory();
@@ -31,13 +32,6 @@ export default function ButtonSignUp(props) {
       setLgShow(true);
     } */
   }
-  const checkValues = () => {
-    if (name == "") {
-      setErrorName(true);
-    } else {
-      auth.signUpEmail(name, email, password);
-    }
-  };
 
   const goToRequest = () => {
     history.push("/request");
@@ -46,80 +40,10 @@ export default function ButtonSignUp(props) {
     <div>
       {auth.loggedIn ? (
         <button className="btn-style" onClick={goToRequest}>
-          <span>Invia Richiesta</span>
+          <span>Inizia Richiesta</span>
         </button>
       ) : (
-        <>
-          <button className="btn-style" onClick={() => setLgShow(true)}>
-            <span>Invia Richiesta</span>
-          </button>
-          <Modal size="sm" show={lgShow} onHide={() => setLgShow(false)}>
-            <div className="container" style={{ padding: 30 }}>
-              <Row>
-                <CloseIcon
-                  style={{ position: "absolute", top: 13, cursor: "pointer" }}
-                  onClick={() => setLgShow(false)}
-                ></CloseIcon>
-                {/* <Col md="6" lg="6" className="noMobile center">
-                <img src={wallet}></img>
-              </Col> */}
-
-                <Col className="center">
-                  <h3 className="mb-3">Iscriviti e Inizia Gratis !</h3>
-                  <button
-                    class="btn btn-lg btn-google btn-block text-uppercase mt-4"
-                    type="submit"
-                    style={{ fontSize: 15 }}
-                    onClick={auth.login}
-                  >
-                    <i class="fab fa-google mr-2"></i> Iscriviti con Google
-                  </button>
-                  <button
-                    class="btn btn-lg btn-facebook btn-block text-uppercase mb-4"
-                    type="submit"
-                    style={{ fontSize: 15 }}
-                    onClick={auth.fbLogin}
-                  >
-                    <i class="fab fa-facebook-f mr-2"></i> Iscriviti con
-                    Facebook
-                  </button>
-                  <TextField
-                    variant="outlined"
-                    placeholder="Nome"
-                    error={name == "" ? (errorName ? true : false) : null}
-                    helperText={
-                      name == "" ? (errorName ? "Required" : null) : null
-                    }
-                    type="text"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    style={{ width: "90%", padding: 10 }}
-                  ></TextField>
-                  <TextField
-                    variant="outlined"
-                    placeholder="email"
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    style={{ width: "90%", padding: 10 }}
-                  ></TextField>
-                  <TextField
-                    variant="outlined"
-                    placeholder="password"
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    style={{ width: "90%", padding: 10 }}
-                  ></TextField>
-                  <button className="btn-style mt-3" onClick={checkValues}>
-                    <span>Iscriviti</span>
-                  </button>
-                  <Divider></Divider>
-                </Col>
-              </Row>
-            </div>
-          </Modal>
-        </>
+        <ModalIscriviti></ModalIscriviti>
       )}
     </div>
   );

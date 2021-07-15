@@ -21,16 +21,16 @@ const ServiceV2 = () => {
                                     {data.singleService.map((item,i)=>{
                                         return (
                                             <div className="col-lg-4 col-md-6" key={i}>
-                                                <div className={`item wow  ${item.animation}`} style={{background:`url(${publicUrl + item.image})`}} data-img="assets/images/home2/offer/offer1.jpg" data-wow-duration="1.5s" data-wow-delay=".3s">
+                                                <div className={`item wow  ${item.animation}`} style={{background:`url(${publicUrl + item.image})`, objectFit:'contain', backgroundSize:'cover', backgroundPosition:'center'}} data-img="assets/images/home2/offer/offer1.jpg" data-wow-duration="1.5s" data-wow-delay=".3s">
                                                     <div className="overlay">
                                                         <div className="icon">
                                                             <i className={item.icon}></i>
                                                         </div>
                                                         <span className="number">0{i+1}</span>
                                                         <h3>{item.title}</h3>
-                                                        <ul>
+                                                        <ul >
                                                             {item.feature.map((item, i)=>{
-                                                                return <li key={i}>{item}</li>
+                                                                return <li style={{listStyle:'none'}} key={i}>{item}</li>
                                                             })}
                                                         </ul>
                                                         <ButtonConsultant></ButtonConsultant>

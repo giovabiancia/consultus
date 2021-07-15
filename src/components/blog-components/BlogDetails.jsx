@@ -35,7 +35,7 @@ const BlogDetails = (props) => {
     return (
         <>
             {/* <!-- start blog details area --> */}
-        <section className="blog-detail pt-90">
+        <section className="blog-detail pt-30">
         <div className="container">
             <div className="row">
                 {/* <!-- start blog detail inner --> */}
