@@ -67,7 +67,7 @@ function Hero (props){
                                                 >
                                                     <option aria-label="None" value="" disabled defaultValue default>Seleziona consulente</option>
                                                     <option value={'Consulente Finanziario'}>Consulente Finanziario</option>
-                                                    <option value={'Consulente Assicurativo'}>Consulente assicurativo</option>
+                                                    <option value={'Consulente Assicurativo'}>Consulente Assicurativo</option>
                                                     <option value={'Consulente del Credito'}>Consulente del Credito</option>
                                             </Select>
                                         </FormControl>

@@ -4,6 +4,8 @@ import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import warren from "../../img/warren.png";
 import buto from "../../img/buto.jpg";
+import enrico from "../../img/enrico.jpeg";
+import marco from "../../img/marco.jpeg";
 
 const CountV3 = () => {
   let data = sectionData.count;
@@ -26,10 +28,10 @@ const CountV3 = () => {
             </div>
           </div>
           <div className="row">
-            <div className="col-lg-3 col-md-6 col-sm-6  mt-4 ">
+            <div className="col-lg-3 col-md-6 col-sm-6  mt-4">
               <div className="center">
                 <img
-                  src={warren}
+                  src={marco}
                   style={{
                     borderRadius: "50%",
                     backgroundColor: "white",
@@ -38,13 +40,14 @@ const CountV3 = () => {
                     objectFit: "cover",
                   }}
                 ></img>
-                <h5>Giovanni Bianciardi</h5>
+                <h5>Marco Fatucchi</h5>
+                <small>Consulente Finanziario</small>
               </div>
             </div>
             <div className="col-lg-3 col-md-6 col-sm-6  mt-4">
               <div className="center">
                 <img
-                  src={warren}
+                  src={enrico}
                   style={{
                     borderRadius: "50%",
                     backgroundColor: "white",
@@ -53,7 +56,8 @@ const CountV3 = () => {
                     objectFit: "cover",
                   }}
                 ></img>
-                <h5>Giovanni Bianciardi</h5>
+                <h5>Enrico Palopoli</h5>
+                <small>Consulente Assicurativo e Finanziario</small>
               </div>
             </div>
             <div className="col-lg-3 col-md-6 col-sm-6  mt-4">
@@ -63,6 +67,7 @@ const CountV3 = () => {
                   style={{
                     borderRadius: "50%",
                     backgroundColor: "white",
+                    backgroundPosition: "center",
                     height: 200,
                     width: 200,
                     objectFit: "cover",

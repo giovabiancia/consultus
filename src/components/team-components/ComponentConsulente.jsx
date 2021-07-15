@@ -14,6 +14,10 @@ import FindInPageIcon from '@material-ui/icons/FindInPage';
 import TimelineIcon from '@material-ui/icons/TrendingUp';
 import AccountBalanceWalletIcon from '@material-ui/icons/AccountBalanceWallet';
 import BlogCarousel from "../section-components/BlogCarousel";
+import firebase from "../../firebase"
+
+
+
 const Consulente = (props) => {
     let data = sectionData.teamDetails;
     const auth = useAuthentication()
@@ -34,11 +38,23 @@ const Consulente = (props) => {
             setCompetenze(array)
 
         }
-
-
       /*  */
 
     }, [props])
+
+    useEffect(() => {
+        const db = firebase.firestore();
+        const increment = firebase.firestore.FieldValue.increment(1);
+        var user = firebase.auth().currentUser;
+        if (user){
+            const storyRef = db.collection('consulenti').doc(props.profilo.idconsulente);
+            storyRef.update({ views: increment });
+
+        }
+
+
+
+    },[])
 
 
     return (
