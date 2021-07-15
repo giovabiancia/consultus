@@ -80,7 +80,7 @@ const NavigationMenu = () => {
 
                                     <li><Link to="/consulenti">consulenti</Link></li>
                                     <li><Link to="/contact">contatti</Link></li>
-                                    <li>
+                                    <li  className="center">
                                  {auth.loggedIn ?    <Link to="/profilo" style={{cursor:"pointer"}}><Avatar alt="Remy Sharp" src={auth.loggedIn.photoURL ? auth.loggedIn.photoURL: businessman} /></Link>:<ModalLogin></ModalLogin>}
 
                                     </li>
