@@ -7,7 +7,7 @@ import firebase from "../firebase.js";
 import CloseIcon from "@material-ui/icons/Close";
 import { useAuthentication } from "../hooks/useAuthentication";
 
-export default function ModalLogin() {
+export default function ModalLogin(props) {
   const [lgShow, setLgShow] = useState(false);
   const history = useHistory();
   const auth = useAuthentication();
@@ -16,7 +16,7 @@ export default function ModalLogin() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const checkValues = () => {
-    if (name == "") {
+    if (email == "") {
       setErrorName(true);
     } else {
       auth.signInEmail(email, password);
@@ -24,8 +24,8 @@ export default function ModalLogin() {
   };
   return (
     <>
-      <button className="btn btn-primary " onClick={() => setLgShow(true)}>
-        <span>Log In</span>
+      <button className={props.class} onClick={() => setLgShow(true)}>
+        <span>Accedi</span>
       </button>
       <Modal size="sm" show={lgShow} onHide={() => setLgShow(false)}>
         <div className="container" style={{ padding: 30 }}>
@@ -85,7 +85,6 @@ export default function ModalLogin() {
               <button className="btn-style mt-3" onClick={checkValues}>
                 <span>Login</span>
               </button>
-              <Divider></Divider>
             </Col>
           </Row>
         </div>

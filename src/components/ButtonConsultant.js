@@ -22,13 +22,7 @@ export default function ButtonConsultant(props) {
   function handleClick() {
     var user = firebase.auth().currentUser;
 
-    if (user) {
-      history.push("/registrazione-consulente");
-    } else {
-      setLgShow(true);
-
-      /* ; */
-    }
+    history.push("/registrazione-consulente");
   }
   const checkValues = () => {
     if (name == "") {

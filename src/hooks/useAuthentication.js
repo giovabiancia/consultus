@@ -8,8 +8,8 @@ const provider = new firebase.auth.GoogleAuthProvider();
 var FacebookProvider = new firebase.auth.FacebookAuthProvider();
 
 export function useAuthentication() {
-  const [authenticated, setAuthenticated] = useState("loading");
-  const [error, setError] = useState("loading");
+  const [authenticated, setAuthenticated] = useState("");
+  const [error, setError] = useState("");
   function login() {
     auth.signInWithPopup(provider);
   }
@@ -24,6 +24,7 @@ export function useAuthentication() {
       var errorCode = error.code;
       var errorMessage = error.message;
       alert(errorMessage);
+
       // ...
     });
   }

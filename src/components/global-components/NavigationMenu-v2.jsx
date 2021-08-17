@@ -25,6 +25,7 @@ const NavigationMenuV2 = () => {
                             <img src={data.logo2} style={{width:120}} alt="Logo" />
                             </Link>
                             <div className={`header-menu ml-auto position-static ${menuToggle === true ? 'menuToggle' : ''}`}>
+                            {auth.loggedIn ? <Link to="/profilo" style={{cursor:"pointer"}} className="noPc"><Avatar alt="Remy Sharp" src={auth.loggedIn.photoURL ? auth.loggedIn.photoURL: businessman} /></Link>: <ModalLogin class="btn btn-primary  mr-4 noPc"></ModalLogin> }
                             <div id="menu-button"  onClick={()=>{setMobileMenuToggle(!mobileMenuToggle)}}><i className="fas fa-bars"></i></div>
                                 <ul className={`menus ${mobileMenuToggle === true ? 'open' : ''}`}>
                                     <li>
@@ -47,7 +48,7 @@ const NavigationMenuV2 = () => {
                                     <li><Link to="/consulenti">consulenti</Link></li>
                                     <li><Link to="/contact">contatti</Link></li>
                                     <li className="center">
-                                    {auth.loggedIn ?    <Link to="/profilo" style={{cursor:"pointer"}}><Avatar alt="Remy Sharp" src={auth.loggedIn.photoURL ? auth.loggedIn.photoURL: businessman} /></Link>:<ModalLogin></ModalLogin>}
+                                    {auth.loggedIn ?    <Link to="/profilo" style={{cursor:"pointer"}} className="noMobile"><Avatar alt="Remy Sharp" src={auth.loggedIn.photoURL ? auth.loggedIn.photoURL: businessman} /></Link>:<ModalLogin class="btn btn-primary  mr-4 noMobile"></ModalLogin>}
                                     </li>
                                 </ul>
                             </div>

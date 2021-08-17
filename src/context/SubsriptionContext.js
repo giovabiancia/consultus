@@ -22,7 +22,6 @@ export const SubscriptionProvider = (props) => {
               .collection("subscriptions")
               .onSnapshot((querySnapshot) => {
                 if (!querySnapshot.empty) {
-                  console.log("oh yes");
                   const newRichieste = querySnapshot.docs.map((richiesta) => ({
                     id: richiesta.id,
                     ...richiesta.data(),

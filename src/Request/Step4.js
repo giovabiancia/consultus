@@ -88,7 +88,7 @@ export default function Step4() {
             </Select>
           </Col>
           <Col md="12" sm="12" className="mt-4 center">
-            <h5 className="mb-4">Quale è la tua prepenzione al rischio?</h5>
+            <h5 className="mb-4">Quale è la tua propenzione al rischio?</h5>
             <Slider
               value={request.rischio}
               aria-labelledby="discrete-slider-always"

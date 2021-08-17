@@ -19,6 +19,9 @@ function Hero (props){
     let publicUrl = process.env.PUBLIC_URL+'/'
 
     const history = useHistory()
+    const goToRequest = () => {
+        history.push("/request");
+      };
 
     const handleClick =()=>{
         history.push('/registrazione-consulente')
@@ -91,7 +94,10 @@ function Hero (props){
 
                                         </div>
                                         <div className="col-lg-4 col-md-12 center">
-                                        <ButtonSignUp></ButtonSignUp>
+                                  {/*       <ButtonSignUp></ButtonSignUp> */}
+                                        <button className="btn-style" onClick={goToRequest}>
+                                            <span>Inizia Richiesta</span>
+                                        </button>
 
                                         </div>
 

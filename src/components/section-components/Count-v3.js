@@ -6,9 +6,15 @@ import warren from "../../img/warren.png";
 import buto from "../../img/buto.jpg";
 import enrico from "../../img/enrico.jpeg";
 import marco from "../../img/marco.jpeg";
+import { useHistory } from "react-router-dom";
 
 const CountV3 = () => {
   let data = sectionData.count;
+  const history = useHistory();
+
+  const handleLink = () => {
+    history.push("/registrazione-consulente");
+  };
   return (
     <div>
       {/* <!-- start count area --> */}
@@ -22,8 +28,12 @@ const CountV3 = () => {
                 style={{ paddingBottom: 0 }}
                 data-wow-delay=".3s"
               >
-                <h6>Consulenti Premium</h6>
-                <h2>Chi ci ha già scelto</h2>
+                <h6>Chi ci ha già scelto</h6>
+                <h2>Sei un consulente ?</h2>
+                {/* <b>Sei un consulente ? </b> */}
+                <button className=" btn-style mt-4" onClick={handleLink}>
+                  <span>Registrati subito</span>
+                </button>
               </div>
             </div>
           </div>

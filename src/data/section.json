@@ -140,25 +140,25 @@
         "count": {
             "singleCount": [
                 {
-                    "title": "Soddisfazione Utenti",
+                    "title": "Utenti soddisfatti",
                     "percent": 89,
                     "animation": "fadeInRight",
                     "animationDelay": "0.4s"
                 },
                 {
-                    "title": "Velocità di Risposta",
+                    "title": "Utenti fidelizzati",
                     "percent": 91,
                     "animation": "fadeInUp",
                     "animationDelay": "0.3s"
                 },
                 {
-                    "title": "Strategia di Sviluppo ",
+                    "title": "Probabilità di match",
                     "percent": 93,
                     "animation": "fadeInUp",
                     "animationDelay": "0.3s"
                 },
                 {
-                    "title": "Sodisfazione Consulenti",
+                    "title": "Consulenti soddisfatti",
                     "percent": 92,
                     "animation": "fadeInLeft",
                     "animationDelay": "0.4s"

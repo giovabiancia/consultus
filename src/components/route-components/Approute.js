@@ -33,6 +33,7 @@ import SignUp from "../../page/SignUp";
 import { useAuthentication } from "../../hooks/useAuthentication";
 import BlogPage from "../../page/BlogPage";
 import { SubscriptionProvider } from "../../context/SubsriptionContext";
+import Esempio from "../section-components/Esempio";
 
 function AppRoute() {
   const auth = useAuthentication();
@@ -73,6 +74,7 @@ function AppRoute() {
                         <Route path="/project" exact component={ProjectPage} />
                         <Route path="/blog" exact component={BlogPage} />
                         <Route path="/team" exact component={TeamPage} />
+                        <Route path="/esempio" exact component={Esempio} />
                         <Route path="/risultati" exact component={TeamPage} />
                         <Route
                           path="/profilo"
