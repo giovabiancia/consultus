@@ -112,7 +112,7 @@ const ComponentProfiloConsulente = () => {
                                      <button className="btn button-primary mt-3" onClick={sendToPortal}>Gestisci abbonamento</button>
                                 </div>
                                 :null}
-                                {abbonamento=="active" && profilo.attivo == false ?
+                                {abbonamento==="active" && profilo.attivo === false ?
                                 <div className="center p-4">
                                  <p>Stato del profilo: <Chip label="In attesa di revisione" style={{backgroundColor:'orange', color:'white'}} /></p>
                                  <p>Stiamo controllando la tua documentazione</p>

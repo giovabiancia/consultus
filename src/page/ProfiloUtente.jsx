@@ -9,6 +9,8 @@ import ComponentProfiloUtente from '../components/team-components/ComponentProfi
 import { ProfileContext } from '../context/ProfileContext';
 import { sectionData } from '../data/section.json';
 import { useAuthentication } from '../hooks/useAuthentication';
+import { Helmet } from "react-helmet";
+
 
 
 
@@ -23,6 +25,14 @@ const ProfiloUtente = () => {
     return (
         <>
             <Layouts  pageTitle='Team Details'>
+            <Helmet>
+          <meta charSet="utf-8" />
+          <title>Profilo Utente| ProntoConsulenti</title>
+          <meta
+            name="description"
+            content="Confronta i migliori consulenti finanziari, assicurativi e fiscali presenti sulla nostra piattaforma e scegli quello che fa per te  "
+          />
+        </Helmet>
                 <HeaderV3 background={data.teamDetails.background} title={auth.loggedIn.displayName} pageName={auth.loggedIn.email} />
                 {profilo?  <ComponentProfiloConsulente />: <ComponentProfiloUtente/>}
 

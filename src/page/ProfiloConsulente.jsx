@@ -11,6 +11,7 @@ import { RisultatiContext } from '../context/RisultatiContext';
 import { sectionData } from '../data/section.json';
 import { useAuthentication } from '../hooks/useAuthentication';
 import countapi from 'countapi-js';
+import { Helmet } from "react-helmet";
 
 import firebase from '../firebase'
 
@@ -75,6 +76,15 @@ useEffect(() => {
     return (
         <>
             <Layouts  pageTitle='Team Details'>
+            <Helmet>
+              <meta charSet="utf-8" />
+              <title>Consulente | ProntoConsulenti</title>
+              <meta
+                name="description"
+                content="Confronta i migliori consulenti finanziari, assicurativi e fiscali presenti sulla nostra piattaforma e scegli quello che fa per te  "
+              />
+            </Helmet>
+
                 <HeaderV3 background={data.teamDetails.background}  title={profilo.nome+ profilo.cognome}   />
 
                 {/* distinguo tra profilo consulente e profilo normale */}

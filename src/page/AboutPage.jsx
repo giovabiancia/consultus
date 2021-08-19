@@ -9,6 +9,7 @@ import Client from '../components/section-components/Client';
 import Connect from '../components/section-components/Connect';
 import Footer from '../components/global-components/Footer';
 import ScrollTop from '../components/global-components/BackToTop';
+import {Helmet} from "react-helmet";
 const AboutPage = () => {
     const data = sectionData.sectionTitle
     useEffect(() => {
@@ -17,6 +18,12 @@ const AboutPage = () => {
     return (
         <>
             <Layouts pageTitle='Abouts'>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Su di Noi | ProntoConsulenti</title>
+                    <meta name="description" content="Confronta i migliori consulenti finanziari, assicurativi e fiscali presenti sulla nostra piattaforma e scegli quello che fa per te  " />
+
+                </Helmet>
                 <HeaderV3 background={data.about.background} title={data.about.title} pageName={data.about.pageName} />
                 <AboutV2 />
                 <Count />

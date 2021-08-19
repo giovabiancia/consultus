@@ -187,7 +187,7 @@ export default function RegistrationConsultant() {
 
               if (sessionId) {
                 const stripe = await loadStripe(
-                  "pk_test_51JAyOjLyrGIetcWTZTFA5Ylhq9VSN9p1nCuzZyEvDSEiyCHgRZDgrGnGkzfjmoVgNUFC4f7ClSAL3OuE1YKBsaUr00wN5Rdyvk"
+                  "pk_live_51JAyOjLyrGIetcWTsyGiWwjkslkJxja7YzPGmaGqqmkGQh1RH7ZxqODA6AylfWR3oegnLn4Ksrqe3E7CGe8J39es00v6aW1Sg6"
                 );
                 await stripe.redirectToCheckout({ sessionId }).then((e) => {
                   alert(e);
@@ -204,7 +204,10 @@ export default function RegistrationConsultant() {
     <div>
       <NavigationMenu></NavigationMenu>
       <Helmet>
-        <title>Cunsultus | Consulente finanziario | Inizia Ora</title>
+        <title>
+          ProntoConsulenti | Consulenti finanziari, assicurativi, fiscali |
+          Inizia Ora
+        </title>
         <meta name="description" content="Affidati a dei professionisti" />
       </Helmet>
       <Container style={{ height: "100vh" }}>

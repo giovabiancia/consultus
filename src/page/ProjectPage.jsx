@@ -5,6 +5,7 @@ import Connect from '../components/section-components/Connect';
 import HeaderV3 from '../components/section-components/Header-v3';
 import ProjectV2 from '../components/section-components/Project-v2';
 import { sectionData } from './../data/section.json';
+import { Helmet } from "react-helmet";
 
 
 const ProjectPage = () => {
@@ -14,6 +15,7 @@ const ProjectPage = () => {
 }, [])
     return (
         <>
+
             <Layouts pageTitle='Project'>
                 <HeaderV3  background={data.project.background} title={data.project.title} pageName={data.project.pageName}/>
                 <ProjectV2 />

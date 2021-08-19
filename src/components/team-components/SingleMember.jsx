@@ -64,14 +64,14 @@ const SingleMemberInfo = (props) => {
             </div>
             <div className="team-inner inner-shadow wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
             {auth.loggedIn.uid === props.profilo.uid?
-            <div className="single-item mt-md-30 personal-info center">
+            <div className="single-item  personal-info center">
 
                     <ModalRequest></ModalRequest>
 
 
               </div>:null}
                 {auth.loggedIn.uid === props.profilo.uid?
-                <div className="single-item mt-md-30 personal-info center">
+                <div className="single-item  personal-info center">
 
                   <button className="btn-primary btn-lg" onClick={handleClick}>
                   Modifica Profilo

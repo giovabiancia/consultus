@@ -13,6 +13,7 @@ import Service from '../components/section-components/Service';
 import Team from '../components/section-components/Team';
 import Layouts from './../components/global-components/Layouts';
 import Header from '../components/section-components/Header';
+import {Helmet} from "react-helmet";
 
 class Home extends Component {
     componentDidMount(){
@@ -21,6 +22,12 @@ class Home extends Component {
    render(){
        return(
            <Layouts pageTitle='Home'>
+                <Helmet>
+                <meta charSet="utf-8" />
+                <title>Home | ProntoConsulenti - trova il tuo consulente Online</title>
+                <meta name="description" content="Confronta i migliori consulenti finanziari, assicurativi e fiscali presenti sulla nostra piattaforma e scegli quello che fa per te  " />
+                </Helmet>
+
                <Header />
                <Offer />
                <Count />

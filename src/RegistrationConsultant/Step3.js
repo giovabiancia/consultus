@@ -30,12 +30,34 @@ export default function Step3() {
     newState.competenze = value;
     setRequest(newState);
   };
+  const handleCitta = (value) => {
+    let newState = Object.assign({}, request);
+    newState.zonaOperativa = value;
+    setRequest(newState);
+  };
   return (
     <Container>
       <Row>
         <Col className="mt-4  " md="12" sm="12">
           <h5 className="mb-4 center ">Zona di operatività</h5>
           {/* <MapField></MapField> */}
+          <Autocomplete
+            id="combo-box-demo"
+            options={citta}
+            getOptionLabel={(option) => option.title}
+            style={{ padding: 0, width: "100%" }}
+            className="ml-2 "
+            variant="outlined"
+            onChange={(e, value) => handleCitta(value)}
+            renderInput={(params) => (
+              <TextField
+                variant="outlined"
+                {...params}
+                label="Provincia"
+                style={{ padding: 0 }}
+              />
+            )}
+          />
         </Col>
         <Col className="mt-4  center" lg="6" sm="12">
           <h5 className="mb-4 center ">Titolo di studio</h5>
@@ -152,4 +174,117 @@ const top100Films = [
   { title: "Consulenza sul credito", year: 2003 },
   { title: "Gestione del rischio finanziaro", year: 1966 },
   { title: "Asset allocation", year: 1999 },
+];
+
+const citta = [
+  { title: "Agrigento" },
+  { title: "Alessandria" },
+  { title: "Ancona" },
+  { title: "Aosta" },
+  { title: "Arezzo" },
+  { title: "Ascoli Piceno" },
+  { title: "Asti" },
+  { title: "Avellino" },
+  { title: "Bari" },
+  { title: "Barletta-Andria-Trani" },
+  { title: "Belluno" },
+  { title: "Benevento" },
+  { title: "Bergamo" },
+  { title: "Biella" },
+  { title: "Bologna" },
+  { title: "Bolzano" },
+  { title: "Brescia" },
+  { title: "Brindisi" },
+  { title: "Cagliari" },
+  { title: "Caltanissetta" },
+  { title: "Campobasso" },
+  { title: "Carbonia-Iglesias" },
+  { title: "Caserta" },
+  { title: "Catania" },
+  { title: "Catanzaro" },
+  { title: "Chieti" },
+  { title: "Como" },
+  { title: "Cosenza" },
+  { title: "Cremona" },
+  { title: "Crotone" },
+  { title: "Cuneo" },
+  { title: "Enna" },
+  { title: "Fermo" },
+  { title: "Ferrara" },
+  { title: "Firenze" },
+  { title: "Foggia" },
+  { title: "Forlì-Cesena" },
+  { title: "Frosinone" },
+  { title: "Genova" },
+  { title: "Gorizia" },
+  { title: "Grosseto" },
+  { title: "Imperia" },
+  { title: "Isernia" },
+  { title: "La Spezia" },
+  { title: "L Aquila" },
+  { title: "Latina" },
+  { title: "Lecce" },
+  { title: "Lecco" },
+  { title: "Livorno" },
+  { title: "Lodi" },
+  { title: "Lucca" },
+  { title: "Macerata" },
+  { title: "Mantova" },
+  { title: "Massa-Carrara" },
+  { title: "Matera" },
+  { title: "Messina" },
+  { title: "Milano" },
+  { title: "Modena" },
+  { title: "Monza e della Brianza" },
+  { title: "Napoli" },
+  { title: "Novara" },
+  { title: "Nuoro" },
+  { title: "Olbia-Tempio" },
+  { title: "Oristano" },
+  { title: "Padova" },
+  { title: "Palermo" },
+  { title: "Parma" },
+  { title: "Pavia" },
+  { title: "Perugia" },
+  { title: "Pesaro e Urbino" },
+  { title: "Pescara" },
+  { title: "Piacenza" },
+  { title: "Pisa" },
+  { title: "Pistoia" },
+  { title: "Pordenone" },
+  { title: "Potenza" },
+  { title: "Prato" },
+  { title: "Ragusa" },
+  { title: "Ravenna" },
+  { title: "Reggio Calabria" },
+  { title: "Reggio Emilia" },
+  { title: "Rieti" },
+  { title: "Rimini" },
+  { title: "Roma" },
+  { title: "Rovigo" },
+  { title: "Salerno" },
+  { title: "Medio Campidano" },
+  { title: "Sassari" },
+  { title: "Savona" },
+  { title: "Siena" },
+  { title: "Siracusa" },
+  { title: "Sondrio" },
+  { title: "Taranto" },
+  { title: "Teramo" },
+  { title: "Terni" },
+  { title: "Torino" },
+  { title: "Ogliastra" },
+  { title: "Trapani" },
+  { title: "Trento" },
+  { title: "Treviso" },
+  { title: "Trieste" },
+  { title: "Udine" },
+  { title: "Varese" },
+  { title: "Venezia" },
+  { title: "Verbano-Cusio-Ossola" },
+  { title: "Vercelli" },
+  { title: "Verona" },
+  { title: "Vibo Valentia" },
+  { title: "Vicenza" },
+  { title: "Viterbo" },
 ];

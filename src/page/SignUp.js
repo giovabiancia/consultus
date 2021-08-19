@@ -200,6 +200,7 @@ export default function SignUp() {
               fullWidth
               variant="contained"
               color="primary"
+              onClick={() => auth.signUpEmail(name, email, password)}
               className={classes.submit}
             >
               Sign Up

@@ -27,9 +27,9 @@ export const ConsultantProvider = (props) => {
     rischio: 0,
     fotoURL: "",
     progress: 0,
+    zonaOperativa: "",
 
     error: false,
-
     open: false,
   });
 
